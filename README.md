@@ -23,3 +23,5 @@ Descripción de los integrantes del equipo:
 Olga: Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
 
 Carlos Alberto Lira: Apasionado de la música, le gusta combinar el arte y la tecnología y es originario de Tabasco, México.
+
+Carlos Romero Nava: En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
