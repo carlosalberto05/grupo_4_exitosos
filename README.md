@@ -25,3 +25,6 @@ Olga: Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle 
 Carlos Alberto Lira: Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
 
 Carlos Romero Nava: En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
+
+Sergio Alberto Ruiz Velázquez:
+Diseñador gráfico y artista de la ciudad de México. Buscando la expresión en la programación y la música.
