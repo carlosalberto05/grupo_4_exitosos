@@ -24,11 +24,11 @@ Descripción de servicios: Nos dedicamos a la venta online de discos de vinilo d
 
 # Descripción de los integrantes del equipo:
 
-Olga: Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
+**Olga**: Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
 
-Carlos Alberto Lira: Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
+**Carlos Alberto Lira:** Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
 
-Carlos Romero Nava: En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
+**Carlos Romero Nava:** En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
 
 Sergio Alberto Ruiz Velázquez:
 Diseñador gráfico y artista de la ciudad de México. Buscando la expresión en la programación y la música.
