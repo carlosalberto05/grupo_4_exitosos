@@ -1,4 +1,6 @@
-Temática del sitio: E-commerce de música, específicamente venta de discos de vinilo de diferentes géneros musicales.
+#Temática del sitio
+
+E-commerce de música, específicamente venta de discos de vinilo de diferentes géneros musicales.
 
 Público objetivo: Dirigido a los amantas de la música (melómanos) que buscan una experiencia diferente de consumir música, coleccionistas, jóvenes entusiastas y músicos.
 
