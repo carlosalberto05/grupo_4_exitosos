@@ -12,7 +12,7 @@ Descripción de servicios: Nos dedicamos a la venta online de discos de vinilo d
 
 # Listado de 5 sitios referentes:
 
-1. ttps://www.discogs.com/ - Referencia principal
+1. https://www.discogs.com/ - Referencia principal
 
 2. https://audius.co/ - Referencia por la temática propuesta y por estética del sitio.
 
@@ -24,21 +24,26 @@ Descripción de servicios: Nos dedicamos a la venta online de discos de vinilo d
 
 # Wireframe 
 ## Home
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Detalle de producto
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Carrito de compras
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Formulario de registro
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Formulario de login
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 # Autores ✒️
 
 [**Olga**](https://github.com/Oleandra): Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
 
-**Carlos Alberto Lira:** Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
+[**Carlos Alberto Lira**](https://github.com/carlosalberto05): Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
 
-**Carlos Romero Nava:** En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
+[**Carlos Romero Nava**](https://github.com/Charly121): En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
 
-**Sergio Alberto Ruiz Velázquez:** Diseñador gráfico y artista de la ciudad de México. Buscando la expresión en la programación y la música.
+[**Sergio Alberto Ruiz Velázquez**](https://github.com/svartgazer):Diseñador gráfico y artista de la ciudad de México. Buscando la expresión en la programación y la música.
