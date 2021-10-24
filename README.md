@@ -35,7 +35,7 @@ Descripción de servicios: Nos dedicamos a la venta online de discos de vinilo d
 
 # Autores ✒️
 
-[**Olga**]-(https://github.com/Oleandra): Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
+[**Olga**](https://github.com/Oleandra): Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
 
 **Carlos Alberto Lira:** Soy un apasionado de la música, me gusta combinar el arte y la tecnología y radico en Tabasco, México.
 
