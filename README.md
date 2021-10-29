@@ -26,7 +26,7 @@ Descripción de servicios: Nos dedicamos a la venta online de discos 💿 de vin
 
 ## Home
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[![homeWeb.png](https://i.postimg.cc/mDS63vgm/homeWeb.png)](https://postimg.cc/TLp9fHmb)
 
 ## Home versión móvil
 
