@@ -72,11 +72,23 @@ Descripción de servicios: Nos dedicamos a la venta online de discos 💿 de vin
 
 [![Login-Movil.png](https://i.postimg.cc/L4Dqbyc1/Login-Movil.png)](https://postimg.cc/hhJPJ0PD)
 
+## Propuesta de paleta de colores para la página
+
+[![colores.png](https://i.postimg.cc/7Zy75NfY/colores.png)](https://postimg.cc/crX6jwRV)
+
+## Propuesta 1 de logo y tipografía
+
+[![Mellowdyne-design.png](https://i.postimg.cc/mgN9CFH3/Mellowdyne-design.png)](https://postimg.cc/FYz1QzG1)
+
+## Propuesta 2 de logo
+
+[![mellodyne-logo.png](https://i.postimg.cc/KvTBcWcH/mellodyne-logo.png)](https://postimg.cc/tYXY22x3)
+
 # Autores ✒️
 
 [**Olga**](https://github.com/Oleandra): Olga vino a Mexico del país de Dracula. Al inicio, no comía en la calle tacos porque no entendía 'pa' qui o pa' llevar' y la pregunta 'con todo?'. Aprendió Español desde cero y su siguiente meta es el idioma extranjero JavaScript.
 
-[**Carlos Alberto Lira**](https://github.com/carlosalberto05): Soy un apasionado de la música y la física del sonido, me gusta combinar el arte y la tecnología.
+[**Carlos de Jesús Alberto Lira**](https://github.com/carlosalberto05): Soy un apasionado de la música y la física del sonido, me gusta combinar el arte y la tecnología.
 
 [**Carlos Romero Nava**](https://github.com/Charly121): En mi tiempo libre me gusta realizar nuevas actividades, realizar proyectos personales. También me gusta salir a fiestas o conciertos de música especialmente de rock.
 
