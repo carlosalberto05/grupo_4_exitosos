@@ -32,21 +32,45 @@ Descripción de servicios: Nos dedicamos a la venta online de discos 💿 de vin
 
 [![home-Movil.png](https://i.postimg.cc/kgrGPKfx/home-Movil.png)](https://postimg.cc/N54B19hM)
 
+## Menú de navegación versión móvil
+
+[![Menu-Nav-Movil.png](https://i.postimg.cc/BnLXtJXT/Menu-Nav-Movil.png)](https://postimg.cc/4YGJSkvy)
+
+## Footer versión móvil
+
+[![Footer-Movil.png](https://i.postimg.cc/Jhj0cK3t/Footer-Movil.png)](https://postimg.cc/gwkGGVTP)
+
 ## Detalle de producto
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[![Detalle-Producto-Web.png](https://i.postimg.cc/hjgjCxMs/Detalle-Producto-Web.png)](https://postimg.cc/Jy6M0sfH)
+
+## Detalle del producto versión móvil
+
+[![Detalle-Producto-Movil.png](https://i.postimg.cc/503tD0RV/Detalle-Producto-Movil.png)](https://postimg.cc/R6W9HMms)
 
 ## Carrito de compras
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[![Carrito-Web.png](https://i.postimg.cc/K864MCMd/Carrito-Web.png)](https://postimg.cc/Wd72RWSn)
+
+## Carrito de compras versión móvil
+
+[![Carrito-Movil.png](https://i.postimg.cc/c4JKyRW5/Carrito-Movil.png)](https://postimg.cc/s1tf5Zvp)
 
 ## Formulario de registro
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[![Registro-Web.png](https://i.postimg.cc/tRBT5s6d/Registro-Web.png)](https://postimg.cc/K4gxcvJ4)
+
+## Formulario de registro versión móvil
+
+[![Registro-Movil.png](https://i.postimg.cc/5y2tJVhF/Registro-Movil.png)](https://postimg.cc/WFxVmQb2)
 
 ## Formulario de login
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+[![LoginWeb.png](https://i.postimg.cc/dtShqhtQ/LoginWeb.png)](https://postimg.cc/2VhkG8Zg)
+
+## Formulario login versión móvil
+
+[![Login-Movil.png](https://i.postimg.cc/L4Dqbyc1/Login-Movil.png)](https://postimg.cc/hhJPJ0PD)
 
 # Autores ✒️
 
