@@ -1,0 +1,22 @@
+{
+  "name": "grupo_4_exitosos",
+  "version": "1.0.0",
+  "description": "**🛒E-commerce de música** 🎵, específicamente venta de discos de vinilo de diferentes géneros musicales.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oleandra/grupo_4_exitosos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oleandra/grupo_4_exitosos/issues"
+  },
+  "homepage": "https://github.com/Oleandra/grupo_4_exitosos#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
