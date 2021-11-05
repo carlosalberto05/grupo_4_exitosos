@@ -1,7 +1,73 @@
 * {
+  margin: ​0​px​;
+  padding: ​0​px​;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* header, menu y barra de navegacion .................. */
+
+.main_header {
+  padding: 20px;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: bisque;
+}
+
+.header_menu {
+  width: 20%;
+  height: 100%;
+  background-color: aqua;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburguer-button {
+}
+
+.header_logo {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(0, 255, 30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+}
+
+.header_icons {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(147, 170, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon {
+  width: 50%;
+  text-align: center;
+}
+
+.car-icon {
+  width: 50%;
+  text-align: center;
+}
+
+/* tamaño de iconos */
+.user-icon,
+.car-icon,
+.hamburguer-button {
+  font-size: 1.3rem;
 }
