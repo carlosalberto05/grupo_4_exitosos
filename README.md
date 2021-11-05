@@ -2,6 +2,10 @@
 
 **🛒E-commerce de música** 🎵, específicamente venta de discos de vinilo de diferentes géneros musicales.
 
+# Link a Trello de la organización del trabajo
+
+https://trello.com/b/nojal7pb/sprint-2-grupo-exito
+
 # Público objetivo 👥
 
 Dirigido a los amantas de la música (melómanos) que buscan una experiencia diferente de consumir música, coleccionistas, jóvenes entusiastas y músicos.
