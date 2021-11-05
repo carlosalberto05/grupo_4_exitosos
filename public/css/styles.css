@@ -46,6 +46,10 @@ body {
 .logo {
 }
 
+.search {
+  display: none;
+}
+
 .header_icons {
   width: 30%;
   height: 100%;
@@ -70,4 +74,27 @@ body {
 .car-icon,
 .hamburguer-button {
   font-size: 1.3rem;
+}
+
+/* medias queries para el header o menu o navbar */
+
+@media (min-width: 768px) {
+  .header_menu {
+    display: none;
+  }
+  .header_logo {
+    width: 60%;
+    display: flex;
+  }
+  .logo {
+    width: 40%;
+    text-align: center;
+  }
+  .search {
+    display: block;
+    width: 60%;
+  }
+  .header_icons {
+    width: 40%;
+  }
 }
