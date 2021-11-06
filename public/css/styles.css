@@ -82,6 +82,12 @@ body {
   display: none;
 }
 
+/* Main sección del baner carrusel --------------*/
+.baner {
+}
+.carrousel {
+}
+
 /* medias queries para el header o menu o navbar */
 
 @media (min-width: 768px) {
