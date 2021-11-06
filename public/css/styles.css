@@ -11,21 +11,16 @@ body {
 /* header, menu y barra de navegacion .................. */
 
 .main_header {
-  padding: 20px;
   width: 100vw;
-  height: 15vh;
+  height: 12vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: bisque;
 }
 
 .header_menu {
   width: 20%;
-  height: 100%;
-  background-color: aqua;
-  /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,24 +31,23 @@ body {
 
 .header_logo {
   width: 50%;
-  height: 100%;
-  background-color: rgb(0, 255, 30);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo {
+  text-decoration: none;
+  font-size: 18px;
 }
 
+/* la barra de busqueda para tablets y escritorio */
 .search {
   display: none;
 }
 
 .header_icons {
   width: 30%;
-  height: 100%;
-  background-color: rgb(147, 170, 44);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,6 +56,10 @@ body {
 .user-icon {
   width: 50%;
   text-align: center;
+}
+
+.butt-regis_login {
+  display: none;
 }
 
 .car-icon {
@@ -87,14 +85,34 @@ body {
     display: flex;
   }
   .logo {
-    width: 40%;
-    text-align: center;
+    width: 35%;
+    display: flex;
+    justify-content: center;
   }
   .search {
     display: block;
-    width: 60%;
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .search input {
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 5px;
   }
   .header_icons {
     width: 40%;
+  }
+  .user-icon {
+    display: none;
+  }
+  .butt-regis_login {
+    width: 80%;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+  }
+  .car-icon {
+    width: 20%;
   }
 }
