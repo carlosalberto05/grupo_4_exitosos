@@ -15,8 +15,9 @@ body {
   height: 12vh;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
+  background-color: #3c119e;
 }
 
 .header_menu {
@@ -37,6 +38,7 @@ body {
 }
 
 .logo {
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
 }
@@ -56,6 +58,7 @@ body {
 .user-icon {
   width: 50%;
   text-align: center;
+  color: #fff;
 }
 
 .butt-regis_login {
@@ -65,6 +68,7 @@ body {
 .car-icon {
   width: 50%;
   text-align: center;
+  color: #fff;
 }
 
 /* tamaño de iconos */
@@ -74,9 +78,17 @@ body {
   font-size: 1.3rem;
 }
 
+.main-navbar_desktab {
+  display: none;
+}
+
 /* medias queries para el header o menu o navbar */
 
 @media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
   .header_menu {
     display: none;
   }
@@ -114,5 +126,25 @@ body {
   }
   .car-icon {
     width: 20%;
+  }
+
+  .main-navbar_desktab {
+    width: 100%;
+    background-color: #6931eb;
+    display: block;
+  }
+
+  .main-navbar_desktab ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-navbar_desktab ul li {
+    list-style: none;
+  }
+
+  .main-navbar_desktab ul li a {
+    color: #ffffff;
+    text-decoration: none;
   }
 }
