@@ -132,6 +132,33 @@ body {
   background-color: #3c119e;
 }
 
+/* Main sección top discos --------------*/
+.section-top {
+}
+
+.section-top_title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.vin-top {
+  display: flex;
+  flex-direction: column;
+}
+.top-disk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-disk a {
+  text-align: center;
+  padding: 5%;
+}
+
+.top-disk-img {
+  width: 60%;
+}
 /* medias queries para el header o menu o navbar */
 
 @media (min-width: 768px) {
