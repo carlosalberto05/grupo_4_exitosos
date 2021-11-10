@@ -103,8 +103,13 @@ body {
 
 .carrousel .img {
   width: calc(100% / 2);
-  height: fit-content;
-  /* height: 88vh; */
+}
+@supports (object-fit: cover) {
+  .grande .img {
+    height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 .carrousel .puntos {
@@ -159,7 +164,7 @@ body {
 
 /* medias queries para el header o menu o navbar */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   header {
     display: flex;
     flex-direction: column;
