@@ -227,4 +227,11 @@ body {
     color: #ffffff;
     text-decoration: none;
   }
+
+  /* imagen del banner carrusel */
+  @supports (object-fit: cover) {
+    .grande .img {
+      height: 75vh;
+    }
+  }
 }
