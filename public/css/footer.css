@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: white;
+}
+
+
+/* Create four equal columns that floats next to each other */
+
+.column {
+    float: left;
+    width: 23%;
+    padding: 20px;
+    height: 300px;
+    background-color: #3c119e;
+    /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+
+.footer-company {
+    width: 30%;
+    border-right: 1px solid white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+    font-size: 13px;
+}
+
+.footer-logo {
+    float: left;
+    margin-right: 15px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.footer-title {
+    color: #f08017;
+}
+
+
+/*@media (min-width: 375px) {
+    .column {
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        background-color: #3c119e;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .footer-contacts {
+        height: 160px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .footer-help {
+        padding-bottom: 0px;
+        height: 220px;
+    }
+}*/
