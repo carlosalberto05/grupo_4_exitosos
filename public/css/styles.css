@@ -225,6 +225,18 @@ body {
     text-decoration: none;
   }
 
+  .header_logo {
+    padding-left: 5%;
+  }
+  .header_icons {
+    padding-right: 5%;
+  }
+
+  .main-navbar_desktab {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
   /* imagen del banner carrusel */
   @supports (object-fit: cover) {
     .grande .img {
@@ -235,5 +247,18 @@ body {
   /* seccion top discos */
   .top-article-disk {
     width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header_logo {
+    padding-left: 5%;
+  }
+  .header_icons {
+    padding-right: 5%;
+  }
+  .main-navbar_desktab {
+    padding-right: 5%;
+    padding-left: 5%;
   }
 }
