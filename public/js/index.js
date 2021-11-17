@@ -1,5 +1,16 @@
 "use strict";
 
+// Menu movil ------------------------------------------------
+addEventListener("DOMContentLoaded", () => {
+  const hamburguer_button = document.querySelector(".hamburguer-button");
+  if (hamburguer_button) {
+    hamburguer_button.addEventListener("click", () => {
+      const menu_movil = document.querySelector(".menu_movil");
+      menu_movil.classList.toggle("active");
+    });
+  }
+});
+
 //Carrusel de la home view ------------------------------------------
 
 const grande = document.querySelector(".grande");
