@@ -1,26 +1,28 @@
 * {
     box-sizing: border-box;
-    font-family: 'Poppins';
-    color: white;
 }
 
+footer {
+    color: #fff;
+    font-family: 'Poppins';
+}
 
-/* Create four equal columns that floats next to each other */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .column {
+    justify-content: space-between;
+    align-items: center;
     float: left;
-    width: 23%;
+    width: 100%;
     padding: 20px;
-    height: 300px;
     background-color: #3c119e;
-    /* Should be removed. Only for demonstration */
 }
 
-
-/* Clear floats after the columns */
-
 .footer-company {
-    width: 30%;
+    width: 100%;
     border-right: 1px solid white;
 }
 
@@ -35,8 +37,10 @@ p {
 }
 
 .footer-logo {
+    display: block;
     float: left;
     margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .fa {
@@ -76,26 +80,74 @@ p {
     color: #f08017;
 }
 
-
-/*@media (min-width: 375px) {
+@media (min-width: 768px) {
     .column {
-        width: 100%;
-        height: 250px;
+        justify-content: space-between;
+        float: left;
+        width: 23.3%;
         padding: 20px;
+        height: 250px;
         background-color: #3c119e;
     }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+    .footer-company {
+        width: 30%;
+        border-right: 1px solid white;
     }
-    .footer-contacts {
-        height: 160px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+    .column h2 {
+        font-size: 18px;
     }
-    .footer-help {
-        padding-bottom: 0px;
-        height: 220px;
+    .column p {
+        font-size: 12px;
     }
-}*/
+    .fa {
+        padding: 10px;
+        font-size: 15px;
+        width: 35px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-logo {
+        width: 50%;
+        margin-right: 50%;
+    }
+    .column h2 {
+        font-size: 21px;
+    }
+    .column p {
+        font-size: 13px;
+    }
+    .column {
+        height: 210px;
+    }
+    .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+    /*.footer-social a {
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30%
+    }
+    .footer-social h2 {
+        margin-bottom: 35%;
+    }
+    .footer-contacts h2,
+    .footer-contacts p,
+    .footer-social h2,
+    .footer-help h2,
+    .footer-help p {
+        padding-left: 80px;
+    }
+    .footer-social {
+        display: flex;
+    }*/
+}
