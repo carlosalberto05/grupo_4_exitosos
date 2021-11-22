@@ -70,149 +70,63 @@
     </header>
 
     <!-- Formulario -->
-    <form action="/" method="get" class="create-form">
-      <div class="control-formulario">
-        <label>Nombre y apellido</label>
-        <input
-          type="text"
-          name="nombre"
-          class="control"
-          placeholder="Carlos Lira"
-        />
-      </div>
-      <div class="control-formulario">
-        <label> Nombre de usuario</label>
+    <h2 class="register-title">Crea tu cuenta</h2>
+
+    <form action="/" method="get" class="create-form form-holder">
+      <div class="control-form">
+        <!-- <label>Nombre y apellido</label> -->
         <input
           required
           type="text"
           name="usuario"
-          placeholder="carlos123"
           class="control"
+          placeholder="Ingresa tu nombre y apellido"
         />
       </div>
-      <div class="control-formulario">
-        <label>Correo</label>
+
+      <div class="control-form">
+        <!-- <label>Correo</label> -->
         <input
           required
           type="email"
           name="correo"
-          placeholder="carlos_lira@outlook.com"
+          placeholder="Ingresa tu correo"
           class="control"
         />
       </div>
-      <div class="control-formulario">
-        <label>Fecha de nacimiento</label>
-        <input placeholder="" type="date" name="fecha" class="control" />
-      </div>
 
-      <div class="control-formulario">
-        <label>Ciudad:</label>
-        <select name="ciudad" class="control">
-          <option value="mexico">México</option>
-          <option value="villahermosa">Villahermosa</option>
-          <option value="nuevoleon">Nuevo Leon</option>
-        </select>
-      </div>
-
-      <div class="control-formulario perfil-usuario">
-        <label>Perfil del usuario</label>
-
-        <div class="compra-vende">
-          <div>
-            <label for="vendedor">Vendedor</label>
-            <input
-              type="radio"
-              value="vendedor"
-              name="tipoUsuario"
-              id="vendedor"
-            />
-          </div>
-          <div>
-            <label for="comprador">Comprador</label>
-            <input
-              type="radio"
-              value="comprador"
-              name="tipoUsuario"
-              id="comprador"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="control-formulario perfil-usuario">
-        <label>Intereses</label>
-
-        <div class="intereses">
-          <label for="electro" class="interes_opcion"
-            >Electro
-            <input
-              type="checkbox"
-              name="intereses"
-              id="electro"
-              value="Electro"
-            />
-          </label>
-
-          <label for="moda" class="interes_opcion"
-            >Moda
-            <input type="checkbox" name="intereses" id="moda" value="Moda" />
-          </label>
-
-          <label for="hogar" class="interes_opcion"
-            >Hogar
-            <input type="checkbox" name="intereses" id="hogar" value="Hogar" />
-          </label>
-
-          <label for="jugueteria" class="interes_opcion"
-            >Juguetería
-            <input
-              type="checkbox"
-              name="intereses"
-              id="jugueteria"
-              value="Juguetería"
-            />
-          </label>
-
-          <label for="vidasana" class="interes_opcion"
-            >Vida Sana
-            <input
-              type="checkbox"
-              name="intereses"
-              id="vidasana"
-              value="Vidasana"
-            />
-          </label>
-        </div>
-      </div>
-
-      <div class="control-formulario">
-        <label>Seleccionar una imagen para el perfil</label>
-        <input type="file" name="avatar" accept=".jpg" id="" class="control" />
-      </div>
-
-      <div class="control-formulario">
-        <label> Contraseña</label>
+      <div class="control-form">
+        <!-- <label> Contraseña</label> -->
         <input
           minlength="8"
           type="password"
           name="contraseña"
-          placeholder="@567Ac34"
+          placeholder="Ingresa tu contraseña"
           class="control"
         />
       </div>
 
-      <div class="control-formulario">
-        <label> Confirmar contraseña</label>
+      <div class="control-form">
+        <!-- <label> Confirmar contraseña</label> -->
         <input
           minlength="8"
           type="password"
           name="confirmar-contraseña"
+          placeholder="Confirma tu contraseña"
           class="control"
         />
       </div>
 
-      <button type="submit" class="boton-formulario">Enviar</button>
-      <button type="reset" class="boton-formulario">Borrar</button>
+      <div class="control-form politica">
+        <input type="checkbox" name="intereses" id="politica" value="" />
+        <label for="politica" class="interes_opcion">
+          Acepto la política de privacidad
+        </label>
+      </div>
+
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Confirmar</button>
+      </div>
     </form>
     <footer>
       <div class="row footer-container">
