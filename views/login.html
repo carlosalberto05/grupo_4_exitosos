@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <script src="https://kit.fontawesome.com/525d227bb1.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/525d227bb1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="main_header">
-            <div class="header_menu">
-                <button class="hamburguer-button">
+      <div class="main_header">
+        <div class="header_menu">
+          <button class="hamburguer-button">
             <i class="fas fa-bars"></i>
           </button>
-            </div>
-            <div class="header_logo">
-                <a href="#" class="logo">
-                    <img class="logo_img" src="/images/mellowdyne-disco.svg" alt="" />
-                </a>
-                <div class="search">
-                    <input type="text" placeholder="Buscar" />
-                </div>
-            </div>
-            <div class="header_icons">
-                <a href="#" class="user-icon">
-                    <i class="fas fa-user"></i>
-                </a>
-                <div class="butt-regis_login">
-                    <button class="btn_registro">Registro</button>
-                    <button class="btn_registro">Login</button>
-                </div>
-                <a href="#" class="car-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-            </div>
         </div>
-        <nav class="main-navbar_movil menu_movil">
-            <ul>
-                <li><a href="#">Lo nuevo</a></li>
-                <li><a href="#">Lo más vendido</a></li>
-                <li><a href="#">Género</a></li>
-                <li><a href="#">Estilos</a></li>
-            </ul>
-        </nav>
-        <nav class="main-navbar_desktab">
-            <ul>
-                <li><a href="#">Lo nuevo</a></li>
-                <li><a href="#">Lo más vendido</a></li>
-                <li><a href="#">Género</a></li>
-                <li><a href="#">Estilos</a></li>
-            </ul>
-        </nav>
+        <div class="header_logo">
+          <a href="/" class="logo">
+            <img class="logo_img" src="/images/mellowdyne-disco.svg" alt="" />
+          </a>
+          <div class="search">
+            <input type="text" placeholder="Buscar" />
+          </div>
+        </div>
+        <div class="header_icons">
+          <a href="/login" class="user-icon">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="butt-regis_login">
+            <button class="btn_registro">
+              <a href="/register">Registro</a>
+            </button>
+            <button class="btn_registro">
+              <a href="/login">Login</a>
+            </button>
+          </div>
+          <a href="/cart" class="car-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+      <nav class="main-navbar_movil menu_movil">
+        <ul>
+          <li><a href="#">Lo nuevo</a></li>
+          <li><a href="#">Lo más vendido</a></li>
+          <li><a href="#">Género</a></li>
+          <li><a href="#">Estilos</a></li>
+        </ul>
+      </nav>
+      <nav class="main-navbar_desktab">
+        <ul>
+          <li><a href="#">Lo nuevo</a></li>
+          <li><a href="#">Lo más vendido</a></li>
+          <li><a href="#">Género</a></li>
+          <li><a href="#">Estilos</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Formulario -->
@@ -66,55 +75,76 @@
     <h2 class="register-title">Ingresa a tu cuenta</h2>
 
     <form action="/" method="get" class="create-form form-holder">
+      <div class="control-form">
+        <input
+          required
+          type="text"
+          name="usuario"
+          placeholder=" Correo o nombre de usuario"
+          class="control"
+        />
+      </div>
 
-        <div class="control-form">
+      <div class="control-form">
+        <input
+          minlength="8"
+          type="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          class="control"
+        />
+      </div>
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Confirmar</button>
+      </div>
+      <div class="btn-form">
+        <p><a href="#">Olvidaste tu contrasena?</a></p>
+      </div>
 
-            <input required type="text" name="usuario" placeholder=" Correo o nombre de usuario" class="control" />
-        </div>
-
-        <div class="control-form">
-
-            <input minlength="8" type="password" name="contraseña" placeholder="Contraseña" class="control" />
-        </div>
-        <div class="btn-form">
-            <button type="submit" class="form-btn">Confirmar</button>
-        </div>
-        <div class="btn-form">
-            <p><a href="#">Olvidaste tu contrasena?</a></p>
-        </div>
-
-        <div class="btn-form">
-            <button type="submit" class="form-btn register">Registrate</button>
-        </div>
+      <div class="btn-form">
+        <button type="submit" class="form-btn register">Registrate</button>
+      </div>
     </form>
     <footer>
+      <div class="row footer-container">
+        <div class="column footer-company">
+          <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
 
-        <div class="row footer-container">
-            <div class="column footer-company">
-
-                <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
-
-                <p>Dirigido a los amantas de la música que buscan una experiencia diferente de consumir música, coleccionistas, jóvenes entusiastas y músicos.</p>
-                <p>Compra online tus discos de vinilo favoritos. Mellowdyne te ofrece diferentes estilos y géneros musicales de artistas nacionales e internacionales.</p>
-
-            </div>
-            <div class="column footer-help">
-                <h2>Ayuda y soporte</h2>
-                <p>En caso de que el producto tenga defectos de fábrica, tienes derecho a recibir un reembolso total, crédito en la tienda o el cambio de su producto, cuenta con 20 días para solicitar la petición.</p>
-            </div>
-            <div class="column footer-contacts">
-                <h2>Contactos</h2>
-                <p>Av. We Are the Champions 3500<br> Ciudad: Mercury<br> C.P: 4500</p>
-            </div>
-            <div class="column footer-social">
-                <h2>Siguenos</h2>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-youtube"></a>
-            </div>
+          <p>
+            Dirigido a los amantas de la música que buscan una experiencia
+            diferente de consumir música, coleccionistas, jóvenes entusiastas y
+            músicos.
+          </p>
+          <p>
+            Compra online tus discos de vinilo favoritos. Mellowdyne te ofrece
+            diferentes estilos y géneros musicales de artistas nacionales e
+            internacionales.
+          </p>
         </div>
+        <div class="column footer-help">
+          <h2>Ayuda y soporte</h2>
+          <p>
+            En caso de que el producto tenga defectos de fábrica, tienes derecho
+            a recibir un reembolso total, crédito en la tienda o el cambio de su
+            producto, cuenta con 20 días para solicitar la petición.
+          </p>
+        </div>
+        <div class="column footer-contacts">
+          <h2>Contactos</h2>
+          <p>
+            Av. We Are the Champions 3500<br />
+            Ciudad: Mercury<br />
+            C.P: 4500
+          </p>
+        </div>
+        <div class="column footer-social">
+          <h2>Siguenos</h2>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
@@ -26,7 +27,7 @@
           </button>
         </div>
         <div class="header_logo">
-          <a href="#" class="logo">
+          <a href="/" class="logo">
             <img class="logo_img" src="/images/mellowdyne-disco.svg" alt="" />
           </a>
           <div class="search">
@@ -34,14 +35,18 @@
           </div>
         </div>
         <div class="header_icons">
-          <a href="#" class="user-icon">
+          <a href="/login" class="user-icon">
             <i class="fas fa-user"></i>
           </a>
           <div class="butt-regis_login">
-            <button class="btn_registro">Registro</button>
-            <button class="btn_registro">Login</button>
+            <button class="btn_registro">
+              <a href="/register">Registro</a>
+            </button>
+            <button class="btn_registro">
+              <a href="/login">Login</a>
+            </button>
           </div>
-          <a href="#" class="car-icon">
+          <a href="/cart" class="car-icon">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -209,5 +214,46 @@
       <button type="submit" class="boton-formulario">Enviar</button>
       <button type="reset" class="boton-formulario">Borrar</button>
     </form>
+    <footer>
+      <div class="row footer-container">
+        <div class="column footer-company">
+          <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
+
+          <p>
+            Dirigido a los amantas de la música que buscan una experiencia
+            diferente de consumir música, coleccionistas, jóvenes entusiastas y
+            músicos.
+          </p>
+          <p>
+            Compra online tus discos de vinilo favoritos. Mellowdyne te ofrece
+            diferentes estilos y géneros musicales de artistas nacionales e
+            internacionales.
+          </p>
+        </div>
+        <div class="column footer-help">
+          <h2>Ayuda y soporte</h2>
+          <p>
+            En caso de que el producto tenga defectos de fábrica, tienes derecho
+            a recibir un reembolso total, crédito en la tienda o el cambio de su
+            producto, cuenta con 20 días para solicitar la petición.
+          </p>
+        </div>
+        <div class="column footer-contacts">
+          <h2>Contactos</h2>
+          <p>
+            Av. We Are the Champions 3500<br />
+            Ciudad: Mercury<br />
+            C.P: 4500
+          </p>
+        </div>
+        <div class="column footer-social">
+          <h2>Siguenos</h2>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
