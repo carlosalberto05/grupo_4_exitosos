@@ -11,12 +11,14 @@
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header>
       <div class="main_header">
@@ -67,115 +69,46 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="carrousel">
-        <a href="/productDetail" class="grande">
-          <img class="img" src="/images/vinilo_baner1.jpg" />
-          <img class="img" src="/images/vinilo_baner2.jpg" />
-        </a>
-        <ul class="puntos">
-          <li class="punto"></li>
-          <li class="punto"></li>
-        </ul>
-      </section>
-      <section class="section-top">
-        <h2 class="section-top_title">Lo más top</h2>
 
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/beatles.jpeg" />
-          </a>
-          <p>The Beatles</p>
-        </article>
+    <!-- Formulario -->
 
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
-          </a>
-          <p>Dream Theater</p>
-        </article>
+    <h2 class="register-title">Ingresa a tu cuenta</h2>
 
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/genesis.jpeg" />
-          </a>
-          <p>Genesis</p>
-        </article>
+    <form action="/" method="get" class="create-form form-holder">
+      <div class="control-form">
+        <input
+          required
+          type="text"
+          name="usuario"
+          placeholder=" Correo o nombre de usuario"
+          class="control"
+        />
+      </div>
 
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
-          </a>
-          <p>Pink Floyd</p>
-        </article>
-      </section>
-      <section class="section-top">
-        <h2 class="section-top_title">Ediciones populares</h2>
+      <div class="control-form">
+        <input
+          minlength="8"
+          type="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          class="control"
+        />
+      </div>
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Confirmar</button>
+      </div>
+      <div class="btn-form">
+        <p><a href="#">Olvidaste tu contrasena?</a></p>
+      </div>
 
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/beatles.jpeg" />
-          </a>
-          <p>The Beatles</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
-          </a>
-          <p>Dream Theater</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/genesis.jpeg" />
-          </a>
-          <p>Genesis</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
-          </a>
-          <p>Pink Floyd</p>
-        </article>
-      </section>
-      <section class="section-top">
-        <h2 class="section-top_title">Ediciones más vendidas del mes</h2>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/beatles.jpeg" />
-          </a>
-          <p>The Beatles</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
-          </a>
-          <p>Dream Theater</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/genesis.jpeg" />
-          </a>
-          <p>Genesis</p>
-        </article>
-
-        <article class="top-article-disk">
-          <a href="/productDetail">
-            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
-          </a>
-          <p>Pink Floyd</p>
-        </article>
-      </section>
-    </main>
+      <div class="btn-form">
+        <button type="submit" class="form-btn register">Registrate</button>
+      </div>
+    </form>
     <footer>
       <div class="row footer-container">
         <div class="column footer-company">
-          <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
+          <img class="footer-logo" src="/images/mellowdyne.svg" alt="" />
 
           <p>
             Dirigido a los amantas de la música que buscan una experiencia
@@ -213,6 +146,5 @@
         </div>
       </div>
     </footer>
-    <script src="/js/index.js"></script>
   </body>
 </html>

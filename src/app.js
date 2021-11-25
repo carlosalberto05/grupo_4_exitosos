@@ -6,23 +6,23 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, "../public")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/index.html"));
+  res.sendFile(path.resolve(__dirname, "./views/partials/index.html"));
 });
 
 app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/login.html"));
+  res.sendFile(path.resolve(__dirname, "./views/users/login.html"));
 });
 
 app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/register.html"));
+  res.sendFile(path.resolve(__dirname, "./views/users/register.html"));
 });
 
 app.get("/cart", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
+  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"));
 });
 
 app.get("/productDetail", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
+  res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"));
 });
 
 app.listen(3000, () => {
