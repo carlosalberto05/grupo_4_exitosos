@@ -11,14 +11,13 @@
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/productDetail.css" />
+    <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <header>
       <div class="main_header">
@@ -70,60 +69,69 @@
       </nav>
     </header>
 
-    <main>
-      <div class="row footer-row">
-        <section class="product-column product-pics">
-          <div class="main-image">
-            <img src="/images/leon-bridges.jpg" />
-          </div>
-          <div class="small-images">
-            <img class="pic" src="/images/bridges-one.PNG" />
-            <img class="pic" src="/images/bridges-two.PNG" />
-          </div>
-        </section>
+    <!-- Formulario -->
+    <h2 class="register-title">Crea tu cuenta</h2>
 
-        <section class="product-column product-info">
-          <article>
-            <span class="border-title"
-              ><h2 class="title">Comming Home - L. Bridges</h2></span
-            >
-            <div class="product-price">
-              <div class="add-btn">
-                <button type="button">Agregar<br />al carrito</button>
-              </div>
-              <div class="price">
-                <h3>$900 <span class="moneda">MXN</span></h3>
-              </div>
-            </div>
-
-            <div class="product-details">
-              <h4>Detalles</h4>
-
-              <p>
-                Todd Michael "Leon" Bridges es un cantante de soul, compositor y
-                productor de discos estadounidense. Es mejor conocido por su
-                canción de 2015 "Coming Home", que recibió difusión regular y
-                también fue una de las 10 canciones más virales en Spotify.
-              </p>
-
-              <h4>Tracklist</h4>
-              <ul>
-                <li>Coming Home</li>
-                <li>Better Man</li>
-                <li>Shine</li>
-                <li>Flowers</li>
-                <li>River</li>
-                <li>Brown Skin Girl</li>
-              </ul>
-            </div>
-          </article>
-        </section>
+    <form action="/" method="get" class="create-form form-holder">
+      <div class="control-form">
+        <!-- <label>Nombre y apellido</label> -->
+        <input
+          required
+          type="text"
+          name="usuario"
+          class="control"
+          placeholder="Ingresa tu nombre y apellido"
+        />
       </div>
-    </main>
+
+      <div class="control-form">
+        <!-- <label>Correo</label> -->
+        <input
+          required
+          type="email"
+          name="correo"
+          placeholder="Ingresa tu correo"
+          class="control"
+        />
+      </div>
+
+      <div class="control-form">
+        <!-- <label> Contraseña</label> -->
+        <input
+          minlength="8"
+          type="password"
+          name="contraseña"
+          placeholder="Ingresa tu contraseña"
+          class="control"
+        />
+      </div>
+
+      <div class="control-form">
+        <!-- <label> Confirmar contraseña</label> -->
+        <input
+          minlength="8"
+          type="password"
+          name="confirmar-contraseña"
+          placeholder="Confirma tu contraseña"
+          class="control"
+        />
+      </div>
+
+      <div class="control-form politica">
+        <input type="checkbox" name="intereses" id="politica" value="" />
+        <label for="politica" class="interes_opcion">
+          Acepto la política de privacidad
+        </label>
+      </div>
+
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Confirmar</button>
+      </div>
+    </form>
     <footer>
       <div class="row footer-container">
         <div class="column footer-company">
-          <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
+          <img class="footer-logo" src="/images/mellowdyne.svg" alt="" />
 
           <p>
             Dirigido a los amantas de la música que buscan una experiencia

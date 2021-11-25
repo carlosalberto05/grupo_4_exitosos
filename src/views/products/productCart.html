@@ -4,20 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/productCart.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header>
       <div class="main_header">
@@ -68,70 +73,51 @@
         </ul>
       </nav>
     </header>
-
-    <!-- Formulario -->
-    <h2 class="register-title">Crea tu cuenta</h2>
-
-    <form action="/" method="get" class="create-form form-holder">
-      <div class="control-form">
-        <!-- <label>Nombre y apellido</label> -->
-        <input
-          required
-          type="text"
-          name="usuario"
-          class="control"
-          placeholder="Ingresa tu nombre y apellido"
-        />
+    <main>
+      <div class="header-carrito">
+        <h2>Tu carrito</h2>
       </div>
-
-      <div class="control-form">
-        <!-- <label>Correo</label> -->
-        <input
-          required
-          type="email"
-          name="correo"
-          placeholder="Ingresa tu correo"
-          class="control"
-        />
+      <div class="productoX">
+        <img src="images\beatles.jpeg" alt="Abbey Road-The Beatles" />
+        <div class="info-album">
+          <p>Abbey Road</p>
+          <p><strong>The Beatles</strong></p>
+        </div>
+        <div class="cantidad">
+          <i class="fas fa-minus-circle"></i>
+          <p>1</p>
+          <i class="fas fa-plus"></i>
+        </div>
+        <p>$550 mxn</p>
+        <i class="far fa-trash-alt"></i>
       </div>
-
-      <div class="control-form">
-        <!-- <label> Contraseña</label> -->
-        <input
-          minlength="8"
-          type="password"
-          name="contraseña"
-          placeholder="Ingresa tu contraseña"
-          class="control"
-        />
+      <div class="productoX">
+        <img src="images\crystalcastles.jpg" alt="(III)-Crystal Castles" />
+        <div class="info-album">
+          <p>(III)</p>
+          <p><strong>Crystal Castles</strong></p>
+        </div>
+        <div class="cantidad">
+          <i class="fas fa-minus-circle"></i>
+          <p>1</p>
+          <i class="fas fa-plus"></i>
+        </div>
+        <p>$550 mxn</p>
+        <i class="far fa-trash-alt"></i>
       </div>
-
-      <div class="control-form">
-        <!-- <label> Confirmar contraseña</label> -->
-        <input
-          minlength="8"
-          type="password"
-          name="confirmar-contraseña"
-          placeholder="Confirma tu contraseña"
-          class="control"
-        />
+      <div class="subtotal">
+        <h5>Subtotal</h5>
+        <p>$1100 mxn</p>
       </div>
-
-      <div class="control-form politica">
-        <input type="checkbox" name="intereses" id="politica" value="" />
-        <label for="politica" class="interes_opcion">
-          Acepto la política de privacidad
-        </label>
+      <div class="botones">
+        <button type="button">Seguir comprando</button>
+        <button class="comprar" type="submit">Finalizar pedido</button>
       </div>
-
-      <div class="btn-form">
-        <button type="submit" class="form-btn">Confirmar</button>
-      </div>
-    </form>
+    </main>
     <footer>
       <div class="row footer-container">
         <div class="column footer-company">
-          <img class="footer-logo" src="/images/mellowdyne-disco.svg" alt="" />
+          <img class="footer-logo" src="/images/mellowdyne.svg" alt="" />
 
           <p>
             Dirigido a los amantas de la música que buscan una experiencia
