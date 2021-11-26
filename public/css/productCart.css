@@ -1,202 +1,62 @@
 * {
-    margin: ​0​px​;
-    padding: ​0​px​;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* header, menu y barra de navegacion .................. */
-  
-  .main_header {
-    width: 100vw;
-    height: 12vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #3c119e;
-  }
-  
-  .header_menu {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hamburguer-button {
-  }
-  
-  .header_logo {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  /* la barra de busqueda para tablets y escritorio */
-  .search {
-    display: none;
-  }
-  
-  .header_icons {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .user-icon {
-    width: 50%;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .butt-regis_login {
-    display: none;
-  }
-  
-  .car-icon {
-    width: 50%;
-    text-align: center;
-    color: #fff;
-  }
-  
-  /* tamaño de iconos */
-  .user-icon,
-  .car-icon,
-  .hamburguer-button {
-    font-size: 1.3rem;
-  }
-  
-  .main-navbar_desktab {
-    display: none;
-  }
-  
- 
-  /* medias queries para el header o menu o navbar */
-  
-  @media (min-width: 769px) {
-    header {
-      display: flex;
-      flex-direction: column;
-    }
-    .header_menu {
-      display: none;
-    }
-    .header_logo {
-      width: 60%;
-      display: flex;
-    }
-    .logo {
-      width: 35%;
-      display: flex;
-      justify-content: center;
-    }
-    .search {
-      display: block;
-      width: 65%;
-      display: flex;
-      justify-content: flex-start;
-    }
-    .search input {
-      width: 90%;
-      border: 1px solid gray;
-      border-radius: 5px;
-    }
-    .header_icons {
-      width: 40%;
-    }
-    .user-icon {
-      display: none;
-    }
-    .butt-regis_login {
-      width: 80%;
-      display: block;
-      display: flex;
-      justify-content: space-around;
-    }
-    .car-icon {
-      width: 20%;
-    }
-  
-    .main-navbar_desktab {
-      width: 100%;
-      background-color: #6931eb;
-      display: block;
-    }
-  
-    .main-navbar_desktab ul {
-      display: flex;
-      justify-content: space-around;
-    }
-  
-    .main-navbar_desktab ul li {
-      list-style: none;
-    }
-  
-    .main-navbar_desktab ul li a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-  
-    /* imagen del banner carrusel 
-    @supports (object-fit: cover) {
-      .grande .img {
-        height: 75vh;
-      }
-    }*/
-  }
-  
-/* estilos carrito del main */
-main{
-    margin-left: 5vw;
-    margin-top: 4rem;
-    margin-right: 50px;
+  margin: ​0​px​;
+  padding: ​0​px​;
+  box-sizing: border-box;
 }
-.header-carrito{
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* estilos carrito del main */
+main {
+  margin-left: 5vw;
+  margin-top: 4rem;
+  margin-right: 50px;
+}
+.header-carrito {
   margin-bottom: 50px;
   font-size: 1.5rem;
 }
-.productoX{
+.productoX {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom:30px;
-  
+  margin-bottom: 30px;
+
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   justify-content: space-between;
 }
 
-div.productoX img{
+/* div.productoX img {
+  width: 10%;
+} */
+
+.productoX a {
   width: 10%;
 }
-.info-album{
+
+.img-car {
+  width: 100%;
+}
+
+.info-album {
   width: 25%;
   align-items: center;
   text-align: left;
 }
-.cantidad{
+.cantidad {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
-div.cantidad i{
+div.cantidad i {
   padding: 5px;
   justify-content: center;
   display: inline-block;
 }
 
-.subtotal{
+.subtotal {
   padding-right: 15vw;
   font-size: 1.5rem;
   display: flex;
@@ -206,17 +66,17 @@ div.cantidad i{
   align-items: center;
 }
 
-div.subtotal p{
+div.subtotal p {
   font-size: 1rem;
   margin-left: 5vw;
 }
 
-.botones{
+.botones {
   display: flex;
   padding-right: 15vw;
   justify-content: flex-end;
 }
-div.botones button{
+div.botones button {
   margin-left: 50px;
   background-color: black;
   color: white;
@@ -226,59 +86,58 @@ div.botones button{
 }
 
 /* media query de carrito movil*/
-@media (max-width:768px){
-  .header-carrito{
-  text-align: center;
-  margin-bottom: 50px;
+@media (max-width: 768px) {
+  .header-carrito {
+    text-align: center;
+    margin-bottom: 50px;
   }
-  .productoX{
+  .productoX {
     display: flex;
     flex-wrap: wrap;
-    font-size: .7rem;
-    margin-bottom:30px;
+    font-size: 0.7rem;
+    margin-bottom: 30px;
     border-bottom: 1px solid black;
     padding-bottom: 20px;
-    }
-  div.productoX img{
+  }
+  /* div.productoX img {
     width: 25vw;
     align-items: flex-end;
+  } */
+  .productoX a {
+    width: 25%;
   }
-  .info-album{
+  .info-album {
     width: 10%;
     margin: 5px;
     align-items: center;
     text-align: left;
   }
-  div.cantidad i{
+  div.cantidad i {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
   }
-  .cantidad{
+  .cantidad {
     width: 15%;
-     
   }
-  .subtotal{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: right;
-  padding-right: 10vw;
-  font-size: 1rem;
+  .subtotal {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    padding-right: 10vw;
+    font-size: 1rem;
   }
 
-  div.subtotal p{
-    font-size: .75rem;
+  div.subtotal p {
+    font-size: 0.75rem;
     text-align: right;
   }
 
-  .botones{
-  display: block;
-  text-align: center;
-  margin: 20px;
-  font-size: .75rem;
-  line-height: 3rem;
+  .botones {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 0.75rem;
+    line-height: 3rem;
   }
 }
-
-
-

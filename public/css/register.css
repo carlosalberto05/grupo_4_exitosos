@@ -35,8 +35,18 @@ body {
 }
 
 .politica {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+}
+
+.check-polit {
+  margin-left: 5%;
+  width: 5%;
+}
+
+.polit-label {
+  margin-left: 3%;
+  font-size: small;
 }
 
 .form-btn {
@@ -51,6 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 .btn-form {
