@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Oleandra/grupo_4_exitosos#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
