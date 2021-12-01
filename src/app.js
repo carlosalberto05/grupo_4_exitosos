@@ -1,24 +1,17 @@
 const express = require("express");
-const path = require("path");
 const app = express();
+const path = require("path");
+const port = process.env.PORT || 3000;
+const mainRoutes = require("./routes/mainRoutes");
+const userRoutes = require("./routes/userRoutes");
 
-
-/* Template Engine*/
-app.set('view engine', 'ejs');
-
-/*Módulo de rutas*/
-const mainRouter = require('./routes/main');
+app.set("view engine", "ejs");
 
 app.use(express.static(path.resolve(__dirname, "../public")));
 
+app.use("/", mainRoutes);
+app.use("/users", userRoutes);
 
-app.use("/", mainRouter);
-app.use('/login', mainRouter.login);
-app.use('/register', mainRouter.register);
-app.use('/cart', mainRouter.cart);
-app.use('/productDetail', mainRouter.productDetail);
-
-
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Servidor corriendo en el puerto 3000");
 });
