@@ -11,13 +11,14 @@
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header>
       <div class="main_header">
@@ -39,18 +40,18 @@
           </div>
         </div>
         <div class="header_icons">
-          <a href="/login" class="user-icon">
+          <a href="/users/login" class="user-icon">
             <i class="fas fa-user"></i>
           </a>
           <div class="butt-regis_login">
             <button class="btn_registro">
-              <a href="/register">Registro</a>
+              <a href="/users/register">Registro</a>
             </button>
             <button class="btn_registro">
-              <a href="/login">Login</a>
+              <a href="/users/login">Login</a>
             </button>
           </div>
-          <a href="/cart" class="car-icon">
+          <a href="/products/cart" class="car-icon">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -74,68 +75,38 @@
     </header>
 
     <!-- Formulario -->
-    <h2 class="register-title">Crea tu cuenta</h2>
+
+    <h2 class="register-title">Ingresa a tu cuenta</h2>
 
     <form action="/" method="get" class="create-form form-holder">
       <div class="control-form">
-        <!-- <label>Nombre y apellido</label> -->
         <input
           required
           type="text"
           name="usuario"
-          class="control"
-          placeholder="Ingresa tu nombre y apellido"
-        />
-      </div>
-
-      <div class="control-form">
-        <!-- <label>Correo</label> -->
-        <input
-          required
-          type="email"
-          name="correo"
-          placeholder="Ingresa tu correo"
+          placeholder=" Correo o nombre de usuario"
           class="control"
         />
       </div>
 
       <div class="control-form">
-        <!-- <label> Contraseña</label> -->
         <input
           minlength="8"
           type="password"
           name="contraseña"
-          placeholder="Ingresa tu contraseña"
+          placeholder="Contraseña"
           class="control"
         />
       </div>
-
-      <div class="control-form">
-        <!-- <label> Confirmar contraseña</label> -->
-        <input
-          minlength="8"
-          type="password"
-          name="confirmar-contraseña"
-          placeholder="Confirma tu contraseña"
-          class="control"
-        />
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Confirmar</button>
       </div>
-
-      <div class="politica">
-        <input
-          class="check-polit"
-          type="checkbox"
-          name="intereses"
-          id="politica"
-          value=""
-        />
-        <label class="polit-label" for="politica" class="interes_opcion">
-          Acepto la política de privacidad
-        </label>
+      <div class="btn-form">
+        <p><a href="#">Olvidaste tu contrasena?</a></p>
       </div>
 
       <div class="btn-form">
-        <button type="submit" class="form-btn">Confirmar</button>
+        <button type="submit" class="form-btn register">Registrate</button>
       </div>
     </form>
     <footer>
