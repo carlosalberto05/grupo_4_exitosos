@@ -4,25 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/productCart.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <header>
       <div class="main_header">
@@ -44,18 +38,18 @@
           </div>
         </div>
         <div class="header_icons">
-          <a href="/login" class="user-icon">
+          <a href="/users/login" class="user-icon">
             <i class="fas fa-user"></i>
           </a>
           <div class="butt-regis_login">
             <button class="btn_registro">
-              <a href="/register">Registro</a>
+              <a href="/users/register">Registro</a>
             </button>
             <button class="btn_registro">
-              <a href="/login">Login</a>
+              <a href="/users/login">Login</a>
             </button>
           </div>
-          <a href="/cart" class="car-icon">
+          <a href="/products/cart" class="car-icon">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -78,59 +72,109 @@
       </nav>
     </header>
     <main>
-      <div class="header-carrito">
-        <h2>Tu carrito</h2>
-      </div>
-      <div class="productoX">
-        <a href="/productDetail">
-          <img
-            class="img-car"
-            src="images\beatles.jpeg"
-            alt="Abbey Road-The Beatles"
-          />
+      <section class="carrousel">
+        <a href="/products/detail" class="grande">
+          <img class="img" src="/images/vinilo_baner1.jpg" />
+          <img class="img" src="/images/vinilo_baner2.jpg" />
         </a>
+        <ul class="puntos">
+          <li class="punto"></li>
+          <li class="punto"></li>
+        </ul>
+      </section>
+      <section class="section-top">
+        <h2 class="section-top_title">Lo más top</h2>
 
-        <div class="info-album">
-          <p>Abbey Road</p>
-          <p><strong>The Beatles</strong></p>
-        </div>
-        <div class="cantidad">
-          <i class="fas fa-minus-circle"></i>
-          <p>1</p>
-          <i class="fas fa-plus"></i>
-        </div>
-        <p>$550 mxn</p>
-        <i class="far fa-trash-alt"></i>
-      </div>
-      <div class="productoX">
-        <a href="/productDetail">
-          <img
-            class="img-car"
-            src="images\crystalcastles.jpg"
-            alt="(III)-Crystal Castles"
-          />
-        </a>
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/beatles.jpeg" />
+          </a>
+          <p>The Beatles</p>
+        </article>
 
-        <div class="info-album">
-          <p>(III)</p>
-          <p><strong>Crystal Castles</strong></p>
-        </div>
-        <div class="cantidad">
-          <i class="fas fa-minus-circle"></i>
-          <p>1</p>
-          <i class="fas fa-plus"></i>
-        </div>
-        <p>$550 mxn</p>
-        <i class="far fa-trash-alt"></i>
-      </div>
-      <div class="subtotal">
-        <h5>Subtotal</h5>
-        <p>$1100 mxn</p>
-      </div>
-      <div class="botones">
-        <button type="button">Seguir comprando</button>
-        <button class="comprar" type="submit">Finalizar pedido</button>
-      </div>
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
+          </a>
+          <p>Dream Theater</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/genesis.jpeg" />
+          </a>
+          <p>Genesis</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
+          </a>
+          <p>Pink Floyd</p>
+        </article>
+      </section>
+      <section class="section-top">
+        <h2 class="section-top_title">Ediciones populares</h2>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/beatles.jpeg" />
+          </a>
+          <p>The Beatles</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
+          </a>
+          <p>Dream Theater</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/genesis.jpeg" />
+          </a>
+          <p>Genesis</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
+          </a>
+          <p>Pink Floyd</p>
+        </article>
+      </section>
+      <section class="section-top">
+        <h2 class="section-top_title">Ediciones más vendidas del mes</h2>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/beatles.jpeg" />
+          </a>
+          <p>The Beatles</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/dreamtheater.jpeg" />
+          </a>
+          <p>Dream Theater</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/genesis.jpeg" />
+          </a>
+          <p>Genesis</p>
+        </article>
+
+        <article class="top-article-disk">
+          <a href="/products/detail">
+            <img class="top-disk-img" src="/images/pinkfloyd.jpeg" />
+          </a>
+          <p>Pink Floyd</p>
+        </article>
+      </section>
     </main>
     <footer>
       <div class="row footer-container">
