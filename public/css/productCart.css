@@ -1,143 +1,224 @@
 * {
-  margin: ​0​px​;
-  padding: ​0​px​;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-/* estilos carrito del main */
-main {
-  margin-left: 5vw;
-  margin-top: 4rem;
-  margin-right: 50px;
-}
-.header-carrito {
-  margin-bottom: 50px;
-  font-size: 1.5rem;
-}
-.productoX {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-
-  border-bottom: 1px solid black;
-  padding-bottom: 20px;
-  justify-content: space-between;
-}
-
-/* div.productoX img {
-  width: 10%;
-} */
-
-.productoX a {
-  width: 10%;
-}
-
-.img-car {
-  width: 100%;
-}
-
-.info-album {
-  width: 25%;
-  align-items: center;
-  text-align: left;
-}
-.cantidad {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-div.cantidad i {
-  padding: 5px;
-  justify-content: center;
-  display: inline-block;
-}
-
-.subtotal {
-  padding-right: 15vw;
-  font-size: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  text-align: right;
-  align-items: center;
-}
-
-div.subtotal p {
-  font-size: 1rem;
-  margin-left: 5vw;
-}
-
-.botones {
-  display: flex;
-  padding-right: 15vw;
-  justify-content: flex-end;
-}
-div.botones button {
-  margin-left: 50px;
-  background-color: black;
-  color: white;
-  border-radius: 30px;
-  box-sizing: border-box;
-  padding: 5px;
-}
-
-/* media query de carrito movil*/
-@media (max-width: 768px) {
-  .header-carrito {
-    text-align: center;
-    margin-bottom: 50px;
+    margin: ​0​px​;
+    padding: ​0​px​;
+    box-sizing: border-box;
   }
-  .productoX {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.7rem;
-    margin-bottom: 30px;
-    border-bottom: 1px solid black;
-    padding-bottom: 20px;
+
+  body {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10vh;
   }
-  /* div.productoX img {
-    width: 25vw;
-    align-items: flex-end;
-  } */
+
+  main{
+      margin-left: 5vw;
+      margin-top: 4rem;
+      margin-right: 5vw;
+      margin-bottom: 4rem;
+    }
+  .header-carrito{
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+  }
+
+  .productoX{
+      display:flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      border-bottom: 1px solid #3C119E;
+      padding-bottom: 3vh;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  
+  
   .productoX a {
-    width: 25%;
+    width: 20%;
   }
-  .info-album {
-    width: 10%;
-    margin: 5px;
-    align-items: center;
+
+  .img-car{
+      width: 100%;
+  }
+
+  .info-album{
+    margin-left: 2vw;
+    width: 20%;
     text-align: left;
-  }
-  div.cantidad i {
-    display: flex;
-    flex-wrap: nowrap;
+    font-size: 16px;
+    justify-content: center;
     align-items: flex-end;
+    font-weight: 700;
   }
-  .cantidad {
-    width: 15%;
+  .artist{
+      font-weight: 500;
+      font-style: italic;
   }
-  .subtotal {
+
+  .cantidad{
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1rem;
+      align-items: baseline;
+  }
+
+  .cantidad p{
+      font-size: 1.1rem;
+      font-weight: 600;
+  }
+
+  .fa-minus-circle, .fa-plus{
+      color: #F06355;
+      align-items: baseline;
+      margin: 15px;
+  }
+
+  .precio-album{
+      font-weight: 700;
+      font-size: 1rem;
+      align-items: baseline;
+  }
+
+  .borrar{
+      width: 100%;
+      text-decoration: underline;
+      align-items: center;
+  }
+
+  .borrar a{
+      color: black;
+  }
+
+  .subtotal{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+  }
+
+  .subtotal h5{
+      font-size: 1.5rem;
+      font-style: italic;
+  }
+
+  #x-pagar{
+      font-size: 1.2rem;
+      font-weight: 800;
+  }
+  
+  .form-btn {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
-    text-align: right;
-    padding-right: 10vw;
-    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
   }
 
-  div.subtotal p {
-    font-size: 0.75rem;
-    text-align: right;
+  .form-btn a{
+      color: white;
+      text-decoration: none;
   }
 
-  .botones {
-    display: block;
-    text-align: center;
-    margin: 20px;
-    font-size: 0.75rem;
-    line-height: 3rem;
+  .form-btn-finalizar{
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #88DB9A;
+    border: 1px solid #DFECE8;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
-}
+  
+  .btn-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  /* Media query */
+  @media(min-width: 768px){
+
+    .precio-album{
+        font-weight: 700;
+        font-size: 1.5rem;
+        align-items: baseline;
+    }
+
+    #x-pagar{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .cantidad p{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+  
+    .fa-minus-circle, .fa-plus{
+        color: #F06355;
+        align-items: baseline;
+        margin: 25px;
+    }
+
+
+    .productoX div.info-album{
+        font-size: 24px;
+    }
+      .info-album{
+          margin-left: 0;
+          font-weight: 600;
+          font-size: 50px;
+      }
+
+      .artist{
+          font-style: italic;
+      }
+      
+      .borrar{
+          font-weight: 600;
+      }
+
+      .borrar a:hover{
+          color: #F06355;
+      }
+
+      .form-btn-finalizar:hover{
+          background-color: #88DB53;
+
+      }
+
+      .form-btn:hover{
+          background-color: lightgray;
+          color: black;
+      }
+
+      .form-btn a{
+          color: white;
+          text-decoration: none;
+      }
+
+      .btn-form {
+        display: flex;
+        padding: 0px 20vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+      }
+  }
+
+  
