@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -19,180 +20,95 @@
     ></script>
   </head>
   <body>
-    <header>
-      <div class="main_header">
-        <div class="header_menu">
-          <button class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-          </button>
-          <a class="search_movil" href="#">
-            <i class="fas fa-search"></i>
-          </a>
-        </div>
-        <div class="header_logo">
-          <a href="/" class="logo">
-            <img class="logo_img" src="/images/mellowdyne.svg" alt="" />
-          </a>
 
-          <div class="search">
-            <input type="text" placeholder="Buscar" />
-          </div>
-        </div>
-        <div class="header_icons">
-          <a href="/users/login" class="user-icon">
-            <i class="fas fa-user"></i>
-          </a>
-          <div class="butt-regis_login">
-            <button class="btn_registro">
-              <a href="/users/register">Registro</a>
-            </button>
-            <button class="btn_registro">
-              <a href="/users/login">Login</a>
-            </button>
-          </div>
-          <a href="/products/cart" class="car-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </div>
-      </div>
-      <nav class="main-navbar_movil menu_movil">
-        <ul>
-          <li><a href="#">Lo nuevo</a></li>
-          <li><a href="#">Lo más vendido</a></li>
-          <li><a href="#">Género</a></li>
-          <li><a href="#">Estilos</a></li>
-        </ul>
-      </nav>
-      <nav class="main-navbar_desktab">
-        <ul>
-          <li><a href="#">Lo nuevo</a></li>
-          <li><a href="#">Lo más vendido</a></li>
-          <li><a href="#">Género</a></li>
-          <li><a href="#">Estilos</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include('../partials/navbar')%>
     <main>
-      <h2>Creación y edición de productos</h2>
-      <form action="/" method="GET" class="create-form">
+      <h2 class="create-title">Vende tus viniles aqui</h2>
+      <form action="/" method="GET" class="create-form form-holder">
         <div class="control-form">
-          <label for="nameProd">Nombre del producto</label>
-          <input type="text" name="name_product" id="nameProd" />
+          
+          <input type="text" name="name_product" id="nameProd" placeholder="Nombre del album" />
         </div>
         <div class="control-form">
-          <label for="desPro">Descripción del producto</label>
-          <textarea
+          <input
+          type="text"
             name="descrip_product"
             id="desPro"
-            cols="30"
+            cols="10"
             rows="10"
-          ></textarea>
-        </div>
-        <div class="control-form">
-          <label for="img-product"
-            >Seleccionar una imagen para el producto</label
-          >
-          <input
-            type="file"
-            name="avatar"
-            accept=".jpg"
-            id="img-product"
-            class="control"
+            placeholder="Lista de tracks"
           />
         </div>
         <div class="control-form">
-          <p>Categoría</p>
-          <div>
-            <label for="rock">Rock</label>
-            <input type="checkbox" name="categoria" id="rock" value="Rock" />
-          </div>
-          <div>
-            <label for="pop">Pop</label>
-            <input type="checkbox" name="categoria" id="pop" value="Pop" />
-          </div>
-          <div>
-            <label for="metal">Metal</label>
-            <input type="checkbox" name="categoria" id="metal" value="Metal" />
-          </div>
-          <div>
-            <label for="reggae">Reggae</label>
-            <input
-              type="checkbox"
-              name="categoria"
-              id="reggae"
-              value="Reggae"
-            />
-          </div>
-          <div>
-            <label for="blues">Blues</label>
-            <input type="checkbox" name="categoria" id="blues" value="Blues" />
-          </div>
-          <div>
-            <label for="jazz">Jazz</label>
-            <input type="checkbox" name="categoria" id="jazz" value="Jazz" />
-          </div>
-          <div>
-            <label for="otros">Otros</label>
-            <input type="checkbox" name="categoria" id="otros" value="Otros" />
+          <div id="dropContainer">
+            <div class="drop-info">
+              <p><i class="fas fa-cloud-upload-alt"></i><br> Arrastra y pega</p>
+            </div>
+         </div>
+           <p>o Sube una imagen<input type="file" id="fileInput" /></p>
+        </div>
+<div class="info">
+        <div class="control-form categories">
+          
+          <div class="category-options">
+            <select name="categoria">
+              <option value="categoria">Categoría</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="metal">Metal</option>
+            <option value="reggae">Reggae</option>
+            <option value="blues">Blues</option>
+            <option value="jazz">Jazz</option>
+            <option value="otros">Otros</option>
+            </select>
           </div>
         </div>
-        <div class="control-form">
-          <label for="date-disc">Fecha de lanzamiento del disco</label>
-          <input
-            placeholder=""
-            type="date"
-            name="fecha"
-            class="control"
-            id="date-disc"
-          />
+      
+        <div class="control-form date">
+          <input  placeholder="Fecha de lanzamiento del disco" type="date" name="fecha" class="control" id="date-disc"/>
         </div>
-        <div class="control-form">
-          <label for="price">Precio del disco</label>
-          <input type="number" name="price_disc" id="price" />
-        </div>
-      </form>
-    </main>
-    <footer>
-      <div class="row footer-container">
-        <div class="column footer-company">
-          <img class="footer-logo" src="/images/mellowdyne.svg" alt="" />
 
-          <p>
-            Dirigido a los amantas de la música que buscan una experiencia
-            diferente de consumir música, coleccionistas, jóvenes entusiastas y
-            músicos.
-          </p>
-          <p>
-            Compra online tus discos de vinilo favoritos. Mellowdyne te ofrece
-            diferentes estilos y géneros musicales de artistas nacionales e
-            internacionales.
-          </p>
-        </div>
-        <div class="column footer-help">
-          <h2>Ayuda y soporte</h2>
-          <p>
-            En caso de que el producto tenga defectos de fábrica, tienes derecho
-            a recibir un reembolso total, crédito en la tienda o el cambio de su
-            producto, cuenta con 20 días para solicitar la petición.
-          </p>
-        </div>
-        <div class="column footer-contacts">
-          <h2>Contactos</h2>
-          <p>
-            Av. We Are the Champions 3500<br />
-            Ciudad: Mercury<br />
-            C.P: 4500
-          </p>
-        </div>
-        <div class="column footer-social">
-          <h2>Siguenos</h2>
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-linkedin"></a>
-          <a href="#" class="fa fa-youtube"></a>
+        <div class="control-form price">
+          <input type="number" name="price_disc" id="price"  placeholder="Precio"/>
         </div>
       </div>
-    </footer>
+      <div class="btn-group">
+        <div class="btn-form">
+          <button type="submit" class="form-btn confirm">Confirmar</button>
+      </div>
+    
+      <div class="btn-form">
+          <button type="reset" class="form-btn delete">Borrar</button>
+      </div>
+
+      <div class="btn-form">
+            <button type="submit" class="form-btn edit">Editar</button>
+      </div>
+
+    </div>
+      
+      </form>
+
+    </main>
+    <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script>
+      dropContainer.ondragover = dropContainer.ondragenter = function(evt) {
+  evt.preventDefault();
+};
+
+dropContainer.ondrop = function(evt) {
+  // pretty simple -- but not for IE :(
+  fileInput.files = evt.dataTransfer.files;
+
+  // If you want to use some of the dropped files
+  const dT = new DataTransfer();
+  dT.items.add(evt.dataTransfer.files[0]);
+  dT.items.add(evt.dataTransfer.files[3]);
+  fileInput.files = dT.files;
+
+  evt.preventDefault();
+};
+</script>
   </body>
 </html>

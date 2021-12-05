@@ -5,5 +5,162 @@
 body {
   font-family: "Poppins", sans-serif;
   background: white;
-  color: black;
+  color: #464646;
+}
+
+.form-holder {
+  width: 35%;
+  margin:0 auto;
+  padding: 40px 25px 0px;
+  border-radius: 10px;
+  background-color: #dfece8;
+  margin-bottom: 5%;
+  padding-top: 60px;
+  height: 40%;
+}
+
+.create-title{
+  color:#3c119e;
+  font-size:21px;
+  text-transform: uppercase;
+  margin-top:40px;
+  margin-bottom:40px;
+  margin-left:32%;
+}
+
+
+.control-form input,
+select{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  border: 1px solid #6931eb57;
+}
+
+select,
+.date{
+  font-size:9px;
+  text-align:left;
+}
+
+#fileInput{
+  font-size:12px;
+  border:none;
+}
+
+select option{
+  padding-right:25px;
+}
+
+.control-form ::placeholder {
+  font-size: 12px;
+  text-align: center;
+  color: #464646;
+}
+
+.form-btn {
+  font-size: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #88db9a;
+  border: 1px solid #88db9a;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dropContainer{
+  width:100%;
+  background-color:#fff;
+  padding: 3px 25px;
+  border-radius: 20px;
+  border: 1px solid #6931eb57;
+  height:100px;
+}
+
+.drop-info p,
+.drop-info .fa{
+  text-align:center;
+  font-size:16px;
+  color:#dfece8;
+  padding-top:15px;
+}
+
+.btn-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom:50px;
+}
+
+.btn-form p {
+  font-size: 10px;
+}
+
+.btn-group{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  width:100%; 
+}
+
+.btn-form{
+  justify-content:center;
+  align-items:center;
+  width:33%;
+}
+
+.delete{
+  background-color:#f06355;
+  border: 1px solid #f06355;
+}
+
+.edit{
+  background-color:#6931eb;
+  border: 1px solid #6931eb;
+}
+
+.info{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  width:100%;
+}
+
+.categories,
+.date,
+.price{
+  justify-content:space-between;
+  align-items:center;
+  width:33%;
+  padding-right:10px;
+}
+.date input,
+.price input{
+  height:30px;
+  
+}
+@media only screen and (max-width:  768px) {
+.form-holder {
+width:80%;
+}
+.categories, .date, .price {
+  width:100%;
+}
+.btn-form{
+  width:100%;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+.form-btn{
+  margin-top:0;
+}
+.create-title{
+  margin-left:10%;
+}
 }

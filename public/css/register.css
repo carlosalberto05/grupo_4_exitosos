@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: ​0​px​;
+  padding: ​0​px​;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
 
 .form-holder {
   width: 85%;
+  height:50vh;
   margin: 0 auto;
 }
 
@@ -61,7 +64,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10%;
+  margin-bottom:60px;
 }
 
 .btn-form {
