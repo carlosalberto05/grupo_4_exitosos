@@ -39,8 +39,14 @@ const productsController = {
     };
     discs.push(newDisc);
 
-    fs.writeFileSync(discsFilePath, JSON.parse(discs, null, " "));
-    res.redirec("/");
+    console.log("Este es el newDisc");
+    console.log(newDisc);
+    console.log(req.body);
+
+    console.log(discs);
+    fs.writeFileSync(discsFilePath, JSON.stringify(discs, null, " "));
+
+    res.redirect("/");
   },
 };
 

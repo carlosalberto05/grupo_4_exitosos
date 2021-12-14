@@ -1,182 +1,190 @@
 [
-    {
-        "id": 1,
-        "titulo": "Scenes from a memory",
-        "artista": "Dream Theater",
-        "descripcion": "Metropolis Pt. 2: Scenes From a Memory es el quinto álbum de estudio de la banda de metal progresivo Dream Theater. Fue lanzado en 1999 y en él debuta Jordan Rudess como nuevo teclista de la banda, después de haber grabado Liquid Tension Experiment 1 y 2",
-        "precio": 350,
-        "category": "top",
-        "año": 1999,
-        "img": "Scenes-from-a-memory.jpg",
-        "tracklist": [
-            "Regresion",
-            "Overture 1928",
-            "Strange Deja Vu"
-        ]
-    },
-    {
-        "id": 2,
-        "titulo": "Sueños Líquidos",
-        "artista": "Maná",
-        "descripcion": "Sueños líquidos es el título del quinto álbum de estudio (noveno en general) grabado por la banda de rock en español mexicana Maná.",
-        "precio": 200,
-        "category": "popular",
-        "año": 1995,
-        "img": "Suenos-liquidos.jpg",
-        "tracklist": [
-            "Clavado en un bar",
-            "Hechicera",
-            "Como dueles en los labio"
-        ]
-    },
-    {
-        "id": 3,
-        "titulo": "Abbey Road",
-        "artista": "The Beatles",
-        "descripcion": "Abbey Road” es el undécimo disco estudio que sacó a la venta la banda inglesa de rock The Beatles. Fue lanzado al mercado el 26 de septiembre de 1969 en el Reino Unido, y el 1 de octubre del mismo año en Estados Unidos por el sello discográfico Apple Record.",
-        "precio": 600,
-        "category": "moreSale",
-        "año": 1969,
-        "img": "Abbey-road.jpg",
-        "tracklist": [
-            "Come Together",
-            "Something",
-            "Maxwell's Silver Hammer"
-        ]
-    },
-    {
-        "id": 4,
-        "titulo": "Immortal",
-        "artista": "Michael Jackson",
-        "descripcion": "Immortal” se publicó el 21 de noviembre de 2011, sus grabaciones corresponden a temas originales realizados entre los años 1969 hasta el 2009, por Michael Jackson.",
-        "precio": 700,
-        "category": "top",
-        "año": 2011,
-        "img": "Immortal.jpg",
-        "tracklist": [
-            "Workin' Day And Night",
-            "Childhood",
-            "Dancing Machine"
-        ]
-    },
-    {
-        "id": 5,
-        "titulo": "Master of puppets",
-        "artista": "Metallica",
-        "descripcion": "Master Of Puppets, se publicó en marzo del año 1986, es el tercer disco de estudio de la banda Metallica, se editó bajo el sello discográfico Elektra Records.",
-        "precio": 400,
-        "category": "popular",
-        "año": 1986,
-        "img": "Master-of-puppets.jpg",
-        "tracklist": [
-            "Master of Puppets",
-            "Welcome Home",
-            "Leper Messiah"
-        ]
-    },
-    {
-        "id": 6,
-        "titulo": "Nevermind",
-        "artista": "Nirvana",
-        "descripcion": "Nevermind (en español: No importa) es el segundo álbum de estudio de la banda estadounidense de grunge Nirvana, publicado el 24 de septiembre de 1991, al igual que Badmotorfinger, el segundo álbum de estudio de Soundgarden. Producido por Butch Vig, Nevermind fue el primer lanzamiento de la banda con DGC Records.",
-        "precio": 600,
-        "category": "moreSale",
-        "año": 1991,
-        "img": "Nevermind.jpg",
-        "tracklist": [
-            "Smells Like Teen Spirit",
-            "In Bloom",
-            "Come as You Are"
-        ]
-    },
-    {
-        "id": 7,
-        "titulo": "Revolver",
-        "artista": "The Beatles",
-        "descripcion": "“Revolver” es el séptimo disco de estudio de la agrupación inglesa de rock, The Beatles, el cual fue lanzado el 5 de agosto de 1966 por el sello discográfico Parlophone Record.",
-        "precio": 700,
-        "category": "top",
-        "año": 1966,
-        "img": "Revolver.jpg",
-        "tracklist": [
-            "I'm Only Sleeping",
-            "Good Day Sunshine",
-            " Want To Tell You"
-        ]
-    },
-    {
-        "id": 8,
-        "titulo": "Promesas",
-        "artista": " José José",
-        "descripcion": "Promesas es el título del 21°. álbum de estudio grabado por el intérprete mexicano José José, Fue lanzado al mercado bajo el sello discográfico RCA Ariola a finales de 1985. De nueva cuenta el compositor de todos los temas es el español Rafael Pérez-Botija, además de que él es quien funge como arreglista, director y productor del disco. ",
-        "precio": 200,
-        "category": "popular",
-        "año": 1997,
-        "img": "Promesas.jpg",
-        "tracklist": [
-            "Amantes",
-            "Me Vas a Echar De Menos",
-            "Pruebame"
-        ]
-    },
-    {
-        "id": 9,
-        "titulo": "Back In Black",
-        "artista": "AC/DC",
-        "descripcion": "Back in Black es el séptimo álbum de estudio de la banda australiana de hard rock AC/DC, lanzado en 1980. Fue grabado en Bahamas y, por segunda vez, producido por Robert Mutt Lange, siendo Highway to Hell la primera ocasión.",
-        "precio": 400,
-        "category": "moreSale",
-        "año": 1980,
-        "img": "Back-in-black.jpg",
-        "tracklist": [
-            "Hells Bells",
-            "Back In Black",
-            " Have A Drink On Me"
-        ]
-    },
-    {
-        "id": 10,
-        "titulo": "Train of Thought ",
-        "artista": " Dream Theater",
-        "descripcion": "Train of Thought es el séptimo álbum de duración completa del grupo de metal progresivo Dream Theater. Fue publicado en 2003 y se trata probablemente del álbum más pesado de la banda.",
-        "precio": 900,
-        "category": "top",
-        "año": 2003,
-        "img": "Train_of_Thought.jpg",
-        "tracklist": [
-            "As I Am",
-            "In the Name of God",
-            "In the Name of God"
-        ]
-    },
-    {
-        "id": 11,
-        "titulo": "Six Degrees of Inner Turbulence",
-        "artista": "Dream Theater",
-        "descripcion": "Six Degrees of Inner Turbulence (con frecuencia abreviado SDOIT o 6DOIT) es el sexto álbum de larga duración de la banda de metal progresivo Dream Theater. Es un CD doble lanzado el 29 de enero de 2002 mediante la discográfica Elektra Records.",
-        "precio": 800,
-        "category": "popular",
-        "año": 2002,
-        "img": "Six_Degrees_of_Inner_Turbulence.jpg",
-        "tracklist": [
-            "The Glass Prison",
-            "About to Crash",
-            "Solitary Shell"
-        ]
-    },
-    {
-        "id": 12,
-        "titulo": "Get a Grip",
-        "artista": "Aerosmith",
-        "descripcion": "Get A Grip es el nombre del undécimo álbum de estudio de la banda estadounidense de hard rock Aerosmith. Fue lanzado al mercado el 20 de abril de 1993 por la discográfica Geffen Records.",
-        "precio": 700,
-        "category": "moreSale",
-        "año": 1993,
-        "img": "Get-a-grip.jpg",
-        "tracklist": [
-            "Crazy",
-            "Get A Grip",
-            "Walk On Down"
-        ]
-    }
+ {
+  "id": 1,
+  "titulo": "Scenes from a memory",
+  "artista": "Dream Theater",
+  "descripcion": "Metropolis Pt. 2: Scenes From a Memory es el quinto álbum de estudio de la banda de metal progresivo Dream Theater. Fue lanzado en 1999 y en él debuta Jordan Rudess como nuevo teclista de la banda, después de haber grabado Liquid Tension Experiment 1 y 2",
+  "precio": 350,
+  "category": "top",
+  "año": 1999,
+  "img": "Scenes-from-a-memory.jpg",
+  "tracklist": [
+   "Regresion",
+   "Overture 1928",
+   "Strange Deja Vu"
+  ]
+ },
+ {
+  "id": 2,
+  "titulo": "Sueños Líquidos",
+  "artista": "Maná",
+  "descripcion": "Sueños líquidos es el título del quinto álbum de estudio (noveno en general) grabado por la banda de rock en español mexicana Maná.",
+  "precio": 200,
+  "category": "popular",
+  "año": 1995,
+  "img": "Suenos-liquidos.jpg",
+  "tracklist": [
+   "Clavado en un bar",
+   "Hechicera",
+   "Como dueles en los labio"
+  ]
+ },
+ {
+  "id": 3,
+  "titulo": "Abbey Road",
+  "artista": "The Beatles",
+  "descripcion": "Abbey Road” es el undécimo disco estudio que sacó a la venta la banda inglesa de rock The Beatles. Fue lanzado al mercado el 26 de septiembre de 1969 en el Reino Unido, y el 1 de octubre del mismo año en Estados Unidos por el sello discográfico Apple Record.",
+  "precio": 600,
+  "category": "moreSale",
+  "año": 1969,
+  "img": "Abbey-road.jpg",
+  "tracklist": [
+   "Come Together",
+   "Something",
+   "Maxwell's Silver Hammer"
+  ]
+ },
+ {
+  "id": 4,
+  "titulo": "Immortal",
+  "artista": "Michael Jackson",
+  "descripcion": "Immortal” se publicó el 21 de noviembre de 2011, sus grabaciones corresponden a temas originales realizados entre los años 1969 hasta el 2009, por Michael Jackson.",
+  "precio": 700,
+  "category": "top",
+  "año": 2011,
+  "img": "Immortal.jpg",
+  "tracklist": [
+   "Workin' Day And Night",
+   "Childhood",
+   "Dancing Machine"
+  ]
+ },
+ {
+  "id": 5,
+  "titulo": "Master of puppets",
+  "artista": "Metallica",
+  "descripcion": "Master Of Puppets, se publicó en marzo del año 1986, es el tercer disco de estudio de la banda Metallica, se editó bajo el sello discográfico Elektra Records.",
+  "precio": 400,
+  "category": "popular",
+  "año": 1986,
+  "img": "Master-of-puppets.jpg",
+  "tracklist": [
+   "Master of Puppets",
+   "Welcome Home",
+   "Leper Messiah"
+  ]
+ },
+ {
+  "id": 6,
+  "titulo": "Nevermind",
+  "artista": "Nirvana",
+  "descripcion": "Nevermind (en español: No importa) es el segundo álbum de estudio de la banda estadounidense de grunge Nirvana, publicado el 24 de septiembre de 1991, al igual que Badmotorfinger, el segundo álbum de estudio de Soundgarden. Producido por Butch Vig, Nevermind fue el primer lanzamiento de la banda con DGC Records.",
+  "precio": 600,
+  "category": "moreSale",
+  "año": 1991,
+  "img": "Nevermind.jpg",
+  "tracklist": [
+   "Smells Like Teen Spirit",
+   "In Bloom",
+   "Come as You Are"
+  ]
+ },
+ {
+  "id": 7,
+  "titulo": "Revolver",
+  "artista": "The Beatles",
+  "descripcion": "“Revolver” es el séptimo disco de estudio de la agrupación inglesa de rock, The Beatles, el cual fue lanzado el 5 de agosto de 1966 por el sello discográfico Parlophone Record.",
+  "precio": 700,
+  "category": "top",
+  "año": 1966,
+  "img": "Revolver.jpg",
+  "tracklist": [
+   "I'm Only Sleeping",
+   "Good Day Sunshine",
+   " Want To Tell You"
+  ]
+ },
+ {
+  "id": 8,
+  "titulo": "Promesas",
+  "artista": " José José",
+  "descripcion": "Promesas es el título del 21°. álbum de estudio grabado por el intérprete mexicano José José, Fue lanzado al mercado bajo el sello discográfico RCA Ariola a finales de 1985. De nueva cuenta el compositor de todos los temas es el español Rafael Pérez-Botija, además de que él es quien funge como arreglista, director y productor del disco. ",
+  "precio": 200,
+  "category": "popular",
+  "año": 1997,
+  "img": "Promesas.jpg",
+  "tracklist": [
+   "Amantes",
+   "Me Vas a Echar De Menos",
+   "Pruebame"
+  ]
+ },
+ {
+  "id": 9,
+  "titulo": "Back In Black",
+  "artista": "AC/DC",
+  "descripcion": "Back in Black es el séptimo álbum de estudio de la banda australiana de hard rock AC/DC, lanzado en 1980. Fue grabado en Bahamas y, por segunda vez, producido por Robert Mutt Lange, siendo Highway to Hell la primera ocasión.",
+  "precio": 400,
+  "category": "moreSale",
+  "año": 1980,
+  "img": "Back-in-black.jpg",
+  "tracklist": [
+   "Hells Bells",
+   "Back In Black",
+   " Have A Drink On Me"
+  ]
+ },
+ {
+  "id": 10,
+  "titulo": "Train of Thought ",
+  "artista": " Dream Theater",
+  "descripcion": "Train of Thought es el séptimo álbum de duración completa del grupo de metal progresivo Dream Theater. Fue publicado en 2003 y se trata probablemente del álbum más pesado de la banda.",
+  "precio": 900,
+  "category": "top",
+  "año": 2003,
+  "img": "Train_of_Thought.jpg",
+  "tracklist": [
+   "As I Am",
+   "In the Name of God",
+   "In the Name of God"
+  ]
+ },
+ {
+  "id": 11,
+  "titulo": "Six Degrees of Inner Turbulence",
+  "artista": "Dream Theater",
+  "descripcion": "Six Degrees of Inner Turbulence (con frecuencia abreviado SDOIT o 6DOIT) es el sexto álbum de larga duración de la banda de metal progresivo Dream Theater. Es un CD doble lanzado el 29 de enero de 2002 mediante la discográfica Elektra Records.",
+  "precio": 800,
+  "category": "popular",
+  "año": 2002,
+  "img": "Six_Degrees_of_Inner_Turbulence.jpg",
+  "tracklist": [
+   "The Glass Prison",
+   "About to Crash",
+   "Solitary Shell"
+  ]
+ },
+ {
+  "id": 12,
+  "titulo": "Get a Grip",
+  "artista": "Aerosmith",
+  "descripcion": "Get A Grip es el nombre del undécimo álbum de estudio de la banda estadounidense de hard rock Aerosmith. Fue lanzado al mercado el 20 de abril de 1993 por la discográfica Geffen Records.",
+  "precio": 700,
+  "category": "moreSale",
+  "año": 1993,
+  "img": "Get-a-grip.jpg",
+  "tracklist": [
+   "Crazy",
+   "Get A Grip",
+   "Walk On Down"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Amar es Combatir",
+  "tracks": "mariposa traicionera, bendita tu luz,",
+  "categoria": "rock",
+  "date": "2021-12-16",
+  "price": "500"
+ }
 ]

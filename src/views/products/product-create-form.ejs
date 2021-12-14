@@ -28,7 +28,12 @@
     <!-- /Header -->
     <main>
       <h2 class="create-title">Vende tus viniles aqui</h2>
-      <form action="/products" method="POST" class="create-form form-holder">
+      <form
+        action="/products"
+        method="POST"
+        class="create-form form-holder"
+        enctype="multipart/form-data"
+      >
         <div class="control-form">
           <label for="name" class="form-label">Nombre del álbum</label>
           <input
@@ -59,7 +64,7 @@
             </div>
           </div>
           <label for="portada">Sube una imagen de portada</label>
-          <input type="file" id="fileInput" />
+          <input type="file" id="fileInput" name="cover" />
         </div>
         <div class="info">
           <div class="control-form categories">
