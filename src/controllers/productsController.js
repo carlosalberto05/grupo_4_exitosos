@@ -36,7 +36,11 @@ const productsController = {
     let newDisc = {
       id: discs[discs.length - 1].id + 1,
       ...req.body,
+      img: req.file.filename,
     };
+
+    newDisc.tracklist = newDisc.tracklist.split(",");
+
     discs.push(newDisc);
 
     console.log("Este es el newDisc");

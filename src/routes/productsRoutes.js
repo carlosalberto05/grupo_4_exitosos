@@ -27,6 +27,6 @@ router.get("/cart", productsController.cart);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/create", productsController.create);
-router.post("/", uploadFile.single("cover"), productsController.store);
+router.post("/", uploadFile.single("img"), productsController.store);
 
 module.exports = router;

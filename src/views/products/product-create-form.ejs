@@ -35,20 +35,36 @@
         enctype="multipart/form-data"
       >
         <div class="control-form">
-          <label for="name" class="form-label">Nombre del álbum</label>
+          <label for="title" class="form-label">Nombre del álbum</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="title"
+            name="title"
             placeholder="Ejemplo: Thriller"
           />
         </div>
         <div class="control-form">
-          <label for="tracks" class="form-label">Lista de tracks</label>
+          <label for="artist" class="form-label">Nombre del artista</label>
           <input
             type="text"
-            name="tracks"
-            id="tracks"
+            id="artist"
+            name="artist"
+            placeholder="Metallica"
+          />
+        </div>
+        <div class="control-form">
+          <label for="description" class="form-label"
+            >Descripción del disco</label
+          >
+          <textarea name="description" id="description" rows="10" cols="53">
+          </textarea>
+        </div>
+        <div class="control-form">
+          <label for="tracklist" class="form-label">Lista de tracks</label>
+          <input
+            type="text"
+            name="tracklist"
+            id="tracklist"
             cols="10"
             rows="10"
             placeholder="Coloca cada track separado por una coma. Ejem: Let it be, Dig it  "
@@ -63,14 +79,14 @@
               </p>
             </div>
           </div>
-          <label for="portada">Sube una imagen de portada</label>
-          <input type="file" id="fileInput" name="cover" />
+          <label for="img">Sube una imagen de portada</label>
+          <input type="file" id="img" name="img" />
         </div>
         <div class="info">
           <div class="control-form categories">
             <div class="category-options">
-              <label for="categories">Categorías</label>
-              <select name="categoria">
+              <label for="category">Categorías</label>
+              <select name="category">
                 <option value="categoria">Categoría</option>
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
@@ -84,13 +100,13 @@
           </div>
 
           <div class="control-form date">
-            <label for="date" class="form-label">Lanzamiento</label>
+            <label for="date" class="form-label">Año de lanzamiento</label>
             <input
-              placeholder="Fecha de lanzamiento del disco"
-              type="date"
-              name="date"
+              placeholder="1975"
+              type="number"
+              name="year"
               class="control"
-              id="date"
+              id="year"
             />
           </div>
 
