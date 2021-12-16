@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nuevo productos</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/createAndEditProduct.css" />
+    <script
+      src="https://kit.fontawesome.com/525d227bb1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('../partials/navbar')%>
+    <!-- /Header -->
+    <main>
+      <h2 class="create-title">Vende tus viniles aqui</h2>
+      <form
+        action="/products"
+        method="POST"
+        class="create-form form-holder"
+        enctype="multipart/form-data"
+      >
+        <div class="control-form">
+          <label for="title" class="form-label">Nombre del álbum</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Ejemplo: Thriller"
+          />
+        </div>
+        <div class="control-form">
+          <label for="artist" class="form-label">Nombre del artista</label>
+          <input
+            type="text"
+            id="artist"
+            name="artist"
+            placeholder="Metallica"
+          />
+        </div>
+        <div class="control-form">
+          <label for="description" class="form-label"
+            >Descripción del disco</label
+          >
+          <textarea name="description" id="description" rows="10" cols="53">
+          </textarea>
+        </div>
+        <div class="control-form">
+          <label for="tracklist" class="form-label">Lista de tracks</label>
+          <input
+            type="text"
+            name="tracklist"
+            id="tracklist"
+            cols="10"
+            rows="10"
+            placeholder="Coloca cada track separado por una coma. Ejem: Let it be, Dig it  "
+          />
+        </div>
+        <div class="control-form">
+          <div id="dropContainer">
+            <div class="drop-info">
+              <p>
+                <i class="fas fa-cloud-upload-alt"></i><br />
+                Arrastra y pega
+              </p>
+            </div>
+          </div>
+          <label for="img">Sube una imagen de portada</label>
+          <input type="file" id="img" name="img" />
+        </div>
+        <div class="info">
+          <div class="control-form categories">
+            <div class="category-options">
+              <label for="category">Categorías</label>
+              <select name="category">
+                <option value="categoria">Categoría</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="metal">Metal</option>
+                <option value="reggae">Reggae</option>
+                <option value="blues">Blues</option>
+                <option value="jazz">Jazz</option>
+                <option value="otros">Otros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="control-form date">
+            <label for="date" class="form-label">Año de lanzamiento</label>
+            <input
+              placeholder="1975"
+              type="number"
+              name="year"
+              class="control"
+              id="year"
+            />
+          </div>
+
+          <div class="control-form price">
+            <label for="price" class="form-label">Precio:</label>
+            <input type="number" name="price" id="price" placeholder="$450mx" />
+          </div>
+        </div>
+        <div class="btn-group">
+          <div class="btn-form">
+            <button type="submit" class="form-btn confirm">
+              Guardar Disco
+            </button>
+          </div>
+
+          <!-- <div class="btn-form">
+            <button type="reset" class="form-btn delete">Borrar</button>
+          </div>
+
+          <div class="btn-form">
+            <button type="submit" class="form-btn edit">Editar</button>
+          </div> -->
+        </div>
+      </form>
+    </main>
+    <%- include('../partials/footer')%>
+    <script src="/js/index.js"></script>
+    <script>
+      dropContainer.ondragover = dropContainer.ondragenter = function (evt) {
+        evt.preventDefault();
+      };
+
+      dropContainer.ondrop = function (evt) {
+        // pretty simple -- but not for IE :(
+        fileInput.files = evt.dataTransfer.files;
+
+        // If you want to use some of the dropped files
+        const dT = new DataTransfer();
+        dT.items.add(evt.dataTransfer.files[0]);
+        dT.items.add(evt.dataTransfer.files[3]);
+        fileInput.files = dT.files;
+
+        evt.preventDefault();
+      };
+    </script>
+  </body>
+</html>
