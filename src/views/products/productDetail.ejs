@@ -43,6 +43,16 @@
             <div class="product-price">
               <div class="add-btn">
                 <button type="button">Comprame</button>
+
+                <button class="form-btn edit">
+                  <a href="/products/edit/<%= disc.id %>">Editar</a>
+                </button>
+                <form
+                  action="/products/delete/<%= disc.id %>?_method=DELETE"
+                  method="POST"
+                >
+                  <button type="submit" class="form-btn delete">Borrar</button>
+                </form>
               </div>
               <div class="price">
                 <h3>$<%=disc.price %> <span class="moneda">MXN</span></h3>

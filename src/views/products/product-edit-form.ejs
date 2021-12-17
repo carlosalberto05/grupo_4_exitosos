@@ -27,12 +27,11 @@
     <%- include('../partials/navbar')%>
     <!-- /Header -->
     <main>
-      <h2 class="create-title">Vende tus viniles aqui</h2>
+      <h2 class="create-title">Estas editando <%= discToEdit.title %></h2>
       <form
-        action="/products"
+        action="/products/edit/<%= discToEdit.id %>?_method=PUT"
         method="POST"
         class="create-form form-holder"
-        enctype="multipart/form-data"
       >
         <div class="control-form">
           <label for="title" class="form-label">Nombre del álbum</label>
@@ -40,7 +39,7 @@
             type="text"
             id="title"
             name="title"
-            placeholder="Ejemplo: Thriller"
+            value="<%= discToEdit.title %>"
           />
         </div>
         <div class="control-form">
@@ -49,7 +48,7 @@
             type="text"
             id="artist"
             name="artist"
-            placeholder="Metallica"
+            value="<%= discToEdit.artist %>"
           />
         </div>
         <div class="control-form">
@@ -57,6 +56,7 @@
             >Descripción del disco</label
           >
           <textarea name="description" id="description" rows="10" cols="53">
+          <%= discToEdit.description %>
           </textarea>
         </div>
         <div class="control-form">
@@ -67,10 +67,10 @@
             id="tracklist"
             cols="10"
             rows="10"
-            placeholder="Coloca cada track separado por una coma. Ejem: Let it be, Dig it  "
+            value="<%= discToEdit.tracklist %>"
           />
         </div>
-        <div class="control-form">
+        <!-- <div class="control-form">
           <div id="dropContainer">
             <div class="drop-info">
               <p>
@@ -81,19 +81,22 @@
           </div>
           <label for="img">Sube una imagen de portada</label>
           <input type="file" id="img" name="img" />
-        </div>
+        </div> -->
         <div class="info">
           <div class="control-form categories">
             <div class="category-options">
               <label for="genre">Género musical</label>
               <select name="genre">
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="metal">Metal</option>
-                <option value="reggae">Reggae</option>
-                <option value="blues">Blues</option>
-                <option value="jazz">Jazz</option>
-                <option value="otros">Otros</option>
+                <% let generos = ['Rock', 'Pop', 'Metal', 'Reggae', 'Blues',
+                'Jazz', 'Otros']; %> 
+                <% for(const genero of generos) { %>
+                <option 
+                  value="<%= genero %>"
+                  <%= (genero == discToEdit.genre) ? "selected" : null  %>
+                >
+                  <%= genero  %>
+                </option>
+                <% } %>
               </select>
             </div>
           </div>
@@ -101,7 +104,7 @@
           <div class="control-form date">
             <label for="date" class="form-label">Año de lanzamiento</label>
             <input
-              placeholder="1975"
+              value="<%= discToEdit.year %>"
               type="number"
               name="year"
               class="control"
@@ -111,16 +114,27 @@
 
           <div class="control-form price">
             <label for="price" class="form-label">Precio:</label>
-            <input type="number" name="price" id="price" placeholder="$450mx" />
+            <input
+              type="number"
+              name="price"
+              id="price"
+              value="<%= discToEdit.price %>"
+            />
           </div>
 
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
               <select name="category">
-                <option value="top">Top</option>
-                <option value="popular">Populares</option>
-                <option value="moreSale">Más vendidos</option>
+                <% let categorias = ['top', 'popular', 'moreSale'] %> 
+                <% for(const categoria of categorias) { %>
+                <option 
+                  value="<%= categoria %>"
+                  <%= (categoria == discToEdit.category) ? "selected" : null  %>
+                >
+                  <%= categoria  %>
+                </option>
+                <% } %>
               </select>
             </div>
           </div>
