@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "fullName": "Sherill Britten",
+        "email": "sbritten0@pen.io",
+        "password": "Xpgc31",
+        "avatar": "https://robohash.org/advoluptatemaut.png?size=50x50&set=set1",
+        "politic": true
+    },
+    {
+        "id": 2,
+        "fullName": "Trix Loraine",
+        "email": "tloraine1@weibo.com",
+        "password": "H2f27BmS",
+        "avatar": "https://robohash.org/autemfugitullam.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 3,
+        "fullName": "Nikolai Jedrachowicz",
+        "email": "njedrachowicz2@bing.com",
+        "password": "1SNMNy",
+        "avatar": "https://robohash.org/fugitmodiut.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 4,
+        "fullName": "Jessa Columbell",
+        "email": "jcolumbell3@t.co",
+        "password": "aIhJlD8lSV",
+        "avatar": "https://robohash.org/cumquenonrerum.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 5,
+        "fullName": "Corri Broughton",
+        "email": "cbroughton4@canalblog.com",
+        "password": "WbKbom77SF",
+        "avatar": "https://robohash.org/nostrumadipisciconsequatur.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 6,
+        "fullName": "Flore Stollsteimer",
+        "email": "fstollsteimer5@samsung.com",
+        "password": "CJr3Tl",
+        "avatar": "https://robohash.org/autnatusut.png?size=50x50&set=set1",
+        "politic": true
+    },
+    {
+        "id": 7,
+        "fullName": "Ephraim Hayden",
+        "email": "ehayden6@domainmarket.com",
+        "password": "Is2d4xrb",
+        "avatar": "https://robohash.org/aliquamofficiisperferendis.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 8,
+        "fullName": "Beltran Snailham",
+        "email": "bsnailham7@altervista.org",
+        "password": "8xFhE70StMr8",
+        "avatar": "https://robohash.org/eumutmolestias.png?size=50x50&set=set1",
+        "politic": true
+    },
+    {
+        "id": 9,
+        "fullName": "Griffin Myderscough",
+        "email": "gmyderscough8@drupal.org",
+        "password": "X1roj1XSqN",
+        "avatar": "https://robohash.org/quiutquidem.png?size=50x50&set=set1",
+        "politic": false
+    },
+    {
+        "id": 10,
+        "fullName": "Giulio Vaissiere",
+        "email": "gvaissiere9@virginia.edu",
+        "password": "yPlyWju7dwnt",
+        "avatar": "https://robohash.org/perspiciatisvelitminima.png?size=50x50&set=set1",
+        "politic": false
+    }
+]

@@ -7,6 +7,7 @@ let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
 const productsController = {
   // Root - Show all products
   index: (req, res) => {
+    let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
     res.render("products/products", {
       discs: discs,
     });
@@ -71,9 +72,6 @@ const productsController = {
 
     discToEdit.tracklist = discToEdit.tracklist.split(",");
 
-    console.log("Disco que se va a editar");
-    console.log(discToEdit);
-
     let newDiscs = discs.map((disc) => {
       if (disc.id == discToEdit.id) {
         return (disc = { ...discToEdit });
@@ -81,11 +79,8 @@ const productsController = {
       return disc;
     });
 
-    console.log("Lista de discos incluyendo el editado");
-    console.log(newDiscs);
-
     fs.writeFileSync(discsFilePath, JSON.stringify(newDiscs, null, " "));
-    res.redirect("/");
+    res.redirect("/products");
   },
 
   // Delete - Delete one product from DB
