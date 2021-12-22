@@ -24,66 +24,41 @@
     <!-- Formulario -->
     <h2 class="register-title">Crea tu cuenta</h2>
 
-    <form action="/" method="get" class="create-form form-holder">
+    <form
+      method="POST"
+      action="/users/register"
+      class="create-form form-holder"
+      enctype="multipart/form-data"
+    >
       <div class="control-form">
-        <!-- <label>Nombre y apellido</label> -->
-        <input
-          required
-          type="text"
-          name="usuario"
-          class="control"
-          placeholder="Ingresa tu nombre y apellido"
-        />
+        <label><b>Nombre completo:</b></label>
+        <input required type="text" name="fullName" class="control" />
       </div>
 
       <div class="control-form">
-        <!-- <label>Correo</label> -->
-        <input
-          required
-          type="email"
-          name="correo"
-          placeholder="Ingresa tu correo"
-          class="control"
-        />
+        <label><b>Correo electrónico:</b></label>
+        <input required type="email" name="email" class="control" />
       </div>
 
       <div class="control-form">
-        <!-- <label> Contraseña</label> -->
-        <input
-          minlength="8"
-          type="password"
-          name="contraseña"
-          placeholder="Ingresa tu contraseña"
-          class="control"
-        />
+        <label><b>Contraseña:</b></label>
+        <input minlength="8" type="password" name="password" class="control" />
       </div>
 
       <div class="control-form">
-        <!-- <label> Confirmar contraseña</label> -->
-        <input
-          minlength="8"
-          type="password"
-          name="confirmar-contraseña"
-          placeholder="Confirma tu contraseña"
-          class="control"
-        />
+        <label><b>Imagen de perfil:</b></label>
+        <input type="file" name="avatar" />
       </div>
 
       <div class="politica">
-        <input
-          class="check-polit"
-          type="checkbox"
-          name="intereses"
-          id="politica"
-          value=""
-        />
+        <input class="check-polit" type="checkbox" name="politic" value="" />
         <label class="polit-label" for="politica" class="interes_opcion">
           Acepto la política de privacidad
         </label>
       </div>
 
       <div class="btn-form">
-        <button type="submit" class="form-btn">Confirmar</button>
+        <button type="submit" class="form-btn">Registrarse</button>
       </div>
     </form>
     <%- include('../partials/footer')%>
