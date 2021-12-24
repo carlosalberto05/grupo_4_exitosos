@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
 
 const usersFilePath = path.join(__dirname, "../database/usersDataBase.json");
 let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -10,16 +11,19 @@ const usersController = {
   },
 
   processRegister: (req, res) => {
-    let newUser = {
-      id: users[users.length - 1].id + 1,
-      ...req.body,
-      avatar: req.body.filename,
-    };
+    const resultValidation = validationResult(req);
+    return res.send(resultValidation);
 
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+    // let newUser = {
+    //   id: users[users.length - 1].id + 1,
+    //   ...req.body,
+    //   avatar: req.body.filename,
+    // };
 
-    return res.redirect("login");
+    // users.push(newUser);
+    // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+
+    // return res.redirect("login");
   },
 
   login: (req, res) => {

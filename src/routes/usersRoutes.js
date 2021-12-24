@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require("path");
 const router = express.Router();
-const usersController = require("../controllers/usersController");
+
 const multer = require("multer");
+const { body } = require("express-validator");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -16,6 +17,14 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
+const usersController = require("../controllers/usersController");
+
+const validations = [
+  body("fullName").notEmpty(),
+  body("email").notEmpty(),
+  body("password").notEmpty(),
+];
+
 //Estas son subrutas de la ruta /users que se configura en app
 
 //Formulario de registro
@@ -25,6 +34,7 @@ router.get("/register", usersController.register);
 router.post(
   "/register",
   uploadFile.single("avatar"),
+  validations,
   usersController.processRegister
 );
 
