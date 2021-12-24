@@ -32,22 +32,6 @@
   "img": "Suenos-liquidos.jpg"
  },
  {
-  "id": 3,
-  "title": "Abbey Road",
-  "artist": "The Beatles",
-  "description": "Abbey Road” es el undécimo disco estudio que sacó a la venta la banda inglesa de rock The Beatles. Fue lanzado al mercado el 26 de septiembre de 1969 en el Reino Unido, y el 1 de octubre del mismo year en Estados Unidos por el sello discográfico Apple Record.",
-  "price": 600,
-  "category": "moreSale",
-  "genre": "Rock",
-  "year": 1969,
-  "img": "Abbey-road.jpg",
-  "tracklist": [
-   "Come Together",
-   "Something",
-   "Maxwell's Silver Hammer"
-  ]
- },
- {
   "id": 4,
   "title": "Immortal",
   "artist": "Michael Jackson",
@@ -83,17 +67,17 @@
   "id": 6,
   "title": "Nevermind",
   "artist": "Nirvana",
-  "description": "Nevermind (en espyearl: No importa) es el segundo álbum de estudio de la banda estadounidense de grunge Nirvana, publicado el 24 de septiembre de 1991, al igual que Badmotorfinger, el segundo álbum de estudio de Soundgarden. Producido por Butch Vig, Nevermind fue el primer lanzamiento de la banda con DGC Records.",
-  "price": 600,
-  "category": "moreSale",
-  "genre": "Rock",
-  "year": 1991,
-  "img": "Nevermind.jpg",
+  "description": " Nevermind (en espyearl: No importa) es el segundo álbum de estudio de la banda estadounidense de grunge Nirvana, publicado el 24 de septiembre de 1991, al igual que Badmotorfinger, el segundo álbum de estudio de Soundgarden. Producido por Butch Vig, Nevermind fue el primer lanzamiento de la banda con DGC Records. Hola a todos\r\n          ",
   "tracklist": [
    "Smells Like Teen Spirit",
    "In Bloom",
    "Come as You Are"
-  ]
+  ],
+  "genre": "Rock",
+  "year": "1991",
+  "price": "700",
+  "category": "moreSale",
+  "img": "Nevermind.jpg"
  },
  {
   "id": 7,
@@ -190,22 +174,5 @@
    "Get A Grip",
    "Walk On Down"
   ]
- },
- {
-  "id": 13,
-  "title": "¿Dónde jugarán las niñas?",
-  "artist": "Maná",
-  "description": "                                                  ¿Dónde jugarán los niños? es el nombre del tercer álbum de estudio de la banda de rock mexicana Maná, lanzado al mercado el 27 de octubre de 1992, dos años después de su anterior disco Falta amor. Se publicó simultáneamente en más de 40 países.\r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          ",
-  "tracklist": [
-   "De pies a cabeza",
-   " Oye mi amor",
-   " Cachito",
-   " Como te deseo"
-  ],
-  "genre": "Rock",
-  "year": "1992",
-  "price": "350",
-  "category": "moreSale",
-  "img": "1639762227781_img_.jpg"
  }
 ]
