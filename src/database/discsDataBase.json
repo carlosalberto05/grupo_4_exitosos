@@ -174,5 +174,23 @@
    "Get A Grip",
    "Walk On Down"
   ]
+ },
+ {
+  "id": 13,
+  "title": "¿Donde jugaran los niños?",
+  "artist": "Maná",
+  "description": "¿Dónde jugarán los niños? es el nombre del tercer álbum de estudio de la banda de rock mexicana Maná, lanzado al mercado el 27 de octubre de 1992, dos años después de su anterior disco Falta amor (1990). ",
+  "tracklist": [
+   "Oye mi amor",
+   " Cachito",
+   " Vivir sin aire",
+   " Te lloré un río",
+   " De pies a cabeza"
+  ],
+  "genre": "rock",
+  "year": "1992",
+  "price": "200",
+  "category": "moreSale",
+  "img": "1640623837770_img_.jpg"
  }
 ]

@@ -1,151 +1,150 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 footer {
-    color: #464646;
-    font-family: "Poppins";
-   
+  color: #464646;
+  font-family: "Poppins";
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer h2 {
-    color: #464646;
-    font-size: 16px;
+  color: #464646;
+  font-size: 16px;
 }
 
 .column {
-    justify-content: space-between;
-    align-items: center;
-    float: left;
-    width: 100%;
-    padding: 5px 20px 5px 20px;
-    background-color: #dfece8;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+  background-color: #dfece8;
 }
 
 .footer-company {
-    width: 100%;
-    border-right: 1px solid #dfece8;
-    padding: 0 40px;
+  width: 100%;
+  border-right: 1px solid #dfece8;
+  padding: 0 40px;
 }
 
 .footer-help,
 .footer-contacts,
-.footer-social{
-    padding: 0 40px;
+.footer-social {
+  padding: 0 40px;
 }
-.footer-social{
-    padding-bottom:30px;
+.footer-social {
+  padding-bottom: 30px;
 }
-
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 p {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .footer-logo {
-    display: block;
-    float: left;
-    margin-bottom: 15px;
-    width: 55%;
-    margin-right: 100%;
-    padding-top: 25px;
+  display: block;
+  float: left;
+  margin-bottom: 15px;
+  width: 55%;
+  margin-right: 100%;
+  padding-top: 25px;
 }
 
 .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .column {
+    float: left;
+    width: 23.3%;
+    padding: 20px;
+    background-color: #dfece8;
+  }
+  .footer-company {
+    width: 30%;
+    border-right: 1px solid white;
+  }
+  .footer-company p {
+    padding: 20px;
+  }
+  .column h2 {
+    font-size: 18px;
+  }
+  .column p {
+    font-size: 12px;
+  }
+  .footer-logo {
+    padding-top: 0;
+    width: 50%;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-logo {
+    width: 50%;
+    padding-top: 10px;
+  }
+  .column h2 {
+    font-size: 21px;
+  }
+  .column p {
+    font-size: 13px;
+  }
+  .fa {
     padding: 10px;
     font-size: 20px;
     width: 40px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3b5998;
-    color: white;
-}
-
-.fa-twitter {
-    background: #55acee;
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
-
-@media (min-width: 768px) {
-    .column {
-        float: left;
-        width: 23.3%;
-        padding: 20px;
-        background-color: #dfece8;
-    }
-    .footer-company {
-        width: 30%;
-        border-right: 1px solid white;
-    }
-    .footer-company p {
-        padding: 20px;
-    }
-    .column h2 {
-        font-size: 18px;
-    }
-    .column p {
-        font-size: 12px;
-    }
-    .footer-logo {
-        padding-top: 0;
-        width: 50%;
-    }
-    .fa {
-        padding: 10px;
-        font-size: 15px;
-        width: 35px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .footer-logo {
-        width: 50%;
-        padding-top: 10px;
-    }
-    .column h2 {
-        font-size: 21px;
-    }
-    .column p {
-        font-size: 13px;
-    }
-    .fa {
-        padding: 10px;
-        font-size: 20px;
-        width: 40px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50%;
-    }
+  }
 }

@@ -12,7 +12,7 @@ body {
 
 .form-holder {
   width: 85%;
-  height:50vh;
+  height: 50vh;
   margin: 0 auto;
 }
 
@@ -23,9 +23,12 @@ body {
   margin-left: 30px;
 }
 
+.control-form {
+  margin-bottom: 3%;
+}
+
 .control-form input {
   width: 100%;
-  margin-bottom: 20px;
   padding: 3px 25px;
   border-radius: 20px;
   border: 1px solid #000;
@@ -64,7 +67,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:60px;
+  margin-bottom: 60px;
 }
 
 .btn-form {
@@ -88,6 +91,20 @@ body {
   border: 1px solid #ccc;
   margin-top: 20px;
   margin-bottom: 60px;
+}
+
+.text-danger {
+  color: red;
+}
+
+/* .icon-placeholder {
+} */
+
+.icon-placeholder::placeholder {
+  text-align: right;
+  color: red;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 @media (min-width: 768px) {
