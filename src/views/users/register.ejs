@@ -32,29 +32,73 @@
     >
       <div class="control-form">
         <label><b>Nombre completo:</b></label>
-        <input required type="text" name="fullName" class="control" />
+        <input
+          required
+          type="text"
+          name="fullName"
+          class="control icon-placeholder"
+          placeholder="<%= locals.errors && errors.fullName ? '' : null %>"
+          value="<%= locals.oldData ? oldData.fullName : null %>"
+        />
+
+        <% if (locals.errors && errors.fullName) { %>
+        <div class="text-danger"><%= errors.fullName.msg %></div>
+        <% } %>
       </div>
 
       <div class="control-form">
         <label><b>Correo electrónico:</b></label>
-        <input required type="email" name="email" class="control" />
+        <input
+          required
+          type="text"
+          name="email"
+          class="control icon-placeholder"
+          placeholder="<%= locals.errors && errors.email ? '' : null %>"
+          value="<%= locals.oldData ? oldData.email : null %>"
+        />
+
+        <% if (locals.errors && errors.email) { %>
+        <div class="text-danger"><%= errors.email.msg %></div>
+        <% } %>
       </div>
 
       <div class="control-form">
         <label><b>Contraseña:</b></label>
-        <input minlength="8" type="password" name="password" class="control" />
+        <input
+          required
+          minlength="8"
+          type="password"
+          name="password"
+          class="control icon-placeholder"
+          placeholder="<%= locals.errors && errors.password ? '' : null %>"
+          value="<%= locals.oldData ? oldData.password : null %>"
+        />
+
+        <% if (locals.errors && errors.password) { %>
+        <div class="text-danger"><%= errors.password.msg %></div>
+        <% } %>
       </div>
 
       <div class="control-form">
         <label><b>Imagen de perfil:</b></label>
         <input type="file" name="avatar" />
+
+        <% if (locals.errors && errors.avatar) { %>
+        <div class="text-danger"><%= errors.avatar.msg %></div>
+        <% } %>
       </div>
 
       <div class="politica">
-        <input class="check-polit" type="checkbox" name="politic" value="" />
+        <input class="check-polit" type="checkbox" name="politic" />
         <label class="polit-label" for="politic" class="interes_opcion">
           Acepto la política de privacidad
         </label>
+
+        <% if (locals.errors && errors.politic) { %>
+        <div class="text-danger" style="margin-left: 10px; font-size: 12px">
+          <%= errors.politic.msg %>
+        </div>
+        <% } %>
       </div>
 
       <div class="btn-form">

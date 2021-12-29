@@ -12,18 +12,24 @@ const usersController = {
 
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
-    return res.send(resultValidation);
 
-    // let newUser = {
-    //   id: users[users.length - 1].id + 1,
-    //   ...req.body,
-    //   avatar: req.body.filename,
-    // };
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/register", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
 
-    // users.push(newUser);
-    // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+    let newUser = {
+      id: users[users.length - 1].id + 1,
+      ...req.body,
+      avatar: req.body.filename,
+    };
 
-    // return res.redirect("login");
+    users.push(newUser);
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+
+    return res.redirect("login");
   },
 
   login: (req, res) => {
