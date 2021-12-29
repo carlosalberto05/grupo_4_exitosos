@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
 
 const discsFilePath = path.join(__dirname, "../database/discsDataBase.json");
 let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
@@ -34,6 +35,15 @@ const productsController = {
 
   // Create -  Method to store
   store: (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("products/product-create-form.ejs", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
     let newDisc = {
       id: discs[discs.length - 1].id + 1,
       ...req.body,

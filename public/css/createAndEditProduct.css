@@ -28,19 +28,24 @@ body {
   margin-left: 32%;
 }
 
+.text-danger {
+  color: red;
+  font-size: small;
+  text-align: center;
+}
+
+.control-form {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
 .control-form input,
 select {
   width: 100%;
-  margin-bottom: 20px;
   padding: 5px 25px;
   border-radius: 20px;
   border: 1px solid #6931eb57;
-}
-
-select,
-.date {
-  font-size: 9px;
-  text-align: left;
+  font-size: small;
 }
 
 #fileInput {

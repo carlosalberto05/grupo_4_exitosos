@@ -40,25 +40,46 @@
             type="text"
             id="title"
             name="title"
-            placeholder="Ejemplo: Thriller"
+            value="<%= locals.oldData ? oldData.title : null %>"
           />
+
+          <% if (locals.errors && errors.title) { %>
+          <div class="text-danger"><%= errors.title.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="artist" class="form-label">Nombre del artista</label>
           <input
             type="text"
             id="artist"
             name="artist"
-            placeholder="Metallica"
+            value="<%= locals.oldData ? oldData.artist : null %>"
           />
+
+          <% if (locals.errors && errors.artist) { %>
+          <div class="text-danger"><%= errors.artist.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="description" class="form-label"
             >Descripción del disco</label
           >
-          <textarea name="description" id="description" rows="10" cols="53">
+          <textarea
+            name="description"
+            id="description"
+            rows="10"
+            cols="53"
+            value="<%= locals.oldData ? oldData.description : null %>"
+          >
           </textarea>
+
+          <% if (locals.errors && errors.description) { %>
+          <div class="text-danger"><%= errors.description.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="tracklist" class="form-label">Lista de tracks</label>
           <input
@@ -67,53 +88,97 @@
             id="tracklist"
             cols="10"
             rows="10"
-            placeholder="Coloca cada track separado por una coma. Ejem: Let it be, Dig it  "
+            placeholder="Cada track separado por una coma. Ejem: Let it be, Dig it  "
+            value="<%= locals.oldData ? oldData.tracklist : null %>"
           />
+
+          <% if (locals.errors && errors.tracklist) { %>
+          <div class="text-danger"><%= errors.tracklist.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="img">Sube una imagen de portada</label>
-          <input type="file" id="img" name="img" />
+          <input
+            type="file"
+            id="img"
+            name="img"
+            value="<%= locals.oldData ? oldData.img : null %>"
+          />
+
+          <% if (locals.errors && errors.img) { %>
+          <div class="text-danger"><%= errors.img.msg %></div>
+          <% } %>
         </div>
+
         <div class="info">
           <div class="control-form categories">
             <div class="category-options">
-              <label for="genre">Género musical</label>
+              <label for="genre"><b>Género musical</b></label>
               <select name="genre">
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="metal">Metal</option>
-                <option value="reggae">Reggae</option>
-                <option value="blues">Blues</option>
-                <option value="jazz">Jazz</option>
-                <option value="otros">Otros</option>
+                <option value="">Elige uno</option>
+
+                <% 
+                  let genres = ['Rock', 'Pop', 'Metal', 'Reggae', 'Blues','Jazz', 'Otros']; 
+                %> 
+                
+                <% for( let oneGenre of genres) { %>
+                  <option 
+                    value="<%= oneGenre  %>"
+                    <%= locals.oldData && oneGenre === oldData.genre ? 'selected' : null %>
+                    >
+                    <%= oneGenre %>
+                  </option>
+                <% } %>
               </select>
+
+              <% if (locals.errors && errors.genre) { %>
+              <div class="text-danger"><%= errors.genre.msg %></div>
+              <% } %>
+
             </div>
           </div>
 
           <div class="control-form date">
-            <label for="date" class="form-label">Año de lanzamiento</label>
-            <input
-              placeholder="1975"
-              type="number"
-              name="year"
-              class="control"
-              id="year"
-            />
+            <label for="date" class="form-label">Año</label>
+            <input type="number" name="year" class="control" id="year"  value="<%= locals.oldData ? oldData.year : null %>"/>
+
+            <% if (locals.errors && errors.year) { %>
+            <div class="text-danger"><%= errors.year.msg %></div>
+            <% } %>
           </div>
 
           <div class="control-form price">
-            <label for="price" class="form-label">Precio:</label>
-            <input type="number" name="price" id="price" placeholder="$450mx" />
+            <label for="price" class="form-label">Precio en MX</label>
+            <input type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>"/>
+
+            <% if (locals.errors && errors.price) { %>
+            <div class="text-danger"><%= errors.price.msg %></div>
+            <% } %>
           </div>
 
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
               <select name="category">
-                <option value="top">Top</option>
-                <option value="popular">Populares</option>
-                <option value="moreSale">Más vendidos</option>
+                <option 
+                  value="">Elige una</option>
+
+                <% let categories = ['top', 'popular', 'moreSale'] %> 
+
+                <% for(category of categories ) { %>
+                 <option 
+                 value="<%= category %>"
+                 <%= locals.oldData && category === oldData.category ? 'selected' : null %>
+                  >
+                  <%= category %>
+                </option>
+                <% } %>
               </select>
+
+              <% if (locals.errors && errors.category) { %>
+              <div class="text-danger"><%= errors.category.msg %></div>
+              <% } %>
             </div>
           </div>
         </div>
