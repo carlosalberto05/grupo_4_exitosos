@@ -53,7 +53,22 @@ const usersController = {
     let userToLogin = User.findByField("email", req.body.email);
 
     if (userToLogin) {
-      return res.send(userToLogin);
+      //Comparamos el password que escribio el ususario con el de la base de datos
+      let isOkThePassword = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      //Si es verdadero
+      if (isOkThePassword) {
+        return res.send("Ok, puedes ingresar");
+      }
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Las credenciales son inválidas",
+          },
+        },
+      });
     }
 
     return res.render("users/login", {
