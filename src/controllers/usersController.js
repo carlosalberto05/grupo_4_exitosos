@@ -1,9 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs");
+const { validationResult, body } = require("express-validator");
 
-const usersFilePath = path.join(__dirname, "../database/usersDataBase.json");
-let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const User = require("../models/User");
 
 const usersController = {
   register: (req, res) => {
@@ -20,20 +18,51 @@ const usersController = {
       });
     }
 
-    let newUser = {
-      id: users[users.length - 1].id + 1,
+    //Hacer la consulta para saber si el usuario que se está registrando se encuentra en la db
+    let userInDb = User.findByField("email", req.body.email);
+
+    if (userInDb) {
+      return res.render("users/register", {
+        errors: {
+          email: {
+            msg: "Este email ya está registrado",
+          },
+        },
+        oldData: req.body,
+      });
+    }
+
+    //Crear al usuario
+
+    let userToCreate = {
       ...req.body,
-      avatar: req.body.filename,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: req.file.filename,
     };
 
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+    let userCreated = User.create(userToCreate);
 
     return res.redirect("login");
   },
 
   login: (req, res) => {
     return res.render("users/login");
+  },
+
+  loginProcess: (req, res) => {
+    let userToLogin = User.findByField("email", req.body.email);
+
+    if (userToLogin) {
+      return res.send(userToLogin);
+    }
+
+    return res.render("users/login", {
+      errors: {
+        email: {
+          msg: "Correo no registrado",
+        },
+      },
+    });
   },
 
   profile: (req, res) => {
