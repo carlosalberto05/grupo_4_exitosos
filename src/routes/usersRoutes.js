@@ -25,6 +25,9 @@ router.post(
 //Formulario de login
 router.get("/login", usersController.login);
 
+//Procesar el login
+router.post("/login", usersController.loginProcess);
+
 //Perfil del usuarior
 router.get("/profile/:userId", usersController.profile);
 

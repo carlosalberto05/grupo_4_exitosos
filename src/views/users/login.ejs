@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <script src="https://kit.fontawesome.com/525d227bb1.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/525d227bb1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <%- include('../partials/navbar')%>
 
     <!-- Formulario -->
 
-    <h2 class="register-title">Bienvenido a tu Mellowdyne</h2>
+    <h2 class="register-title">Iniciar sesión</h2>
 
-    <form action="/" method="get" class="create-form form-holder">
-        <div class="control-form">
-            <input required type="text" name="usuario" placeholder=" Correo o nombre de usuario" class="control" />
-        </div>
+    <form action="/users/login" method="POST" class="create-form form-holder">
+      <div class="control-form">
+        <label><b>Correo electrónico:</b></label>
+        <input required type="text" name="email" class="control" />
+        <% if (locals.errors && errors.email) { %>
+        <div class="text-danger"><%= errors.email.msg %></div>
+        <% } %>
+      </div>
 
-        <div class="control-form">
-            <input minlength="8" type="password" name="contraseña" placeholder="Contraseña" class="control" />
-        </div>
-        <div class="btn-form">
-            <button type="submit" class="form-btn">Confirmar</button>
-        </div>
-        <div class="btn-form">
-            <p><a href="#">Olvidaste tu contrasena?</a></p>
-        </div>
-
-        <div class="btn-form">
-            <button type="reset" class="form-btn register">Registrate</button>
-        </div>
+      <div class="control-form">
+        <label><b>Contraseña:</b></label>
+        <input
+          required
+          minlength="8"
+          type="password"
+          name="password"
+          class="control"
+        />
+      </div>
+      <div>
+        <label class="form-check-label">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            name="remember_user"
+          />Recordar mi usuario
+        </label>
+      </div>
+      <div class="btn-form">
+        <button type="submit" class="form-btn">Acceder</button>
+      </div>
     </form>
+
+    <div>
+      <div class="btn-form">
+        <p><a href="#">Olvidaste tu contrasena?</a></p>
+      </div>
+
+      <div class="btn-form">
+        <button type="reset" class="form-btn register">Registrate</button>
+      </div>
+    </div>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
-</body>
-
+  </body>
 </html>
