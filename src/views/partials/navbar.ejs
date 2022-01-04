@@ -18,6 +18,24 @@
       </div>
     </div>
     <div class="header_icons">
+      <% if (locals.isLogged) { %>
+
+      <a href="/users/profile" class="user-icon">
+        <img src="/images/avatars/defaultavatar.png" alt="" />
+      </a>
+
+      <div class="butt-regis_login">
+        <button class="btn_registro">
+          <a class="" href="/users/logout">Cerrar Sesión</a>
+        </button>
+      </div>
+
+      <a href="/products/cart" class="car-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <% } else { %>
+
       <a href="/users/login" class="user-icon">
         <i class="fas fa-user"></i>
       </a>
@@ -32,6 +50,7 @@
       <a href="/products/cart" class="car-icon">
         <i class="fas fa-shopping-cart"></i>
       </a>
+      <% } %>
     </div>
   </div>
   <nav class="main-navbar_movil menu_movil">
