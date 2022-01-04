@@ -60,7 +60,9 @@ const usersController = {
       );
       //Si es verdadero
       if (isOkThePassword) {
-        return res.send("Ok, puedes ingresar");
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        return res.redirect("/users/profile");
       }
       return res.render("users/login", {
         errors: {
