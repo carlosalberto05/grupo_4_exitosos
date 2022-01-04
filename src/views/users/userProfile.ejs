@@ -26,11 +26,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <h2>Hi User</h2>
-          <img src="/images/avatars/defaultavatar.png" />
+          <h2>Hola <%= user.fullName %></h2>
+          <img class="avatar" src="/images/avatars/<%= user.avatar %> " />
           <br />
           <br />
-          <div class="alert alert-success">user@email.com</div>
+          <div class="alert alert-success"><%= user.email %></div>
+
+          <div>
+            <a class="form-btn" href="/users/logout">Cerrar Sesión</a>
+          </div>
         </div>
       </div>
     </div>
