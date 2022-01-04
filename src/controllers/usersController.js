@@ -61,6 +61,7 @@ const usersController = {
       //Si es verdadero
       if (isOkThePassword) {
         delete userToLogin.password;
+        //Le pasamos userToLogin a la sesion, como un elemento de un objeto
         req.session.userLogged = userToLogin;
         return res.redirect("/users/profile");
       }
@@ -83,7 +84,14 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    return res.render("users/userProfile");
+    return res.render("users/userProfile", {
+      user: req.session.userLogged,
+    });
+  },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/");
   },
 };
 

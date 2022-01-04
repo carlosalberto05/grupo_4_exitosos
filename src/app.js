@@ -9,7 +9,11 @@ const port = process.env.PORT || 3000;
 // ************ express() - (don't touch) ************
 const app = express();
 
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
 // ************ Middlewares - (don't touch) ************
+
+//Configuración del middleware de sesión
 app.use(
   session({
     secret: "it's a secret",
@@ -17,6 +21,8 @@ app.use(
     saveUninitialized: false,
   })
 );
+//Configuración del middleware de userlogged
+app.use(userLoggedMiddleware);
 //Configuración para la carpeta public
 app.use(express.static(path.resolve(__dirname, "../public")));
 //Captura la informacion que viene del formulario via post
