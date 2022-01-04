@@ -1,5 +1,6 @@
 // ************ Require's ************
 const express = require("express");
+const session = require("express-session");
 const logger = require("morgan");
 const path = require("path");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
@@ -9,6 +10,13 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // ************ Middlewares - (don't touch) ************
+app.use(
+  session({
+    secret: "it's a secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 //Configuración para la carpeta public
 app.use(express.static(path.resolve(__dirname, "../public")));
 //Captura la informacion que viene del formulario via post
