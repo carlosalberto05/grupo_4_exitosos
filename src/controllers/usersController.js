@@ -63,6 +63,12 @@ const usersController = {
         delete userToLogin.password;
         //Le pasamos userToLogin a la sesion, como un elemento de un objeto
         req.session.userLogged = userToLogin;
+
+        //Esto es para las cookies, si esta activado la casilla le pasamos a cookie el email
+        if (req.body.remember_user) {
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+        }
+
         return res.redirect("/users/profile");
       }
       return res.render("users/login", {
@@ -84,12 +90,14 @@ const usersController = {
   },
 
   profile: (req, res) => {
+    // console.log(req.cookies.userEmail);
     return res.render("users/userProfile", {
       user: req.session.userLogged,
     });
   },
 
   logout: (req, res) => {
+    res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
   },
