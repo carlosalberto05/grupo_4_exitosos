@@ -1,6 +1,7 @@
 // ************ Require's ************
 const express = require("express");
 const session = require("express-session");
+const cookies = require("cookie-parser");
 const logger = require("morgan");
 const path = require("path");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
@@ -21,6 +22,8 @@ app.use(
     saveUninitialized: false,
   })
 );
+//Configuración del middleware de las cookies
+app.use(cookies());
 //Configuración del middleware de userlogged
 app.use(userLoggedMiddleware);
 //Configuración para la carpeta public

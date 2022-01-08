@@ -78,13 +78,5 @@
         "password": "$2a$10$v1HOwbhw0jtk9as2pVTal.7uGnYjlk2.vpC7p4fsYSx8lDqyRqiLW",
         "avatar": "https://robohash.org/perspiciatisvelitminima.png?size=50x50&set=set1",
         "politic": false
-    },
-    {
-        "id": 11,
-        "fullName": "Carlos de Jesús Alberto Lira",
-        "email": "carlos_alberto-lira@outlook.com",
-        "password": "$2a$10$v1HOwbhw0jtk9as2pVTal.7uGnYjlk2.vpC7p4fsYSx8lDqyRqiLW",
-        "politic": "on",
-        "avatar": "1641227258169_img_.jpg"
     }
 ]

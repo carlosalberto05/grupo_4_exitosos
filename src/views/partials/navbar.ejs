@@ -21,10 +21,22 @@
       <% if (locals.isLogged) { %>
 
       <a href="/users/profile" class="user-icon">
-        <img src="/images/avatars/defaultavatar.png" alt="" />
+        <img
+          class="avatar_icon"
+          src="/images/avatars/<%= locals.userLogged.avatar %>"
+          alt=""
+        />
       </a>
 
       <div class="butt-regis_login">
+        <a href="/users/profile" class="user-profile">
+          <img
+            class="avatar_icon"
+            src="/images/avatars/<%= locals.userLogged.avatar %>"
+            alt=""
+          />
+          <span>Hola <%= locals.userLogged.fullName.slice(0,7) %></span>
+        </a>
         <button class="btn_registro">
           <a class="" href="/users/logout">Cerrar Sesión</a>
         </button>
