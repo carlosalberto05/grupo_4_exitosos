@@ -78,5 +78,13 @@
         "password": "$2a$10$v1HOwbhw0jtk9as2pVTal.7uGnYjlk2.vpC7p4fsYSx8lDqyRqiLW",
         "avatar": "https://robohash.org/perspiciatisvelitminima.png?size=50x50&set=set1",
         "politic": false
+    },
+    {
+        "id": 11,
+        "fullName": "Fulanito Perez",
+        "email": "menganito@gmail.com",
+        "password": "$2a$10$imyshQJrRCT/UO0YvWb2yuc09XyET.d8c52ghB34b/yRG5c6TiblS",
+        "politic": "on",
+        "avatar": "1641920207862_img_.png"
     }
 ]
