@@ -192,5 +192,28 @@
   "price": "200",
   "category": "moreSale",
   "img": "1640623837770_img_.jpg"
+ },
+ {
+  "id": 14,
+  "title": "The Resitance",
+  "artist": "Muse",
+  "description": "The Resistance (La Resistencia) es el nombre del quinto álbum de estudio de la banda británica Muse, publicado en Europa el 14 de septiembre de 2009 y en América del Norte el 15 de septiembre de 2009. El álbum fue producido por la banda y mezclado por Mark Stent. Fue grabado en el estudio privado de la banda, en la residencia del vocalista Matt Bellamy en el Lago Como y en Milán, Italia.",
+  "tracklist": [
+   "Uprising",
+   "Resistance",
+   "Undisclosed Desires",
+   "Guiding Lightsia/Collateral Damage",
+   "Guiding Light",
+   "Unnatural Selection",
+   "Mk Ultra",
+   "I Belong To You/Mon Coeur S'ouvre À Ta Voix",
+   "Exogenesis: Symphony Part I (Overture)",
+   ""
+  ],
+  "genre": "Rock",
+  "year": "2009",
+  "price": "379",
+  "category": "top",
+  "img": "1642028433659_img_.jpg"
  }
 ]
