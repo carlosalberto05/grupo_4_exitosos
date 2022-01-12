@@ -1,10 +1,14 @@
-# RETRO SPRINT 4 👥👥
+# RETRO SPRINT 5
+
+Los problemas a los que me enfrento es que no tengo otro punto de vista del proyecto ya que mis compañeros salieron del proyecto y a veces es complicado ser objetivo con la resolución del algún problema.
 
 Enlace Trello:
 https://trello.com/b/B79sPQg0/sprints-grupo-exito
 
 Enlace a Github:
 https://github.com/Oleandra/grupo_4_exitosos
+
+# RETRO SPRINT 4
 
 ## ¿Qué hicimos bien?
 
