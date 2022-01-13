@@ -59,6 +59,12 @@ router.get("/", productsController.index);
 /*** GET ONE PRODUCT ***/
 router.get("/detail/:id", productsController.detail);
 
+/*** TOP PRODUCTS ***/
+router.get("/top", productsController.top);
+
+/*** POPULAR PRODUCTS ***/
+router.get("/popular", productsController.popular);
+
 router.get("/cart", productsController.cart);
 
 /*** CREATE ONE PRODUCT ***/

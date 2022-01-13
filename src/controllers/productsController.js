@@ -14,6 +14,24 @@ const productsController = {
     });
   },
 
+  //Top - Show top discs
+  top: (req, res) => {
+    let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
+    let topDiscs = discs.filter((disc) => disc.category == "top");
+    res.render("products/topProducts", {
+      topDiscs: topDiscs,
+    });
+  },
+
+  //Popular - Show top discs
+  popular: (req, res) => {
+    let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
+    let popularDiscs = discs.filter((disc) => disc.category == "popular");
+    res.render("products/popularProducts", {
+      popularDiscs: popularDiscs,
+    });
+  },
+
   // Detail - Detail from one product
   detail: (req, res) => {
     let id = req.params.id;
