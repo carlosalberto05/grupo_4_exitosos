@@ -178,14 +178,14 @@ body {
 @supports (object-fit: cover) {
   .grande .img {
     height: 40vh;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center center;
   }
 }
 
 .carrousel .puntos {
   width: 100%;
-  background-color: #88db9a;
+  background-color: #6931eb;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
