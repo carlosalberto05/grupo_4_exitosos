@@ -65,6 +65,10 @@ router.get("/top", productsController.top);
 /*** POPULAR PRODUCTS ***/
 router.get("/popular", productsController.popular);
 
+/*** MORE SALE PRODUCTS ***/
+router.get("/more-sale", productsController.moreSale);
+
+/*** CART PRODUCTS ***/
 router.get("/cart", productsController.cart);
 
 /*** CREATE ONE PRODUCT ***/

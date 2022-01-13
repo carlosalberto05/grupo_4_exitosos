@@ -65,21 +65,50 @@
       <% } %>
     </div>
   </div>
+
   <nav class="main-navbar_movil menu_movil">
-    <ul>
-      <li><a href="/products">Colecciones</a></li>
-      <li><a href="#populares">Ediciones populares</a></li>
-      <li><a href="#mas_vendido">Ediciones más vendidas del mes</a></li>
-      <li><a href="/products/create">Vender</a></li>
-    </ul>
-  </nav>
-  <nav class="main-navbar_desktab">
+    <% if (locals.isLogged) { %>
+
     <ul>
       <li><a href="/products">Colecciones</a></li>
       <li><a href="/products/top">Top discos</a></li>
       <li><a href="/products/popular">Ediciones populares</a></li>
-      <li><a href="#mas_vendido">Ediciones más vendidas del mes</a></li>
+      <li><a href="/products/more-sale">Ediciones más vendidas del mes</a></li>
       <li><a href="/products/create">Vender</a></li>
     </ul>
+
+    <% } else { %>
+
+    <ul>
+      <li><a href="/products">Colecciones</a></li>
+      <li><a href="/products/top">Top discos</a></li>
+      <li><a href="/products/popular">Ediciones populares</a></li>
+      <li><a href="/products/more-sale">Ediciones más vendidas del mes</a></li>
+    </ul>
+
+    <% } %>
+  </nav>
+
+  <nav class="main-navbar_desktab">
+    <% if (locals.isLogged) { %>
+
+    <ul>
+      <li><a href="/products">Colecciones</a></li>
+      <li><a href="/products/top">Top discos</a></li>
+      <li><a href="/products/popular">Ediciones populares</a></li>
+      <li><a href="/products/more-sale">Ediciones más vendidas del mes</a></li>
+      <li><a href="/products/create">Vender</a></li>
+    </ul>
+
+    <% } else { %>
+
+    <ul>
+      <li><a href="/products">Colecciones</a></li>
+      <li><a href="/products/top">Top discos</a></li>
+      <li><a href="/products/popular">Ediciones populares</a></li>
+      <li><a href="/products/more-sale">Ediciones más vendidas del mes</a></li>
+    </ul>
+
+    <% } %>
   </nav>
 </header>

@@ -23,12 +23,21 @@ const productsController = {
     });
   },
 
-  //Popular - Show top discs
+  //Popular - Show popular discs
   popular: (req, res) => {
     let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
     let popularDiscs = discs.filter((disc) => disc.category == "popular");
     res.render("products/popularProducts", {
       popularDiscs: popularDiscs,
+    });
+  },
+
+  //More sale - Show top discs
+  moreSale: (req, res) => {
+    let discs = JSON.parse(fs.readFileSync(discsFilePath, "utf-8"));
+    let moreSaleDiscs = discs.filter((disc) => disc.category == "moreSale");
+    res.render("products/moreSaleProducts", {
+      moreSaleDiscs: moreSaleDiscs,
     });
   },
 
