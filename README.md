@@ -4,7 +4,7 @@
 
 # Link a Trello de la organización del trabajo
 
-https://trello.com/b/nojal7pb/sprint-2-grupo-exito
+https://trello.com/b/B79sPQg0/sprints-grupo-exito
 
 # Público objetivo 👥
 

@@ -12,7 +12,7 @@ https://github.com/Oleandra/grupo_4_exitosos
 
 ## ¿Qué hicimos bien?
 
-Nor organizamos con las tareas y se saco adelante el proyecto pese a todo.
+Nos organizamos con las tareas y se saco adelante el proyecto pese a todo.
 
 ## ¿Qué problemas tuvimos?
 
