@@ -86,5 +86,13 @@
         "password": "$2a$10$imyshQJrRCT/UO0YvWb2yuc09XyET.d8c52ghB34b/yRG5c6TiblS",
         "politic": "on",
         "avatar": "1641920207862_img_.png"
+    },
+    {
+        "id": 12,
+        "fullName": "Juan Hernandez",
+        "email": "juanh@gmail.com",
+        "password": "$2a$10$CscOPQssdqmpwmZfimMR2.FFc4tiEpc/CJ6jRW7FJfzvSPN7wJaNG",
+        "politic": "on",
+        "avatar": "1642652539458_img_.jpg"
     }
 ]
