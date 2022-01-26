@@ -1,6 +1,9 @@
 # RETRO SPRINT 5
 
-Los problemas a los que me enfrento es que no tengo otro punto de vista del proyecto ya que mis compañeros salieron del proyecto y a veces es complicado ser objetivo con la resolución del algún problema.
+Me estoy tratando de organizar mejor para cumplir con todas las tareas ya que al trabajar solo tengo el tiempo más reducido para desarrollar cada tarea asignada.
+Tengo que continuar haciendo investigación por cuenta propia para desarrollar algunas habilidades o profundizar más en ciertos temas para poder desarrollar las actividades propuestas.
+Tengo que tratar de perder menos tiempo en las tareas menos significativas y centrarme en las que tienen mayor jerarquía.
+Hasta al momento me ha costado un poco de trabajo desarrollar este proyecto solo, ya que no tengo otros puntos de vista, otras ideas y conocimientos para agilizarlo, sin embargo he aprendido bastante.
 
 Enlace Trello:
 https://trello.com/b/B79sPQg0/sprints-grupo-exito
