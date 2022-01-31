@@ -35,7 +35,7 @@
         <h2 class="section-top_title">Lo más top</h2>
         <% for(const disc of topDiscs) { %>
         <article class="top-article-disk">
-          <a href="/products/detail/<%= disc.id_album %>">
+          <a href="/products/detail/<%= disc.id_albums %>">
             <img class="top-disk-img" src="/images/covers/<%= disc.image %>" />
           </a>
           <p><%= disc.artist.name %></p>
@@ -48,7 +48,7 @@
         <h2 class="section-top_title">Ediciones populares</h2>
         <% for(const disc of popularDiscs) { %>
         <article class="top-article-disk">
-          <a href="/products/detail/<%= disc.id_album %>">
+          <a href="/products/detail/<%= disc.id_albums %>">
             <img class="top-disk-img" src="/images/covers/<%= disc.image %>" />
           </a>
           <p><%= disc.artist.name %></p>
@@ -61,7 +61,7 @@
         <h2 class="section-top_title">Ediciones más vendidas del mes</h2>
         <% for(const disc of moreSaleDiscs) { %>
         <article class="top-article-disk">
-          <a href="/products/detail/<%= disc.id_album %>">
+          <a href="/products/detail/<%= disc.id_albums %>">
             <img class="top-disk-img" src="/images/covers/<%= disc.image %>" />
           </a>
           <p><%= disc.artist.name %></p>

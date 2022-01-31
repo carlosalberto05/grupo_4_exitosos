@@ -54,37 +54,37 @@ const validations = [
 //Estas son subrutas de la ruta /products que se configura en app
 
 /*** GET ALL PRODUCTS ***/
-router.get("/", productsController.index);
+router.get("/", productsController.colection);
 
 /*** GET ONE PRODUCT ***/
 router.get("/detail/:id", productsController.detail);
 
-/*** TOP PRODUCTS ***/
-router.get("/top", productsController.top);
+// /*** TOP PRODUCTS ***/
+// router.get("/top", productsController.top);
 
-/*** POPULAR PRODUCTS ***/
-router.get("/popular", productsController.popular);
+// /*** POPULAR PRODUCTS ***/
+// router.get("/popular", productsController.popular);
 
-/*** MORE SALE PRODUCTS ***/
-router.get("/more-sale", productsController.moreSale);
+// /*** MORE SALE PRODUCTS ***/
+// router.get("/more-sale", productsController.moreSale);
 
-/*** CART PRODUCTS ***/
-router.get("/cart", productsController.cart);
+// /*** CART PRODUCTS ***/
+// router.get("/cart", productsController.cart);
 
-/*** CREATE ONE PRODUCT ***/
-router.get("/create", productsController.create);
-router.post(
-  "/",
-  uploadFile.single("img"),
-  validations,
-  productsController.store
-);
+// /*** CREATE ONE PRODUCT ***/
+// router.get("/create", productsController.create);
+// router.post(
+//   "/",
+//   uploadFile.single("img"),
+//   validations,
+//   productsController.store
+// );
 
-/*** EDIT ONE PRODUCT ***/
-router.get("/edit/:id", productsController.edit);
-router.put("/edit/:id", productsController.update);
+// /*** EDIT ONE PRODUCT ***/
+// router.get("/edit/:id", productsController.edit);
+// router.put("/edit/:id", productsController.update);
 
-/*** DELETE ONE PRODUCT***/
-router.delete("/delete/:id", productsController.destroy);
+// /*** DELETE ONE PRODUCT***/
+// router.delete("/delete/:id", productsController.destroy);
 
 module.exports = router;
