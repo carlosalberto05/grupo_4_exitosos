@@ -136,6 +136,7 @@ const path = require("path");
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { validationResult } = require("express-validator");
 
 const Album = db.Album;
 
@@ -161,6 +162,53 @@ const productsController = {
         album,
       });
     });
+  },
+
+  //Top - Show top discs
+  top: (req, res) => {
+    Album.findAll({
+      include: [{ association: "category" }, { association: "artist" }],
+      where: {
+        id_category: 1,
+      },
+    }).then((albumsTop) => {
+      res.render("products/topProducts", {
+        albumsTop,
+      });
+    });
+  },
+
+  //Popular - Show popular discs
+  popular: (req, res) => {
+    Album.findAll({
+      include: [{ association: "category" }, { association: "artist" }],
+      where: {
+        id_category: 2,
+      },
+    }).then((albumsPopular) => {
+      res.render("products/popularProducts", {
+        albumsPopular,
+      });
+    });
+  },
+
+  //More sale - Show top discs
+  moreSale: (req, res) => {
+    Album.findAll({
+      include: [{ association: "category" }, { association: "artist" }],
+      where: {
+        id_category: 3,
+      },
+    }).then((moreSaleAlbums) => {
+      res.render("products/moreSaleProducts", {
+        moreSaleAlbums,
+      });
+    });
+  },
+
+  //Carro de compras
+  cart: (req, res) => {
+    return res.render("products/productCart");
   },
 };
 
