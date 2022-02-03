@@ -71,14 +71,14 @@ router.get("/more-sale", productsController.moreSale);
 /*** CART PRODUCTS ***/
 router.get("/cart", productsController.cart);
 
-// /*** CREATE ONE PRODUCT ***/
-// router.get("/create", productsController.create);
-// router.post(
-//   "/",
-//   uploadFile.single("img"),
-//   validations,
-//   productsController.store
-// );
+/*** CREATE ONE PRODUCT ***/
+router.get("/create", productsController.create);
+router.post(
+  "/",
+  uploadFile.single("img"),
+  validations,
+  productsController.store
+);
 
 // /*** EDIT ONE PRODUCT ***/
 // router.get("/edit/:id", productsController.edit);
