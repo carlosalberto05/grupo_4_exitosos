@@ -46,7 +46,7 @@ const validations = [
     return true;
   }),
   body("genre").notEmpty().withMessage("Elige un género"),
-  body("year").notEmpty().withMessage("Escribe un año"),
+  body("release_date").notEmpty().withMessage("Escribe un año"),
   body("price").notEmpty().withMessage("Escribe un precio"),
   body("category").notEmpty().withMessage("Elige una categoría"),
 ];

@@ -217,8 +217,13 @@ const productsController = {
   },
 
   // Create - Form to create
-  create: (req, res) => {
-    res.render("products/product-create-form.ejs");
+  create: async (req, res) => {
+    let allGenres = await Genre.findAll();
+    let allCategories = await Category.findAll();
+    res.render("products/product-create-form.ejs", {
+      allGenres,
+      allCategories,
+    });
   },
 
   // Create -  Method to store
@@ -239,24 +244,6 @@ const productsController = {
           name: req.body.artist,
         },
       });
-      //Encontrar el genero
-      let genreToFind = await Genre.findOne({
-        where: {
-          name: req.body.genre,
-        },
-      });
-      //Encontrar la categoria
-      let categoryToFind = await Category.findOne({
-        where: {
-          name: req.body.category,
-        },
-      });
-      //Encontrar al vendedor
-      let sellerToFind = await User.findOne({
-        where: {
-          email: req.session.userLogged,
-        },
-      });
 
       //Si encuentr al artista en la db crear el album
       if (artistToFind) {
@@ -264,24 +251,24 @@ const productsController = {
           title: req.body.title,
           id_artist: artistToFind.id_artists,
           description: req.body.description,
-          id_genre: genreToFind.id_genres,
-          release_date: req.body.year,
+          id_genre: req.body.genre,
+          release_date: req.body.release_date,
           price: req.body.price,
-          id_category: categoryToFind.id_categories,
+          id_category: req.body.id_categories,
           image: req.file.filename,
-          id_seller: sellerToFind.id_users,
+          id_seller: req.session.userLogged.id_users,
         });
 
         //separa cada cancion en un arreglo
         let songs = req.body.tracklist.split(",");
 
         //Recorrer el arregle e ir guardando cada cancion en la db
-        await songs.map((song) => {
+        for (let i = 0; i < songs.length; i++) {
           await Song.create({
-            name: song,
+            name: songs[i],
             id_album: newAlbum.id_albums,
           });
-        });
+        }
       } else {
         // Si no encuentra al artista en la db, crearlo y crear album
         let newArtist = await Artist.create({
@@ -291,31 +278,30 @@ const productsController = {
           title: req.body.title,
           id_artist: newArtist.id_artists,
           description: req.body.description,
-          id_genre: genreToFind.id_genres,
-          release_date: req.body.year,
+          id_genre: req.body.genre,
+          release_date: req.body.release_date,
           price: req.body.price,
-          id_category: categoryToFind.id_categories,
+          id_category: req.body.id_categories,
           image: req.file.filename,
-          id_seller: sellerToFind.id_users,
+          id_seller: req.session.userLogged.id_users,
         });
 
         //separa cada cancion en un arreglo
         let songs = req.body.tracklist.split(",");
 
         //Recorrer el arregle e ir guardando cada cancion en la db
-        await songs.map((song) => {
+        for (let i = 0; i < songs.length; i++) {
           await Song.create({
-            name: song,
+            name: songs[i],
             id_album: newAlbum.id_albums,
           });
-        });
+        }
       }
     } catch (error) {
       console.log(error);
     }
 
-    // res.redirect("/");
-    return res.redirect("/products/detail/" + newDisc.id);
+    return res.redirect("/products");
   },
 };
 

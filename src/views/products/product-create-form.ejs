@@ -116,22 +116,19 @@
             <div class="category-options">
               <label for="genre"><b>Género musical</b></label>
               <select name="genre">
-                <option value="">Elige uno</option>
-
-                <% 
-                  let genres = ['Rock', 'Pop', 'Metal', 'Reggae', 'Blues','Jazz', 'Otros']; 
-                %> 
+                <option value="" disabled selected>Elige uno</option>
                 
-                <% for( let oneGenre of genres) { %>
+                <% allGenres.forEach(genre => { %>
                   <option 
-                    value="<%= oneGenre  %>"
-                    <%= locals.oldData && oneGenre === oldData.genre ? 'selected' : null %>
+                  value="<%= genre.id_genres %>"
+                    <%= locals.oldData && genre === oldData.genre ? 'selected' : null %>
                     >
-                    <%= oneGenre %>
+                    <%= genre.name %>
                   </option>
-                <% } %>
-              </select>
+                <% }) %>       
 
+              </select>
+         
               <% if (locals.errors && errors.genre) { %>
               <div class="text-danger"><%= errors.genre.msg %></div>
               <% } %>
@@ -140,12 +137,8 @@
           </div>
 
           <div class="control-form date">
-            <label for="date" class="form-label">Año</label>
-            <input type="number" name="year" class="control" id="year"  value="<%= locals.oldData ? oldData.year : null %>"/>
-
-            <% if (locals.errors && errors.year) { %>
-            <div class="text-danger"><%= errors.year.msg %></div>
-            <% } %>
+            <label for="release_date" class="form-label">Fecha</label>
+            <input type="date" name="release_date" class="control" id="" required>
           </div>
 
           <div class="control-form price">
@@ -160,20 +153,18 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="category">
+              <select name="id_categories" required>
                 <option 
-                  value="">Elige una</option>
+                  value="" disabled selected >Elige uno</option>
+                  <% allCategories.forEach(category => { %>
+                    <option 
+                    value="<%= category.id_categories %>"
+                    <%= locals.oldData && category === oldData.category ? 'selected' : null %>
+                    >
+                      <%= category.name %>
+                    </option>
+                  <% }) %>
 
-                <% let categories = ['top', 'popular', 'moreSale'] %> 
-
-                <% for(category of categories ) { %>
-                 <option 
-                 value="<%= category %>"
-                 <%= locals.oldData && category === oldData.category ? 'selected' : null %>
-                  >
-                  <%= category %>
-                </option>
-                <% } %>
               </select>
 
               <% if (locals.errors && errors.category) { %>
