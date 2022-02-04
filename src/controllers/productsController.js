@@ -228,16 +228,22 @@ const productsController = {
 
   // Create -  Method to store
   store: async (req, res) => {
-    //validaciones
-    const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render("products/product-create-form.ejs", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
+    // let allGenres = await Genre.findAll();
+    // let allCategories = await Category.findAll();
+    // //validaciones
+    // const resultValidation = validationResult(req);
+    // if (resultValidation.errors.length > 0) {
+    //   return res.render("products/product-create-form.ejs", {
+    //     errors: resultValidation.mapped(),
+    //     oldData: req.body,
+    //     allGenres,
+    //     allCategories,
+    //   });
+    // }
 
     try {
+      console.log("Este es el artista logueado");
+      console.log(req.session.userLogged);
       //Encontrar al artista
       let artistToFind = await Artist.findOne({
         where: {
@@ -245,7 +251,10 @@ const productsController = {
         },
       });
 
-      //Si encuentr al artista en la db crear el album
+      console.log("Muestra si encontro o no al artista");
+      console.log(artistToFind);
+
+      //Si encuentra al artista en la db crear el album
       if (artistToFind) {
         let newAlbum = await Album.create({
           title: req.body.title,
@@ -269,6 +278,7 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
+        console.log("si encontró al artista y creo el album nada mas");
       } else {
         // Si no encuentra al artista en la db, crearlo y crear album
         let newArtist = await Artist.create({
@@ -296,6 +306,7 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
+        console.log("no encontró al artista y creo el album y el artista");
       }
     } catch (error) {
       console.log(error);
