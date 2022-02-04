@@ -98,17 +98,18 @@
         </div>
 
         <div class="control-form">
-          <label for="img">Sube una imagen de portada</label>
+          <label for="image">Sube una imagen de portada</label>
           <input
             type="file"
-            id="img"
-            name="img"
-            value="<%= locals.oldData ? oldData.img : null %>"
+            id="image"
+            name="image"
+            value="<%= locals.oldData ? oldData.image : null %>"
           />
-
-          <% if (locals.errors && errors.img) { %>
-          <div class="text-danger"><%= errors.img.msg %></div>
-          <% } %>
+          
+          <% if (locals.errors && errors.image) { %>
+            <div class="text-danger"><%= errors.image.msg %></div>
+            <% } %>
+         
         </div>
 
         <div class="info">
@@ -118,12 +119,12 @@
               <select name="genre">
                 <option value="" disabled selected>Elige uno</option>
                 
-                <% allGenres.forEach(genre => { %>
+                <% allGenres.forEach(OneGenre => { %>
                   <option 
-                  value="<%= genre.id_genres %>"
-                    <%= locals.oldData && genre === oldData.genre ? 'selected' : null %>
+                  value="<%= OneGenre.id_genres %>"
+                    <%= locals.oldData && OneGenre.id_genres == oldData.genre ? 'selected' : null %>
                     >
-                    <%= genre.name %>
+                    <%= OneGenre.name %>
                   </option>
                 <% }) %>       
 
@@ -156,18 +157,18 @@
               <select name="id_categories" required>
                 <option 
                   value="" disabled selected >Elige uno</option>
-                  <% allCategories.forEach(category => { %>
+                  <% allCategories.forEach(oneCategory => { %>
                     <option 
-                    value="<%= category.id_categories %>"
-                    <%= locals.oldData && category === oldData.category ? 'selected' : null %>
+                    value="<%= oneCategory.id_categories %>"
+                    <%= locals.oldData && oneCategory.id_categories == oldData.id_categories ? 'selected' : null %>
                     >
-                      <%= category.name %>
+                      <%= oneCategory.name %>
                     </option>
                   <% }) %>
 
               </select>
 
-              <% if (locals.errors && errors.category) { %>
+              <% if (locals.errors && errors.id_categories) { %>
               <div class="text-danger"><%= errors.category.msg %></div>
               <% } %>
             </div>

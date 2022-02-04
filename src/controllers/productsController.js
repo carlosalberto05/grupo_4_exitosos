@@ -228,21 +228,23 @@ const productsController = {
 
   // Create -  Method to store
   store: async (req, res) => {
-    // let allGenres = await Genre.findAll();
-    // let allCategories = await Category.findAll();
-    // //validaciones
-    // const resultValidation = validationResult(req);
-    // if (resultValidation.errors.length > 0) {
-    //   return res.render("products/product-create-form.ejs", {
-    //     errors: resultValidation.mapped(),
-    //     oldData: req.body,
-    //     allGenres,
-    //     allCategories,
-    //   });
-    // }
-
     try {
-      console.log("Este es el artista logueado");
+      //validaciones
+      const resultValidation = validationResult(req);
+      console.log(resultValidation.errors.length);
+      if (resultValidation.errors.length > 0) {
+        let allGenres = await Genre.findAll();
+        let allCategories = await Category.findAll();
+        console.log(req.body);
+        return res.render("products/product-create-form.ejs", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          allGenres,
+          allCategories,
+        });
+      }
+
+      console.log("Este es el usuario logueado");
       console.log(req.session.userLogged);
       //Encontrar al artista
       let artistToFind = await Artist.findOne({
@@ -278,7 +280,7 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
-        console.log("si encontró al artista y creo el album nada mas");
+        console.log("sí encontró al artista y solo se creó el álbum");
       } else {
         // Si no encuentra al artista en la db, crearlo y crear album
         let newArtist = await Artist.create({
@@ -306,7 +308,7 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
-        console.log("no encontró al artista y creo el album y el artista");
+        console.log("no encontró al artista y se creo el álbum y el artista");
       }
     } catch (error) {
       console.log(error);
