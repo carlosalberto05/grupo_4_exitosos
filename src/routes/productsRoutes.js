@@ -80,8 +80,8 @@ router.post(
   productsController.store
 );
 
-// /*** EDIT ONE PRODUCT ***/
-// router.get("/edit/:id", productsController.edit);
+/*** EDIT ONE PRODUCT ***/
+router.get("/edit/:id", productsController.edit);
 // router.put("/edit/:id", productsController.update);
 
 // /*** DELETE ONE PRODUCT***/

@@ -45,10 +45,10 @@
                 <button type="button">Comprame</button>
 
                 <button class="form-btn edit">
-                  <a href="/products/edit/<%= album.id %>">Editar</a>
+                  <a href="/products/edit/<%= album.id_albums %>">Editar</a>
                 </button>
                 <form
-                  action="/products/delete/<%= album.id %>?_method=DELETE"
+                  action="/products/delete/<%= album.id_albums %>?_method=DELETE"
                   method="POST"
                 >
                   <button type="submit" class="form-btn delete">Borrar</button>

@@ -231,11 +231,11 @@ const productsController = {
     try {
       //validaciones
       const resultValidation = validationResult(req);
-      console.log(resultValidation.errors.length);
+
       if (resultValidation.errors.length > 0) {
         let allGenres = await Genre.findAll();
         let allCategories = await Category.findAll();
-        console.log(req.body);
+
         return res.render("products/product-create-form.ejs", {
           errors: resultValidation.mapped(),
           oldData: req.body,
@@ -244,17 +244,12 @@ const productsController = {
         });
       }
 
-      console.log("Este es el usuario logueado");
-      console.log(req.session.userLogged);
       //Encontrar al artista
       let artistToFind = await Artist.findOne({
         where: {
           name: req.body.artist,
         },
       });
-
-      console.log("Muestra si encontro o no al artista");
-      console.log(artistToFind);
 
       //Si encuentra al artista en la db crear el album
       if (artistToFind) {
@@ -280,7 +275,6 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
-        console.log("sí encontró al artista y solo se creó el álbum");
       } else {
         // Si no encuentra al artista en la db, crearlo y crear album
         let newArtist = await Artist.create({
@@ -308,7 +302,6 @@ const productsController = {
             id_album: newAlbum.id_albums,
           });
         }
-        console.log("no encontró al artista y se creo el álbum y el artista");
       }
     } catch (error) {
       console.log(error);
@@ -316,6 +309,71 @@ const productsController = {
 
     return res.redirect("/products");
   },
+
+  // Update - Form to edit
+  edit: async (req, res) => {
+    let { id } = req.params;
+
+    let albumToEdit = await Album.findByPk(id, {
+      include: [
+        { association: "category" },
+        { association: "artist" },
+        { association: "genre" },
+        { association: "user" },
+      ],
+    });
+
+    let allGenres = await Genre.findAll();
+    let allCategories = await Category.findAll();
+
+    let albumSongs = await Song.findAll({
+      where: {
+        id_album: id,
+      },
+    });
+
+    let songs = albumSongs.map((song) => {
+      return song.name;
+    });
+
+    //El método join() une todos los elementos de una matriz
+    allAlbumSongs = songs.join();
+    console.log(allAlbumSongs);
+
+    res.render("products/product-edit-form.ejs", {
+      albumToEdit,
+      allGenres,
+      allCategories,
+      allAlbumSongs,
+    });
+  },
+
+  // // Update - Method to update
+  // update: (req, res) => {
+  //   let id = req.params.id;
+  //   let discToEdit = discs.find((disc) => disc.id == id);
+
+  //   console.log("El red.body");
+  //   console.log(req.body);
+
+  //   discToEdit = {
+  //     id: discToEdit.id,
+  //     ...req.body,
+  //     img: discToEdit.img,
+  //   };
+
+  //   discToEdit.tracklist = discToEdit.tracklist.split(",");
+
+  //   let newDiscs = discs.map((disc) => {
+  //     if (disc.id == discToEdit.id) {
+  //       return (disc = { ...discToEdit });
+  //     }
+  //     return disc;
+  //   });
+
+  //   fs.writeFileSync(discsFilePath, JSON.stringify(newDiscs, null, " "));
+  //   res.redirect("/products");
+  // },
 };
 
 module.exports = productsController;

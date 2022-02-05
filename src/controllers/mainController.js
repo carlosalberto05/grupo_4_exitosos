@@ -38,6 +38,7 @@ const mainController = {
       where: {
         id_category: 2,
       },
+      limit: 4,
     });
 
     let moreSaleDiscs = db.Album.findAll({
@@ -45,6 +46,7 @@ const mainController = {
       where: {
         id_category: 3,
       },
+      limit: 4,
     });
 
     Promise.all([topDiscs, popularDiscs, moreSaleDiscs]).then(
