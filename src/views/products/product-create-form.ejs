@@ -98,17 +98,18 @@
         </div>
 
         <div class="control-form">
-          <label for="img">Sube una imagen de portada</label>
+          <label for="image">Sube una imagen de portada</label>
           <input
             type="file"
-            id="img"
-            name="img"
-            value="<%= locals.oldData ? oldData.img : null %>"
+            id="image"
+            name="image"
+            value="<%= locals.oldData ? oldData.image : null %>"
           />
-
-          <% if (locals.errors && errors.img) { %>
-          <div class="text-danger"><%= errors.img.msg %></div>
-          <% } %>
+          
+          <% if (locals.errors && errors.image) { %>
+            <div class="text-danger"><%= errors.image.msg %></div>
+            <% } %>
+         
         </div>
 
         <div class="info">
@@ -116,22 +117,19 @@
             <div class="category-options">
               <label for="genre"><b>Género musical</b></label>
               <select name="genre">
-                <option value="">Elige uno</option>
-
-                <% 
-                  let genres = ['Rock', 'Pop', 'Metal', 'Reggae', 'Blues','Jazz', 'Otros']; 
-                %> 
+                <option value="" disabled selected>Elige uno</option>
                 
-                <% for( let oneGenre of genres) { %>
+                <% allGenres.forEach(OneGenre => { %>
                   <option 
-                    value="<%= oneGenre  %>"
-                    <%= locals.oldData && oneGenre === oldData.genre ? 'selected' : null %>
+                  value="<%= OneGenre.id_genres %>"
+                    <%= locals.oldData && OneGenre.id_genres == oldData.genre ? 'selected' : null %>
                     >
-                    <%= oneGenre %>
+                    <%= OneGenre.name %>
                   </option>
-                <% } %>
-              </select>
+                <% }) %>       
 
+              </select>
+         
               <% if (locals.errors && errors.genre) { %>
               <div class="text-danger"><%= errors.genre.msg %></div>
               <% } %>
@@ -140,12 +138,8 @@
           </div>
 
           <div class="control-form date">
-            <label for="date" class="form-label">Año</label>
-            <input type="number" name="year" class="control" id="year"  value="<%= locals.oldData ? oldData.year : null %>"/>
-
-            <% if (locals.errors && errors.year) { %>
-            <div class="text-danger"><%= errors.year.msg %></div>
-            <% } %>
+            <label for="release_date" class="form-label">Fecha</label>
+            <input type="date" name="release_date" class="control" id="" required>
           </div>
 
           <div class="control-form price">
@@ -160,23 +154,21 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="category">
+              <select name="id_categories" required>
                 <option 
-                  value="">Elige una</option>
+                  value="" disabled selected >Elige uno</option>
+                  <% allCategories.forEach(oneCategory => { %>
+                    <option 
+                    value="<%= oneCategory.id_categories %>"
+                    <%= locals.oldData && oneCategory.id_categories == oldData.id_categories ? 'selected' : null %>
+                    >
+                      <%= oneCategory.name %>
+                    </option>
+                  <% }) %>
 
-                <% let categories = ['top', 'popular', 'moreSale'] %> 
-
-                <% for(category of categories ) { %>
-                 <option 
-                 value="<%= category %>"
-                 <%= locals.oldData && category === oldData.category ? 'selected' : null %>
-                  >
-                  <%= category %>
-                </option>
-                <% } %>
               </select>
 
-              <% if (locals.errors && errors.category) { %>
+              <% if (locals.errors && errors.id_categories) { %>
               <div class="text-danger"><%= errors.category.msg %></div>
               <% } %>
             </div>
@@ -188,36 +180,10 @@
               Guardar Disco
             </button>
           </div>
-
-          <!-- <div class="btn-form">
-            <button type="reset" class="form-btn delete">Borrar</button>
-          </div>
-
-          <div class="btn-form">
-            <button type="submit" class="form-btn edit">Editar</button>
-          </div> -->
         </div>
       </form>
     </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
-    <script>
-      dropContainer.ondragover = dropContainer.ondragenter = function (evt) {
-        evt.preventDefault();
-      };
-
-      dropContainer.ondrop = function (evt) {
-        // pretty simple -- but not for IE :(
-        fileInput.files = evt.dataTransfer.files;
-
-        // If you want to use some of the dropped files
-        const dT = new DataTransfer();
-        dT.items.add(evt.dataTransfer.files[0]);
-        dT.items.add(evt.dataTransfer.files[3]);
-        fileInput.files = dT.files;
-
-        evt.preventDefault();
-      };
-    </script>
   </body>
 </html>

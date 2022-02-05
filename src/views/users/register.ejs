@@ -35,14 +35,14 @@
         <input
           required
           type="text"
-          name="fullName"
+          name="full_name"
           class="control icon-placeholder"
-          placeholder="<%= locals.errors && errors.fullName ? '' : null %>"
-          value="<%= locals.oldData ? oldData.fullName : null %>"
+          placeholder="<%= locals.errors && errors.full_name ? '' : null %>"
+          value="<%= locals.oldData ? oldData.full_name : null %>"
         />
 
-        <% if (locals.errors && errors.fullName) { %>
-        <div class="text-danger"><%= errors.fullName.msg %></div>
+        <% if (locals.errors && errors.full_name) { %>
+        <div class="text-danger"><%= errors.full_name.msg %></div>
         <% } %>
       </div>
 

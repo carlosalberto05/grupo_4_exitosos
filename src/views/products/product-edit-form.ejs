@@ -27,9 +27,9 @@
     <%- include('../partials/navbar')%>
     <!-- /Header -->
     <main>
-      <h2 class="create-title">Estas editando <%= discToEdit.title %></h2>
+      <h2 class="create-title">Estas editando <%= albumToEdit.title %></h2>
       <form
-        action="/products/edit/<%= discToEdit.id %>?_method=PUT"
+        action="/products/edit/<%= albumToEdit.id_albums %>?_method=PUT"
         method="POST"
         class="create-form form-holder"
       >
@@ -39,7 +39,7 @@
             type="text"
             id="title"
             name="title"
-            value="<%= discToEdit.title %>"
+            value="<%= albumToEdit.title %>"
           />
         </div>
         <div class="control-form">
@@ -48,7 +48,7 @@
             type="text"
             id="artist"
             name="artist"
-            value="<%= discToEdit.artist %>"
+            value="<%= albumToEdit.artist.name %>"
           />
         </div>
         <div class="control-form">
@@ -56,7 +56,7 @@
             >Descripción del disco</label
           >
           <textarea name="description" id="description" rows="10" cols="53">
-          <%= discToEdit.description %>
+          <%= albumToEdit.description %>
           </textarea>
         </div>
         <div class="control-form">
@@ -67,48 +67,38 @@
             id="tracklist"
             cols="10"
             rows="10"
-            value="<%= discToEdit.tracklist %>"
+             value = "<%= allAlbumSongs %>"
           />
         </div>
-        <!-- <div class="control-form">
-          <div id="dropContainer">
-            <div class="drop-info">
-              <p>
-                <i class="fas fa-cloud-upload-alt"></i><br />
-                Arrastra y pega
-              </p>
-            </div>
-          </div>
-          <label for="img">Sube una imagen de portada</label>
-          <input type="file" id="img" name="img" />
-        </div> -->
+      
         <div class="info">
           <div class="control-form categories">
             <div class="category-options">
               <label for="genre">Género musical</label>
               <select name="genre">
-                <% let generos = ['Rock', 'Pop', 'Metal', 'Reggae', 'Blues',
-                'Jazz', 'Otros']; %> 
-                <% for(const genero of generos) { %>
-                <option 
-                  value="<%= genero %>"
-                  <%= (genero == discToEdit.genre) ? "selected" : null  %>
-                >
-                  <%= genero  %>
-                </option>
-                <% } %>
+                
+                <% allGenres.forEach(oneGenre => { %>
+                  <option value="<%= oneGenre.id_genres %>"
+                    <% if (albumToEdit.id_genre == oneGenre.id_genres) { %>
+                      <%= 'selected' %>
+                  <% }; %>
+                    >
+                    <%= oneGenre.name %>
+                  </option>
+                <% }) %>       
+
               </select>
             </div>
           </div>
 
           <div class="control-form date">
-            <label for="date" class="form-label">Año de lanzamiento</label>
+            <label for="release_date" class="form-label">Fecha</label>
             <input
-              value="<%= discToEdit.year %>"
-              type="number"
-              name="year"
+              value="<%= albumToEdit.release_date %>"
+              type="date"
+              name="release_date"
               class="control"
-              id="year"
+              id="release_date"
             />
           </div>
 
@@ -118,23 +108,23 @@
               type="number"
               name="price"
               id="price"
-              value="<%= discToEdit.price %>"
+              value="<%= albumToEdit.price %>"
             />
           </div>
 
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="category">
-                <% let categorias = ['top', 'popular', 'moreSale'] %> 
-                <% for(const categoria of categorias) { %>
-                <option 
-                  value="<%= categoria %>"
-                  <%= (categoria == discToEdit.category) ? "selected" : null  %>
-                >
-                  <%= categoria  %>
-                </option>
-                <% } %>
+              <select name="id_categories" required>
+                  <% allCategories.forEach(oneCategory => { %>
+                    <option value="<%= oneCategory.id_categories %>"
+                    <% if (albumToEdit.id_category == oneCategory.id_categories) { %>
+                     <%= 'selected' %>
+                    <% } %>
+                    >
+                      <%= oneCategory.name %>
+                    </option>
+                  <% }) %>
               </select>
             </div>
           </div>
@@ -146,35 +136,12 @@
             </button>
           </div>
 
-          <!-- <div class="btn-form">
-            <button type="reset" class="form-btn delete">Borrar</button>
-          </div>
-
-          <div class="btn-form">
-            <button type="submit" class="form-btn edit">Editar</button>
-          </div> -->
+         
         </div>
       </form>
     </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
-    <script>
-      dropContainer.ondragover = dropContainer.ondragenter = function (evt) {
-        evt.preventDefault();
-      };
-
-      dropContainer.ondrop = function (evt) {
-        // pretty simple -- but not for IE :(
-        fileInput.files = evt.dataTransfer.files;
-
-        // If you want to use some of the dropped files
-        const dT = new DataTransfer();
-        dT.items.add(evt.dataTransfer.files[0]);
-        dT.items.add(evt.dataTransfer.files[3]);
-        fileInput.files = dT.files;
-
-        evt.preventDefault();
-      };
-    </script>
+   
   </body>
 </html>

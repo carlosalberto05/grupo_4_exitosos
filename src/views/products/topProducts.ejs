@@ -31,14 +31,17 @@
     <div class="container products-wrapper">
       <div class="">
         <section class="section-top" id="top">
-          <h2 class="section-top_title">Lo más top en discos</h2>
-          <% for(const disc of topDiscs) { %>
+          <h2 class="section-top_title">Top álbums</h2>
+          <% for(const disc of albumsTop) { %>
           <article class="top-article-disk">
-            <a href="/products/detail/<%= disc.id %>">
-              <img class="top-disk-img" src="/images/covers/<%= disc.img %>" />
+            <a href="/products/detail/<%= disc.id_albums %>">
+              <img
+                class="top-disk-img"
+                src="/images/covers/<%= disc.image %>"
+              />
             </a>
             <p><%= disc.title %></p>
-            <p><%= disc.artist %></p>
+            <p><%= disc.artist.name %></p>
             <p>$<%= disc.price %> MXN</p>
           </article>
           <% } %>

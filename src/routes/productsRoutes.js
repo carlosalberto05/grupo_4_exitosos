@@ -24,10 +24,7 @@ const validations = [
   body("description")
     .notEmpty()
     .withMessage("La descripción del disco es requerida"),
-  body("tracklist")
-    .notEmpty()
-    .withMessage("Los tracks del disco son requeridos"),
-  body("img").custom((value, { req }) => {
+  body("image").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".png"];
 
@@ -45,16 +42,19 @@ const validations = [
 
     return true;
   }),
+  body("tracklist")
+    .notEmpty()
+    .withMessage("Los tracks del disco son requeridos"),
   body("genre").notEmpty().withMessage("Elige un género"),
-  body("year").notEmpty().withMessage("Escribe un año"),
+  body("release_date").notEmpty().withMessage("Escribe un año"),
   body("price").notEmpty().withMessage("Escribe un precio"),
-  body("category").notEmpty().withMessage("Elige una categoría"),
+  body("id_categories").notEmpty().withMessage("Elige una categoría"),
 ];
 
 //Estas son subrutas de la ruta /products que se configura en app
 
 /*** GET ALL PRODUCTS ***/
-router.get("/", productsController.index);
+router.get("/", productsController.colection);
 
 /*** GET ONE PRODUCT ***/
 router.get("/detail/:id", productsController.detail);
@@ -75,7 +75,7 @@ router.get("/cart", productsController.cart);
 router.get("/create", productsController.create);
 router.post(
   "/",
-  uploadFile.single("img"),
+  uploadFile.single("image"),
   validations,
   productsController.store
 );
@@ -84,7 +84,7 @@ router.post(
 router.get("/edit/:id", productsController.edit);
 router.put("/edit/:id", productsController.update);
 
-/*** DELETE ONE PRODUCT***/
-router.delete("/delete/:id", productsController.destroy);
+// /*** DELETE ONE PRODUCT***/
+// router.delete("/delete/:id", productsController.destroy);
 
 module.exports = router;
