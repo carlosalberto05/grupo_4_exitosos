@@ -84,7 +84,7 @@ router.post(
 router.get("/edit/:id", productsController.edit);
 router.put("/edit/:id", productsController.update);
 
-// /*** DELETE ONE PRODUCT***/
-// router.delete("/delete/:id", productsController.destroy);
+/*** DELETE ONE PRODUCT***/
+router.delete("/delete/:id", productsController.destroy);
 
 module.exports = router;
