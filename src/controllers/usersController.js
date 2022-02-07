@@ -223,6 +223,94 @@ const usersController = {
     });
   },
 
+  //Editar unicamente el nombre del usuario
+  editName: async (req, res) => {
+    return res.render("users/user-edit-name", {
+      userToEdit: req.session.userLogged,
+    });
+  },
+
+  updateName: async (req, res) => {
+    let { id } = req.params;
+
+    try {
+      await User.update(
+        {
+          full_name: req.body.full_name,
+        },
+        {
+          where: {
+            id_users: id,
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
+  editEmail: async (req, res) => {
+    return res.render("users/user-edit-email", {
+      userToEdit: req.session.userLogged,
+    });
+  },
+
+  updateEmail: async (req, res) => {
+    let { id } = req.params;
+
+    try {
+      await User.update(
+        {
+          email: req.body.email,
+        },
+        {
+          where: {
+            id_users: id,
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
+  editPassword: async (req, res) => {
+    return res.render("users/user-edit-password", {
+      userToEdit: req.session.userLogged,
+    });
+  },
+
+  updatePassword: async (req, res) => {
+    let { id } = req.params;
+
+    try {
+      await User.update(
+        {
+          password: bcryptjs.hashSync(req.body.password, 10),
+        },
+        {
+          where: {
+            id_users: id,
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
   logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();

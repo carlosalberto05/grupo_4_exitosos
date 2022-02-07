@@ -33,6 +33,28 @@
           <div class="alert alert-success"><%= user.email %></div>
 
           <div>
+            <a
+              class="form-btn"
+              href="/users/profile/editName/<%= user.id_users %>"
+              >Editar nombre</a
+            >
+          </div>
+          <div>
+            <a
+              class="form-btn"
+              href="/users/profile/editEmail/<%= user.id_users %>"
+              >Editar email</a
+            >
+          </div>
+          <div>
+            <a
+              class="form-btn"
+              href="/users/profile/editPassword/<%= user.id_users %>"
+              >Editar password</a
+            >
+          </div>
+
+          <div>
             <a class="form-btn" href="/users/logout">Cerrar Sesión</a>
           </div>
         </div>
