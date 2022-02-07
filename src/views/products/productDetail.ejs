@@ -28,10 +28,10 @@
             <img src="/images/covers/<%= album.image %>" />
           </div>
 
-          <div class="small-images">
+          <!-- <div class="small-images">
             <img class="pic" src="/images/covers/<%= album.image %>" />
             <img class="pic" src="/images/covers/<%= album.image %> " />
-          </div>
+          </div> -->
         </section>
 
         <section class="product-column product-info">
@@ -44,6 +44,7 @@
               <div class="add-btn">
                 <button type="button">Comprame</button>
 
+                <% if (locals.isLogged) { %>
                 <button class="form-btn edit">
                   <a href="/products/edit/<%= album.id_albums %>">Editar</a>
                 </button>
@@ -53,6 +54,7 @@
                 >
                   <button type="submit" class="form-btn delete">Borrar</button>
                 </form>
+                <% } %>
               </div>
               <div class="price">
                 <h3>$<%=album.price %> <span class="moneda">MXN</span></h3>

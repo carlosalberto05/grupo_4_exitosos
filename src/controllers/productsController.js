@@ -476,6 +476,35 @@ const productsController = {
 
     return res.redirect("/products");
   },
+
+  // Delete - Delete one product from DB
+  destroy: async (req, res) => {
+    let songsFromAlbum = await Song.findAll({
+      where: {
+        id_album: req.params.id,
+      },
+    });
+
+    let allIdsFromSongs = songsFromAlbum.map((song) => {
+      return song.id_songs;
+    });
+
+    for (let i = 0; i < allIdsFromSongs.length; i++) {
+      await Song.destroy({
+        where: {
+          id_songs: allIdsFromSongs[i],
+        },
+      });
+    }
+
+    await Album.destroy({
+      where: {
+        id_albums: req.params.id,
+      },
+    });
+
+    res.redirect("/products");
+  },
 };
 
 module.exports = productsController;
