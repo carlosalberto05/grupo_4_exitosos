@@ -61,6 +61,7 @@ body {
   width: 40%;
   text-align: center;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .search {
@@ -278,13 +279,31 @@ body {
     width: 65%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .search input {
+    border: 1px solid;
     width: 90%;
-    border: 1px solid gray;
     border-radius: 5px;
     padding: 1.5%;
+    border-right: none;
   }
+
+  .search-form_button {
+    position: relative;
+    right: 6%;
+    width: 5%;
+    background-color: #ffffff;
+
+    border: none;
+    border-left: 1px solid;
+    cursor: pointer;
+    padding: 1.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header_icons {
     width: 40%;
   }

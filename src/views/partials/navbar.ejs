@@ -4,7 +4,7 @@
       <button class="hamburguer-button">
         <i class="fas fa-bars"></i>
       </button>
-      <a class="search_movil" href="#">
+      <a class="search_movil">
         <i class="fas fa-search"></i>
       </a>
     </div>
@@ -13,9 +13,17 @@
         <img class="logo_img" src="/images/mellowdyne.svg" alt="" />
       </a>
 
-      <div class="search">
-        <input type="text" placeholder="Buscar" />
-      </div>
+      <form action="/search" method="GET" class="search">
+        <input
+          type="text"
+          name="keywords"
+          placeholder="Buscar álbums"
+          class="search-form_input"
+        />
+        <button type="submit" class="search-form_button">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
     </div>
     <div class="header_icons">
       <% if (locals.isLogged) { %>

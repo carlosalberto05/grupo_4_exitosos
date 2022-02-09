@@ -188,10 +188,10 @@ const usersController = {
           //Le pasamos userToLogin a la sesion
           req.session.userLogged = userToLogin;
 
-          //Esto es para las cookies,
-          if (req.body.remember_user) {
-            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
-          }
+          // //Esto es para las cookies,
+          // if (req.body.remember_user) {
+          //   res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+          // }
 
           return res.redirect("/users/profile");
         }
