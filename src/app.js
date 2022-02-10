@@ -22,11 +22,11 @@ app.use(
     saveUninitialized: false,
   })
 );
-//Configuración del middleware de las cookies
+// //Configuración del middleware de las cookies
 app.use(cookies());
 //Configuración del middleware de userlogged
 app.use(userLoggedMiddleware);
-//Configuración para la carpeta public
+// Configuración para la carpeta public
 app.use(express.static(path.resolve(__dirname, "../public")));
 //Captura la informacion que viene del formulario via post
 app.use(express.urlencoded({ extended: false }));

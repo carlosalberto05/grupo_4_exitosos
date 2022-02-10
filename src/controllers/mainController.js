@@ -57,6 +57,28 @@ const mainController = {
       }
     );
   },
+
+  search: async (req, res) => {
+    let search = req.query.keywords;
+    console.log(search);
+
+    try {
+      let albumToSearch = await db.Album.findAll({
+        include: [{ association: "category" }, { association: "artist" }],
+        where: {
+          title: { [Op.like]: "%" + search + "%" },
+        },
+      });
+      console.log("Este es el album");
+      console.log(albumToSearch);
+      return res.render("results", {
+        albums: albumToSearch,
+        search,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 module.exports = mainController;

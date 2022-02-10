@@ -25,9 +25,9 @@ CREATE TABLE artists
 	id_users int primary key not null auto_increment,
     full_name varchar(45) not null,
     email varchar(45) not null,
-    password varchar(45) not null,
+    password varchar(200) not null,
     politic tinyint(5),
-    avatar varchar(45),
+    avatar varchar(512),
     admin tinyint(5) 
  );
  
