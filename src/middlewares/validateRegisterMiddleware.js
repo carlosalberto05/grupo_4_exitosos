@@ -13,7 +13,7 @@ module.exports = [
   body("politic").isIn(["on"]).withMessage("Tienes que aceptar las politicas"),
   body("avatar").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".jpg", ".png"];
+    let acceptedExtensions = [".jpg", ".png", ".jpeg"];
 
     if (!file) {
       throw new Error("Tienes que subir una imagen");

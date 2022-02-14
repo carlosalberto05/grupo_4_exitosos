@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: ​0​px​;
-  padding: ​0​px​;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -12,7 +12,6 @@ body {
 
 .form-holder {
   width: 85%;
-  height: 50vh;
   margin: 0 auto;
 }
 
