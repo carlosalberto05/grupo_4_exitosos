@@ -1,110 +1,3 @@
-// const bcryptjs = require("bcryptjs");
-// const { validationResult, body } = require("express-validator");
-
-// const User = require("../models/User");
-
-// const usersController = {
-//   register: (req, res) => {
-//     return res.render("users/register");
-//   },
-
-//   processRegister: (req, res) => {
-//     const resultValidation = validationResult(req);
-
-//     if (resultValidation.errors.length > 0) {
-//       return res.render("users/register", {
-//         errors: resultValidation.mapped(),
-//         oldData: req.body,
-//       });
-//     }
-
-//     //Hacer la consulta para saber si el usuario que se está registrando se encuentra en la db
-//     let userInDb = User.findByField("email", req.body.email);
-
-//     if (userInDb) {
-//       return res.render("users/register", {
-//         errors: {
-//           email: {
-//             msg: "Este email ya está registrado",
-//           },
-//         },
-//         oldData: req.body,
-//       });
-//     }
-
-//     //Crear al usuario
-
-//     let userToCreate = {
-//       ...req.body,
-//       password: bcryptjs.hashSync(req.body.password, 10),
-//       avatar: req.file.filename,
-//     };
-
-//     let userCreated = User.create(userToCreate);
-
-//     return res.redirect("login");
-//   },
-
-//   login: (req, res) => {
-//     return res.render("users/login");
-//   },
-
-//   loginProcess: (req, res) => {
-//     let userToLogin = User.findByField("email", req.body.email);
-
-//     if (userToLogin) {
-//       //Comparamos el password que escribio el ususario con el de la base de datos
-//       let isOkThePassword = bcryptjs.compareSync(
-//         req.body.password,
-//         userToLogin.password
-//       );
-//       //Si es verdadero
-//       if (isOkThePassword) {
-//         delete userToLogin.password;
-//         //Le pasamos userToLogin a la sesion, como un elemento de un objeto
-//         req.session.userLogged = userToLogin;
-
-//         //Esto es para las cookies, si esta activado la casilla le pasamos a cookie el email
-//         if (req.body.remember_user) {
-//           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
-//         }
-
-//         return res.redirect("/users/profile");
-//       }
-//       return res.render("users/login", {
-//         errors: {
-//           email: {
-//             msg: "Las credenciales son inválidas",
-//           },
-//         },
-//       });
-//     }
-
-//     return res.render("users/login", {
-//       errors: {
-//         email: {
-//           msg: "Correo no registrado",
-//         },
-//       },
-//     });
-//   },
-
-//   profile: (req, res) => {
-//     // console.log(req.cookies.userEmail);
-//     return res.render("users/userProfile", {
-//       user: req.session.userLogged,
-//     });
-//   },
-
-//   logout: (req, res) => {
-//     res.clearCookie("userEmail");
-//     req.session.destroy();
-//     return res.redirect("/");
-//   },
-// };
-
-// module.exports = usersController;
-
 const path = require("path");
 const db = require("../database/models");
 const sequelize = db.sequelize;
@@ -121,6 +14,9 @@ const usersController = {
 
   processRegister: async (req, res) => {
     const resultValidation = validationResult(req);
+
+    console.log("Esto es lo que viene del formulario");
+    console.log(req.body);
 
     console.log(resultValidation);
 

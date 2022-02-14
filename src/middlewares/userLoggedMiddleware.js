@@ -8,9 +8,6 @@ async function userLoggedMiddleware(req, res, next) {
     //Tenemos a alguien en una cookie y lo pudimos encontrar en la base de datos?
     let emailInCookie = req.cookies.userEmail;
 
-    console.log("Este es el userLogged de la linea 13");
-    console.log(req.session.userLogged);
-
     if (req.session.userLogged == undefined && emailInCookie == undefined) {
       next();
     } else if (
