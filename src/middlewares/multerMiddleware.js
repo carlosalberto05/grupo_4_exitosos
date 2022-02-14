@@ -11,6 +11,26 @@ const storage = multer.diskStorage({
   },
 });
 
-const uploadFile = multer({ storage });
+const uploadFile = multer({
+  fileFilter: (req, file, cb) => {
+    let acceptedExtensions = [".jpg", ".png", ".jpeg"];
+
+    if (!file) {
+      req.fileValidationError = "Tienes que subir una imagen";
+      return cb(null, false, req.fileValidationError);
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      req.fileValidationError = `Las extensiones permitidas son ${acceptedExtensions.join(
+        ", "
+      )} `;
+      if (!acceptedExtensions.includes(fileExtension)) {
+        return cb(null, false, req.fileValidationError);
+      }
+    }
+
+    return cb(null, true);
+  },
+  storage,
+});
 
 module.exports = uploadFile;
