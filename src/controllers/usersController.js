@@ -5,6 +5,8 @@ const { Op } = require("sequelize");
 const bcryptjs = require("bcryptjs");
 const { validationResult, body } = require("express-validator");
 
+const avatarName = path.basename("/images/avatars/defaultavatar.png");
+
 const User = db.User;
 
 const usersController = {
@@ -50,7 +52,7 @@ const usersController = {
         email: req.body.email,
         password: bcryptjs.hashSync(req.body.password, 10),
         politic: 1,
-        avatar: req.file.filename,
+        avatar: avatarName,
         admin: false,
       });
 
@@ -115,7 +117,6 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    // console.log(req.cookies.userEmail);
     return res.render("users/userProfile", {
       user: req.session.userLogged,
     });
@@ -193,6 +194,36 @@ const usersController = {
       await User.update(
         {
           password: bcryptjs.hashSync(req.body.password, 10),
+        },
+        {
+          where: {
+            id_users: id,
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
+  //Editar el avatar del usuario
+  editAvatar: async (req, res) => {
+    return res.render("users/user-edit-avatar", {
+      userToEdit: req.session.userLogged,
+    });
+  },
+
+  updateAvatar: async (req, res) => {
+    let { id } = req.params;
+
+    try {
+      await User.update(
+        {
+          avatar: req.file.filename,
         },
         {
           where: {

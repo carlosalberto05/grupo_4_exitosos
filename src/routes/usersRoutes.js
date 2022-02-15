@@ -17,12 +17,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/register", guestMiddleware, usersController.register);
 
 //Procesar el registro
-router.post(
-  "/register",
-  uploadFile.single("avatar"),
-  validations,
-  usersController.processRegister
-);
+router.post("/register", validations, usersController.processRegister);
 
 //Formulario de login
 router.get("/login", guestMiddleware, usersController.login);
@@ -45,6 +40,14 @@ router.patch("/profile/editEmail/:id", usersController.updateEmail);
 //Editar password del usuario
 router.get("/profile/editPassword/:id", usersController.editPassword);
 router.patch("/profile/editPassword/:id", usersController.updatePassword);
+
+//Editar avatar del usuario
+router.get("/profile/editAvatar/:id", usersController.editAvatar);
+router.patch(
+  "/profile/editAvatar/:id",
+  uploadFile.single("avatar"),
+  usersController.updateAvatar
+);
 
 //Logout
 router.get("/logout", usersController.logout);
