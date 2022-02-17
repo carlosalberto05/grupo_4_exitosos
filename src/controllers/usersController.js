@@ -220,6 +220,28 @@ const usersController = {
   updateAvatar: async (req, res) => {
     let { id } = req.params;
 
+    if (!req.file) {
+      return res.render("users/user-edit-avatar", {
+        errors: {
+          avatar: {
+            msg: "Por favor cargue un archivo",
+          },
+        },
+        userToEdit: req.session.userLogged,
+      });
+    }
+
+    if (!req.file.originalname.match(/\.(jpg|png|jpeg|JPG)$/)) {
+      return res.render("users/user-edit-avatar", {
+        errors: {
+          avatar: {
+            msg: "Las extensiones permitidas son jpg,png,jpeg y JPG",
+          },
+        },
+        userToEdit: req.session.userLogged,
+      });
+    }
+
     try {
       await User.update(
         {
