@@ -11,8 +11,8 @@
     <title>Mellowdyne</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/userProfile.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/userProfile.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
@@ -29,39 +29,31 @@
       <div class="alert alert-success"><%= user.email %></div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row-profile">
         <div class="col-md-3">
-          <div>
-            <a
-              class="form-btn"
-              href="/users/profile/editName/<%= user.id_users %>"
+          <div class="form-btn-profile">
+            <a href="/users/profile/editName/<%= user.id_users %>"
               >Editar nombre</a
             >
           </div>
-          <div>
-            <a
-              class="form-btn"
-              href="/users/profile/editEmail/<%= user.id_users %>"
+          <div class="form-btn-profile">
+            <a href="/users/profile/editEmail/<%= user.id_users %>"
               >Editar email</a
             >
           </div>
-          <div>
-            <a
-              class="form-btn"
-              href="/users/profile/editPassword/<%= user.id_users %>"
+          <div class="form-btn-profile">
+            <a href="/users/profile/editPassword/<%= user.id_users %>"
               >Editar password</a
             >
           </div>
-          <div>
-            <a
-              class="form-btn"
-              href="/users/profile/editAvatar/<%= user.id_users %>"
+          <div class="form-btn-profile">
+            <a href="/users/profile/editAvatar/<%= user.id_users %>"
               >Editar imagen de perfil</a
             >
           </div>
 
-          <div>
-            <a class="form-btn" id ="logout" href="/users/logout">Cerrar Sesión</a>
+          <div class="form-btn-profile">
+            <a id="logout" href="/users/logout">Cerrar Sesión</a>
           </div>
         </div>
       </div>
