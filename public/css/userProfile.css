@@ -3,47 +3,36 @@
   margin: ​0​px​;
   padding: ​0​px​;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   background: white;
   color: black;
-}
-
-.container {
-  width: 100%;
-  height: 80vh;
   display: flex;
+  flex-wrap: nowrap;
 }
-
-.row {
+.profile-container{
   width: 100%;
-  /* margin-top: 3%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.col-md-3 {
-  width: 50%;
+  margin: 20px 20px 10px 50px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.avatar {
-  width: 150px;
-  height: 150px;
+.profile-container h2{
+  font-size: 1.5rem;
+}
+
+.avatar{
+  margin: 20px 30px;
+  width: 100px;
+  border-radius: 100px;
+  box-shadow: 0px 10px 5px rgba(0,0,0,0.1);
 }
 
 .form-btn {
-  font-size: 10px;
+  font-size: 12px;
   color: #fff;
   text-transform: uppercase;
-  background-color: #6931eb;
-  border: 1px solid #6931eb;
+  background-color: #3C119E;
+  border: 1px solid #3C119E;
   border-radius: 10px;
   padding: 10px 25px;
   margin-top: 40px;
@@ -53,8 +42,61 @@ body {
   text-decoration: none;
 }
 
-.form-btn:hover {
-  cursor: pointer;
-  background-color: rgb(227, 133, 58);
-  border: 1px solid rgb(227, 133, 58);
+@media (min-width: 768px) {
+  body {
+    font-family: "Poppins", sans-serif;
+    background: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .profile-container{
+    width: 50vw;
+    margin: 50px 20px 10px 50px;
+    text-align: center;
+  }
+  
+  .avatar{
+    margin: 50px 30px;
+    width: 250px;
+    border-radius: 250px;
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.1);
+  }
+  
+  .col-md-3{
+    width: 300px;
+    margin: 50px 0px 0px 0px;
+  }
+  .row {
+    width: 100%;
+    /* margin-top: 3%; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+  } 
+  
+  
+  .form-btn:hover {
+    cursor: pointer;
+    background-color: #6931EB;
+    border: 1px solid #6931EB;
+  }
+  
+  #logout:hover{
+    cursor: pointer;
+    background-color: #F06355;
+    border: 1px solid #F06355;
+  
+  }
 }
+
+
+
+
+/* .container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+} */
+
