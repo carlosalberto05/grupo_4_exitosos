@@ -392,7 +392,6 @@ body {
   .main-navbar_desktab ul {
     display: flex;
     justify-content: space-around;
-    /* Probando si es el line-height en la vista de user*/
   }
   .main-navbar_desktab ul li {
     list-style: none;
