@@ -94,8 +94,9 @@ const productsController = {
 
   // Create -  Method to store
   store: async (req, res) => {
+    //validaciones
+
     try {
-      //validaciones
       const resultValidation = validationResult(req);
 
       if (resultValidation.errors.length > 0) {
