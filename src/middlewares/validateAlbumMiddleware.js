@@ -2,11 +2,24 @@ const path = require("path");
 const { body } = require("express-validator");
 
 module.exports = [
-  body("title").notEmpty().withMessage("El nombre del álbum es requerido"),
-  body("artist").notEmpty().withMessage("El nombre del artista es requerido"),
+  body("title")
+    .notEmpty()
+    .withMessage("El nombre del álbum es requerido")
+    .bail()
+    .isLength({ min: 5 })
+    .withMessage("El nombre del álbum debe tener al menos 5 caracteres"),
+  body("artist")
+    .notEmpty()
+    .withMessage("El nombre del artista es requerido")
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage("El nombre del artista debe tener al menos 2 caracteres"),
   body("description")
     .notEmpty()
-    .withMessage("La descripción del disco es requerida"),
+    .withMessage("La descripción del disco es requerida")
+    .bail()
+    .isLength({ min: 20 })
+    .withMessage("La descripción debe tener al menos 20 caracteres"),
   body("image").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".png", ".jpeg"];

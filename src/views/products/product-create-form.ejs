@@ -72,8 +72,7 @@
             rows="10"
             cols="53"
             value="<%= locals.oldData ? oldData.description : null %>"
-          >
-          </textarea>
+          ></textarea>
 
           <% if (locals.errors && errors.description) { %>
           <div class="text-danger"><%= errors.description.msg %></div>
@@ -139,7 +138,7 @@
 
           <div class="control-form date">
             <label for="release_date" class="form-label">Fecha</label>
-            <input type="date" name="release_date" class="control" id="" required>
+            <input type="date" name="release_date" class="control" id="" >
           </div>
 
           <div class="control-form price">
@@ -154,7 +153,7 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="id_categories" required>
+              <select name="id_categories">
                 <option 
                   value="" disabled selected >Elige uno</option>
                   <% allCategories.forEach(oneCategory => { %>
@@ -169,7 +168,7 @@
               </select>
 
               <% if (locals.errors && errors.id_categories) { %>
-              <div class="text-danger"><%= errors.category.msg %></div>
+              <div class="text-danger"><%= errors.id_categories.msg %></div>
               <% } %>
             </div>
           </div>
