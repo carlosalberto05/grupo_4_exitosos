@@ -17,11 +17,6 @@ const usersController = {
   processRegister: async (req, res) => {
     const resultValidation = validationResult(req);
 
-    console.log("Esto es lo que viene del formulario");
-    console.log(req.body);
-
-    console.log(resultValidation);
-
     if (resultValidation.errors.length > 0) {
       return res.render("users/register", {
         errors: resultValidation.mapped(),
@@ -67,6 +62,15 @@ const usersController = {
   },
 
   loginProcess: async (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/login", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
     try {
       let userToLogin = await User.findOne({
         where: {
@@ -97,8 +101,8 @@ const usersController = {
         }
         return res.render("users/login", {
           errors: {
-            email: {
-              msg: "Las credenciales son inválidas",
+            password: {
+              msg: "La contraseña es incorrecta",
             },
           },
         });

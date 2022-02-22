@@ -5,7 +5,8 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 
 //Middlewares
-const validations = require("../middlewares/validateRegisterMiddleware");
+const validationsRegister = require("../middlewares/validateRegisterMiddleware");
+const validationsLoggin = require("../middlewares/validateLogginMiddleware");
 const uploadFile = require("../middlewares/multerMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
@@ -16,14 +17,13 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/register", guestMiddleware, usersController.register);
 
 //Procesar el registro
-router.post("/register", validations, usersController.processRegister);
+router.post("/register", validationsRegister, usersController.processRegister);
 
 //Formulario de login
 router.get("/login", guestMiddleware, usersController.login);
 
-//Procesar el login
-
-router.post("/login", usersController.loginProcess);
+//Procesar el login (Las validaciones para el loggin son custom y estan en el controlador)
+router.post("/login", validationsLoggin, usersController.loginProcess);
 
 //Perfil del usuarior
 router.get("/profile", authMiddleware, usersController.profile);
