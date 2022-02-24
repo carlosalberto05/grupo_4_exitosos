@@ -10,15 +10,39 @@
   margin-left: 30px;
 }
 
+.ms-error {
+  color: rgb(197, 28, 28);
+  text-align: center;
+  background-color: rgb(245, 185, 188);
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  border-radius: 5px;
+}
+
 .control-form {
   margin-bottom: 3%;
 }
 
-.control-form input {
+.control-form-input {
   width: 100%;
   padding: 3px 25px;
   border-radius: 20px;
-  border: 1px solid #000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.is-valid {
+  color: rgb(58, 201, 46);
+  border: 1px solid rgb(58, 201, 46);
+}
+
+.is-invalid-input {
+  color: rgb(211, 24, 33);
+  border: 1px solid rgb(211, 24, 33);
+}
+
+.is-invalid {
+  color: red;
 }
 
 .control-form ::placeholder {
