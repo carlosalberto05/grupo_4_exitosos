@@ -23,21 +23,25 @@
 
     <!-- Formulario -->
     <h2 class="register-title">Crea tu cuenta</h2>
+    <p class="ms-error"></p>
 
     <form
       method="POST"
       action="/users/register"
       class="create-form form-holder"
+      id="form-register"
     >
       <div class="control-form">
         <label><b>Nombre completo:</b></label>
         <input
+          id="full_name"
           type="text"
           name="full_name"
-          class="control icon-placeholder"
+          class="control-form-input icon-placeholder"
           placeholder="<%= locals.errors && errors.full_name ? '' : null %>"
           value="<%= locals.oldData ? oldData.full_name : null %>"
         />
+        <div class="is-invalid"></div>
 
         <% if (locals.errors && errors.full_name) { %>
         <div class="text-danger"><%= errors.full_name.msg %></div>
@@ -47,13 +51,14 @@
       <div class="control-form">
         <label><b>Correo electrónico:</b></label>
         <input
+          id="email"
           type="text"
           name="email"
-          class="control icon-placeholder"
+          class="control-form-input icon-placeholder"
           placeholder="<%= locals.errors && errors.email ? '' : null %>"
           value="<%= locals.oldData ? oldData.email : null %>"
         />
-
+        <div class="is-invalid"></div>
         <% if (locals.errors && errors.email) { %>
         <div class="text-danger"><%= errors.email.msg %></div>
         <% } %>
@@ -62,24 +67,33 @@
       <div class="control-form">
         <label><b>Contraseña:</b></label>
         <input
+          id="password"
           type="password"
           name="password"
-          class="control icon-placeholder"
+          class="control-form-input icon-placeholder"
           placeholder="<%= locals.errors && errors.password ? '' : null %>"
           value="<%= locals.oldData ? oldData.password : null %>"
         />
-
+        <div class="is-invalid"></div>
         <% if (locals.errors && errors.password) { %>
         <div class="text-danger"><%= errors.password.msg %></div>
         <% } %>
       </div>
 
       <div class="politica">
-        <input class="check-polit" type="checkbox" name="politic" />
+        <input
+          id="politic"
+          class="check-polit"
+          type="checkbox"
+          name="politic"
+        />
         <label class="polit-label" for="politic" class="interes_opcion">
           Acepto la política de privacidad
         </label>
-
+        <div
+          class="is-invalid"
+          style="margin-left: 10px; font-size: 12px"
+        ></div>
         <% if (locals.errors && errors.politic) { %>
         <div class="text-danger" style="margin-left: 10px; font-size: 12px">
           <%= errors.politic.msg %>
@@ -93,5 +107,6 @@
     </form>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/validateRegister.js"></script>
   </body>
 </html>
