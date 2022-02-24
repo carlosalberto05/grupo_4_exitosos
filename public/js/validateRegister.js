@@ -1,75 +1,102 @@
 window.onload = function () {
-  const fileds = document.querySelectorAll("#form-register input");
+  const fields = document.querySelectorAll("#form-register input");
   const form = document.querySelector("#form-register");
-  const messageError = document.querySelector(".ms-error");
-  let allErrors = document.querySelectorAll(".is-invalid");
+  const button = document.querySelector(".btn-form button");
+  console.log(button);
 
-  for (let i = 0; i < fileds.length; i++) {
-    if (fileds[i].id == "full_name") {
-      fileds[i].focus();
-      fileds[i].addEventListener("blur", () => {
-        if (fileds[i].value == "") {
-          fileds[i].nextElementSibling.innerText =
+  // button.disabled = true;
+
+  for (let i = 0; i < fields.length; i++) {
+    if (fields[i].id == "full_name") {
+      fields[i].focus();
+      fields[i].addEventListener("blur", () => {
+        if (fields[i].value == "") {
+          fields[i].nextElementSibling.innerText =
             "El nombre y el apellido son obligatorios";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
-        } else if (fileds[i].value.length < 2) {
-          fileds[i].nextElementSibling.innerText =
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
+        } else if (fields[i].value.length < 2) {
+          fields[i].nextElementSibling.innerText =
             "El nombre y apellido es muy corto";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
         } else {
-          fileds[i].nextElementSibling.innerText = "";
-          fileds[i].classList.add("is-valid");
-          fileds[i].classList.remove("is-invalid-input");
+          fields[i].nextElementSibling.innerText = "";
+          fields[i].classList.add("is-valid");
+          fields[i].classList.remove("is-invalid-input");
         }
       });
-    } else if (fileds[i].id == "email") {
-      fileds[i].addEventListener("blur", () => {
-        if (fileds[i].value == "") {
-          fileds[i].nextElementSibling.innerText = "El correo es necesario";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
+    } else if (fields[i].id == "email") {
+      fields[i].addEventListener("blur", () => {
+        if (fields[i].value == "") {
+          fields[i].nextElementSibling.innerText = "El correo es necesario";
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
         } else if (
-          /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(fileds[i].value) == false
+          /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(fields[i].value) == false
         ) {
-          fileds[i].nextElementSibling.innerText =
+          fields[i].nextElementSibling.innerText =
             "Debe ingresar un correo valido";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
         } else {
-          fileds[i].nextElementSibling.innerText = "";
-          fileds[i].classList.add("is-valid");
-          fileds[i].classList.remove("is-invalid-input");
+          fields[i].nextElementSibling.innerText = "";
+          fields[i].classList.add("is-valid");
+          fields[i].classList.remove("is-invalid-input");
         }
       });
-    } else if (fileds[i].id == "password") {
-      fileds[i].addEventListener("blur", () => {
-        if (fileds[i].value == "") {
-          fileds[i].nextElementSibling.innerText = "El password es requerido";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
-        } else if (fileds[i].value.length <= 7) {
-          fileds[i].nextElementSibling.innerText =
+    } else if (fields[i].id == "password") {
+      fields[i].addEventListener("blur", () => {
+        if (fields[i].value == "") {
+          fields[i].nextElementSibling.innerText = "El password es requerido";
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
+        } else if (fields[i].value.length <= 7) {
+          fields[i].nextElementSibling.innerText =
             "La contraseña debe tener al menos 8 caracteres";
-          fileds[i].classList.add("is-invalid-input");
-          fileds[i].classList.remove("is-valid");
+          fields[i].classList.add("is-invalid-input");
+          fields[i].classList.remove("is-valid");
         } else {
-          fileds[i].nextElementSibling.innerText = "";
-          fileds[i].classList.add("is-valid");
-          fileds[i].classList.remove("is-invalid-input");
+          fields[i].nextElementSibling.innerText = "";
+          fields[i].classList.add("is-valid");
+          fields[i].classList.remove("is-invalid-input");
         }
       });
     }
   }
 
   //aquí empieza el sumbit
-
   form.addEventListener("submit", (e) => {
-    allErrors.forEach((erro) => {
-      if (erro.innerText !== "") {
-        e.preventDefault();
+    let errors = [];
+
+    for (let i = 0; i < fields.length; i++) {
+      if (fields[i].id == "full_name") {
+        if (fields[i].value == "") {
+          errors.push("El nombre y el apellido son obligatorios");
+        } else if (fields[i].value.length < 2) {
+          errors.push("El nombre y apellido es muy corto");
+        }
+      } else if (fields[i].id == "email") {
+        if (fields[i].value == "") {
+          errors.push("El correo es necesario");
+        } else if (
+          /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(fields[i].value) == false
+        ) {
+          errors.push("Debe ingresar un correo valido");
+        }
+      } else if (fields[i].id == "password") {
+        if (fields[i].value == "") {
+          errors.push("El password es requerido");
+        } else if (fields[i].value.length <= 7) {
+          errors.push("La contraseña debe tener al menos 8 caracteres");
+        }
       }
-    });
+    }
+
+    if (errors.length > 0) {
+      e.preventDefault();
+      let mesageError = document.querySelector(".ms-error");
+      mesageError.innerText = "Error al ingresar los datos";
+    }
   });
 };
