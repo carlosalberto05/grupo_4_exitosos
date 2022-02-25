@@ -32,7 +32,7 @@
     >
       <div class="control-form">
         <label><b>Imagen de perfil:</b></label>
-        <input type="file" name="avatar" />
+        <input type="file" name="avatar" class="control-form-input" />
 
         <% if (locals.errors && errors.avatar) { %>
         <div class="text-danger"><%= errors.avatar.msg %></div>

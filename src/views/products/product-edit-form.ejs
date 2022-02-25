@@ -28,40 +28,60 @@
     <!-- /Header -->
     <main>
       <h2 class="create-title">Estas editando <%= albumToEdit.title %></h2>
+      <h4 class="ms-error"></h4>
       <form
         action="/products/edit/<%= albumToEdit.id_albums %>?_method=PUT"
         method="POST"
         class="create-form form-holder"
+        id="edit-form"
       >
         <div class="control-form">
           <label for="title" class="form-label">Nombre del álbum</label>
           <input
+          class="control-form-input"
             type="text"
             id="title"
             name="title"
             value="<%= albumToEdit.title %>"
           />
+          <div class="is-invalid"></div>
+
+          <% if (locals.errors && errors.title) { %>
+          <div class="text-danger"><%= errors.title.msg %></div>
+          <% } %>
         </div>
         <div class="control-form">
           <label for="artist" class="form-label">Nombre del artista</label>
           <input
+          class="control-form-input"
             type="text"
             id="artist"
             name="artist"
             value="<%= albumToEdit.artist.name %>"
           />
+          <div class="is-invalid"></div>
+
+          <% if (locals.errors && errors.artist) { %>
+          <div class="text-danger"><%= errors.artist.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="description" class="form-label"
             >Descripción del disco</label
           >
-          <textarea name="description" id="description" rows="10" cols="53">
-          <%= albumToEdit.description %>
-          </textarea>
+          <textarea class="control-form-input" name="description" id="description" rows="10" cols="53"><%= albumToEdit.description %></textarea>
+          <div class="is-invalid"></div>
+
+          <% if (locals.errors && errors.description) { %>
+          <div class="text-danger"><%= errors.description.msg %></div>
+          <% } %>
         </div>
+
         <div class="control-form">
           <label for="tracklist" class="form-label">Lista de tracks</label>
           <input
+          class="control-form-input"
             type="text"
             name="tracklist"
             id="tracklist"
@@ -69,13 +89,18 @@
             rows="10"
              value = "<%= allAlbumSongs %>"
           />
+          <div class="is-invalid"></div>
+
+          <% if (locals.errors && errors.tracklist) { %>
+          <div class="text-danger"><%= errors.tracklist.msg %></div>
+          <% } %>
         </div>
       
         <div class="info">
           <div class="control-form categories">
             <div class="category-options">
               <label for="genre">Género musical</label>
-              <select name="genre">
+              <select name="genre" class="control-form-input">
                 
                 <% allGenres.forEach(oneGenre => { %>
                   <option value="<%= oneGenre.id_genres %>"
@@ -88,6 +113,12 @@
                 <% }) %>       
 
               </select>
+              <div class="is-invalid"></div>
+         
+              <% if (locals.errors && errors.genre) { %>
+              <div class="text-danger"><%= errors.genre.msg %></div>
+              <% } %>
+
             </div>
           </div>
 
@@ -97,25 +128,31 @@
               value="<%= albumToEdit.release_date %>"
               type="date"
               name="release_date"
-              class="control"
+              class="control-form-input"
               id="release_date"
             />
+            <div class="is-invalid"></div>
           </div>
 
           <div class="control-form price">
             <label for="price" class="form-label">Precio:</label>
             <input
+            class="control-form-input"
               type="number"
               name="price"
               id="price"
               value="<%= albumToEdit.price %>"
             />
+            <div class="is-invalid"></div>
+            <% if (locals.errors && errors.price) { %>
+            <div class="text-danger"><%= errors.price.msg %></div>
+            <% } %>
           </div>
 
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="id_categories" required>
+              <select name="id_categories" required class="control-form-input">
                   <% allCategories.forEach(oneCategory => { %>
                     <option value="<%= oneCategory.id_categories %>"
                     <% if (albumToEdit.id_category == oneCategory.id_categories) { %>
@@ -126,6 +163,10 @@
                     </option>
                   <% }) %>
               </select>
+              <div class="is-invalid"></div>
+              <% if (locals.errors && errors.id_categories) { %>
+              <div class="text-danger"><%= errors.id_categories.msg %></div>
+              <% } %>
             </div>
           </div>
         </div>
