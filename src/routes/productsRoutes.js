@@ -5,7 +5,8 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 
 //Middlewares
-const validations = require("../middlewares/validateAlbumMiddleware");
+const validationsCreateAlbum = require("../middlewares/validateAlbumMiddleware");
+const validationsUpdateAlbum = require("../middlewares/validateUpdateAlbumMiddleware.js");
 const uploadFile = require("../middlewares/multerAlbumCoverMiddleware");
 
 //Estas son subrutas de la ruta /products que se configura en app
@@ -33,13 +34,13 @@ router.get("/create", productsController.create);
 router.post(
   "/",
   uploadFile.single("image"),
-  validations,
+  validationsCreateAlbum,
   productsController.store
 );
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", productsController.edit);
-router.put("/edit/:id", productsController.update);
+router.put("/edit/:id", validationsUpdateAlbum, productsController.update);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/delete/:id", productsController.destroy);

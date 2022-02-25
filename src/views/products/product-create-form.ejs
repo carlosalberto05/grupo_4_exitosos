@@ -21,6 +21,7 @@
       src="https://kit.fontawesome.com/525d227bb1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -28,20 +29,24 @@
     <!-- /Header -->
     <main>
       <h2 class="create-title">Vende tus viniles aqui</h2>
+      <h4 class="ms-error"></h4>
       <form
         action="/products"
         method="POST"
         class="create-form form-holder"
         enctype="multipart/form-data"
+        id="create-form"
       >
         <div class="control-form">
           <label for="title" class="form-label">Nombre del álbum</label>
           <input
             type="text"
+            class="control-form-input"
             id="title"
             name="title"
             value="<%= locals.oldData ? oldData.title : null %>"
           />
+          <div class="is-invalid"></div>
 
           <% if (locals.errors && errors.title) { %>
           <div class="text-danger"><%= errors.title.msg %></div>
@@ -52,10 +57,12 @@
           <label for="artist" class="form-label">Nombre del artista</label>
           <input
             type="text"
+            class="control-form-input"
             id="artist"
             name="artist"
             value="<%= locals.oldData ? oldData.artist : null %>"
           />
+          <div class="is-invalid"></div>
 
           <% if (locals.errors && errors.artist) { %>
           <div class="text-danger"><%= errors.artist.msg %></div>
@@ -68,11 +75,13 @@
           >
           <textarea
             name="description"
+            class="control-form-input"
             id="description"
             rows="10"
             cols="53"
             value="<%= locals.oldData ? oldData.description : null %>"
           ></textarea>
+          <div class="is-invalid"></div>
 
           <% if (locals.errors && errors.description) { %>
           <div class="text-danger"><%= errors.description.msg %></div>
@@ -83,6 +92,7 @@
           <label for="tracklist" class="form-label">Lista de tracks</label>
           <input
             type="text"
+            class="control-form-input"
             name="tracklist"
             id="tracklist"
             cols="10"
@@ -90,6 +100,7 @@
             placeholder="Cada track separado por una coma. Ejem: Let it be, Dig it  "
             value="<%= locals.oldData ? oldData.tracklist : null %>"
           />
+          <div class="is-invalid"></div>
 
           <% if (locals.errors && errors.tracklist) { %>
           <div class="text-danger"><%= errors.tracklist.msg %></div>
@@ -100,10 +111,12 @@
           <label for="image">Sube una imagen de portada</label>
           <input
             type="file"
+            class="control-form-input"
             id="image"
             name="image"
             value="<%= locals.oldData ? oldData.image : null %>"
           />
+          <div class="is-invalid"></div>
           
             <% if (locals.errors && errors.image) { %>
               <div class="text-danger"><%= errors.image.msg %></div>
@@ -115,7 +128,7 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="genre"><b>Género musical</b></label>
-              <select name="genre">
+              <select id="genre" name="genre" class="control-form-input" >
                 <option value="" disabled selected>Elige uno</option>
                 
                 <% allGenres.forEach(OneGenre => { %>
@@ -128,6 +141,7 @@
                 <% }) %>       
 
               </select>
+              <div class="is-invalid"></div>
          
               <% if (locals.errors && errors.genre) { %>
               <div class="text-danger"><%= errors.genre.msg %></div>
@@ -138,13 +152,14 @@
 
           <div class="control-form date">
             <label for="release_date" class="form-label">Fecha</label>
-            <input type="date" name="release_date" class="control" id="" >
+            <input id="release_date" type="date" name="release_date" class="control-form-input"  >
+            <div class="is-invalid"></div>
           </div>
 
           <div class="control-form price">
             <label for="price" class="form-label">Precio en MX</label>
-            <input type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>"/>
-
+            <input  type="number" class="control-form-input" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>"/>
+            <div class="is-invalid"></div>
             <% if (locals.errors && errors.price) { %>
             <div class="text-danger"><%= errors.price.msg %></div>
             <% } %>
@@ -153,7 +168,7 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="id_categories">
+              <select id="id_categories" name="id_categories" class="control-form-input">
                 <option 
                   value="" disabled selected >Elige uno</option>
                   <% allCategories.forEach(oneCategory => { %>
@@ -166,7 +181,7 @@
                   <% }) %>
 
               </select>
-
+              <div class="is-invalid"></div>
               <% if (locals.errors && errors.id_categories) { %>
               <div class="text-danger"><%= errors.id_categories.msg %></div>
               <% } %>
@@ -184,5 +199,6 @@
     </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/validateCreateFormAlbum.js"></script>
   </body>
 </html>

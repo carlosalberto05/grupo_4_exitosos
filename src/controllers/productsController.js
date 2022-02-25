@@ -219,6 +219,45 @@ const productsController = {
     try {
       const { id } = req.params;
 
+      //validaciones
+      const resultValidation = validationResult(req);
+
+      if (resultValidation.errors.length > 0) {
+        let albumToEdit = await Album.findByPk(id, {
+          include: [
+            { association: "category" },
+            { association: "artist" },
+            { association: "genre" },
+            { association: "user" },
+          ],
+        });
+
+        let allGenres = await Genre.findAll();
+        let allCategories = await Category.findAll();
+
+        let albumSongs = await Song.findAll({
+          where: {
+            id_album: id,
+          },
+        });
+
+        let songs = albumSongs.map((song) => {
+          return song.name;
+        });
+
+        //El método join() une todos los elementos de una matriz
+        allAlbumSongs = songs.join();
+
+        return res.render("products/product-edit-form.ejs", {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          albumToEdit,
+          allGenres,
+          allCategories,
+          allAlbumSongs,
+        });
+      }
+
       //Encontrar al artista
       let artistToFind = await Artist.findOne({
         where: {
