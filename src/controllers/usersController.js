@@ -136,6 +136,16 @@ const usersController = {
   updateName: async (req, res) => {
     let { id } = req.params;
 
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/user-edit-name", {
+        userToEdit: req.session.userLogged,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
     try {
       await User.update(
         {
@@ -165,6 +175,16 @@ const usersController = {
   updateEmail: async (req, res) => {
     let { id } = req.params;
 
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/user-edit-email", {
+        userToEdit: req.session.userLogged,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
     try {
       await User.update(
         {
@@ -193,6 +213,16 @@ const usersController = {
 
   updatePassword: async (req, res) => {
     let { id } = req.params;
+
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/user-edit-password", {
+        userToEdit: req.session.userLogged,
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
 
     try {
       await User.update(

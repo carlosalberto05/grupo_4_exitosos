@@ -216,10 +216,11 @@ const productsController = {
 
   // Update - Method to update
   update: async (req, res) => {
+    //validaciones
+
     try {
       const { id } = req.params;
 
-      //validaciones
       const resultValidation = validationResult(req);
 
       if (resultValidation.errors.length > 0) {

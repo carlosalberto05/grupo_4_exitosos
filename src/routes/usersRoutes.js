@@ -7,6 +7,9 @@ const usersController = require("../controllers/usersController");
 //Middlewares
 const validationsRegister = require("../middlewares/validateRegisterMiddleware");
 const validationsLoggin = require("../middlewares/validateLogginMiddleware");
+const validateUpdatePassword = require("../middlewares/validateUpdatePasswordMiddleware");
+const validateUpdateEmail = require("../middlewares/validateUpdateEmailMiddleware");
+const validateUpdateName = require("../middlewares/validateUpdateNameMiddleware");
 const uploadFile = require("../middlewares/multerMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
@@ -30,15 +33,27 @@ router.get("/profile", authMiddleware, usersController.profile);
 
 //Editar nombre del usuario
 router.get("/profile/editName/:id", usersController.editName);
-router.patch("/profile/editName/:id", usersController.updateName);
+router.patch(
+  "/profile/editName/:id",
+  validateUpdateName,
+  usersController.updateName
+);
 
 //Editar email del usuario
 router.get("/profile/editEmail/:id", usersController.editEmail);
-router.patch("/profile/editEmail/:id", usersController.updateEmail);
+router.patch(
+  "/profile/editEmail/:id",
+  validateUpdateEmail,
+  usersController.updateEmail
+);
 
 //Editar password del usuario
 router.get("/profile/editPassword/:id", usersController.editPassword);
-router.patch("/profile/editPassword/:id", usersController.updatePassword);
+router.patch(
+  "/profile/editPassword/:id",
+  validateUpdatePassword,
+  usersController.updatePassword
+);
 
 //Editar avatar del usuario
 router.get("/profile/editAvatar/:id", usersController.editAvatar);

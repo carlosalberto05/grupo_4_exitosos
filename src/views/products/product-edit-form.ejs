@@ -100,7 +100,7 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="genre">Género musical</label>
-              <select name="genre" class="control-form-input">
+              <select name="genre" class="control-form-input" id="genre">
                 
                 <% allGenres.forEach(oneGenre => { %>
                   <option value="<%= oneGenre.id_genres %>"
@@ -152,7 +152,7 @@
           <div class="control-form categories">
             <div class="category-options">
               <label for="category">Categoría</label>
-              <select name="id_categories" required class="control-form-input">
+              <select name="id_categories" required class="control-form-input" id="id_categories">
                   <% allCategories.forEach(oneCategory => { %>
                     <option value="<%= oneCategory.id_categories %>"
                     <% if (albumToEdit.id_category == oneCategory.id_categories) { %>
@@ -183,6 +183,6 @@
     </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
-   
+  <script src="/js/validateUpdateFormAlbum.js"></script>
   </body>
 </html>
