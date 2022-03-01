@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/maring-update.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <script
       src="https://kit.fontawesome.com/525d227bb1.js"
@@ -21,29 +22,40 @@
   <body>
     <%- include('../partials/navbar')%>
 
-    <!-- Formulario -->
-    <h2 class="register-title">Actualizando tu avatar</h2>
+    <section class="margin-update">
+      <!-- Formulario -->
+      <h2 class="register-title">Actualizando tu avatar</h2>
+      <h4 class="ms-error"></h4>
 
-    <form
-      method="POST"
-      action="/users/profile/editAvatar/<%= userToEdit.id_users %>?_method=PATCH"
-      class="create-form form-holder"
-      enctype="multipart/form-data"
-    >
-      <div class="control-form">
-        <label><b>Imagen de perfil:</b></label>
-        <input type="file" name="avatar" class="control-form-input" />
+      <form
+        method="POST"
+        action="/users/profile/editAvatar/<%= userToEdit.id_users %>?_method=PATCH"
+        class="create-form form-holder"
+        enctype="multipart/form-data"
+        id="avatar-form"
+      >
+        <div class="control-form">
+          <label><b>Imagen de perfil:</b></label>
+          <input
+            type="file"
+            name="avatar"
+            class="control-form-input"
+            id="avatar"
+          />
+          <div class="is-invalid"></div>
+          <% if (locals.errors && errors.avatar) { %>
+          <div class="text-danger"><%= errors.avatar.msg %></div>
+          <% } %>
+        </div>
 
-        <% if (locals.errors && errors.avatar) { %>
-        <div class="text-danger"><%= errors.avatar.msg %></div>
-        <% } %>
-      </div>
+        <div class="btn-form">
+          <button type="submit" class="form-btn">Actualizar datos</button>
+        </div>
+      </form>
+    </section>
 
-      <div class="btn-form">
-        <button type="submit" class="form-btn">Actualizar datos</button>
-      </div>
-    </form>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/validateUpdateAvatar.js"></script>
   </body>
 </html>
