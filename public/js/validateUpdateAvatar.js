@@ -23,6 +23,19 @@ window.onload = function () {
     }
   });
 
+  avatarField.addEventListener("change", () => {
+    if (!allowedExtensions.exec(avatarField.value)) {
+      avatarField.nextElementSibling.innerHTML =
+        "Las extensiones permitidas son .jpeg/.jpg/.png/ .JPG";
+      avatarField.classList.add("is-invalid-input");
+      avatarField.classList.remove("is-valid");
+    } else {
+      avatarField.nextElementSibling.innerText = "";
+      avatarField.classList.add("is-valid");
+      avatarField.classList.remove("is-invalid-input");
+    }
+  });
+
   form.addEventListener("submit", (e) => {
     let errors = [];
 
