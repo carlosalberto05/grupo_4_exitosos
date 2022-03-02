@@ -1,3 +1,17 @@
+# RETRO SPRINT 6
+
+Algo que se hizo bien en el sprint anterior fue darle prioridad a los pasos mas complejos del sprint y sacarlos adelante, al hacer esto hubo tiempo suficiente para resolver los procesos mas sencillos y al mismo tiempo tratar de optimizar la aplicación.
+
+Algo que se debería empezar a hacer es tratar de asigar un tiempo de resolución a cada tarea, de esta forma si no nos sale en cierto tiempo podemos solicitar ayuda a los profesores o comaperños y también podemos pasar a otras tareas para no quedarnos ciclados en la misma tarea.
+
+Este sprint fue muy retador, diseñar la base de datos y hacer lo respectivo en sequelize, la lógica para los controladores y hacer el crud tanto de los usuarios como de los productos fue una tarea compleja pero de bastante aprendizaje.
+
+Enlace Trello:
+https://trello.com/b/B79sPQg0/sprints-grupo-exito
+
+Enlace a Github:
+https://github.com/Oleandra/grupo_4_exitosos
+
 # RETRO SPRINT 5
 
 Me estoy tratando de organizar mejor para cumplir con todas las tareas ya que al trabajar solo tengo el tiempo más reducido para desarrollar cada tarea asignada.
