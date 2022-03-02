@@ -22,18 +22,20 @@
   <body>
     <%- include('../partials/navbar')%>
 
-    <!-- Formulario -->
-    <h2 class="register-title">Actualizando tus datos</h2>
-
     <section class="margin-update">
+      <!-- Formulario -->
+      <h2 class="register-title">Actualizando tus datos</h2>
+      <h4 class="ms-error"></h4>
       <form
         method="POST"
         action="/users/profile/editEmail/<%= userToEdit.id_users %>?_method=PATCH"
         class="create-form form-holder"
+        id="email-form"
       >
         <div class="control-form">
           <label><b>Editar electrónico</b></label>
           <input
+            id="email"
             type="text"
             name="email"
             class="control-form-input icon-placeholder"
@@ -52,5 +54,6 @@
     </section>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/validateUpdateEmail.js"></script>
   </body>
 </html>
