@@ -25,11 +25,14 @@
     <!-- Formulario -->
 
     <h2 class="register-title">Iniciar sesión</h2>
+    <h4 class="ms-error"></h4>
 
-    <form action="/users/login" method="POST" class="create-form form-holder">
+    <form action="/users/login" method="POST" class="create-form form-holder" id="form-login">
       <div class="control-form">
         <label><b>Correo electrónico:</b></label>
-        <input type="text" name="email" class="control" />
+        <input type="text" name="email" class="control" id= "email"/>
+        <div class="is-invalid"></div>
+
         <% if (locals.errors && errors.email) { %>
         <div class="text-danger"><%= errors.email.msg %></div>
         <% } %>
@@ -37,7 +40,9 @@
 
       <div class="control-form">
         <label><b>Contraseña:</b></label>
-        <input type="password" name="password" class="control" />
+        <input type="password" name="password" class="control" id="password"/>
+        <div class="is-invalid"></div>
+
         <% if (locals.errors && errors.password) { %>
         <div class="text-danger"><%= errors.password.msg %></div>
         <% } %>
@@ -67,5 +72,6 @@
     </div>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/validateLogin.js"></script>
   </body>
 </html>
