@@ -48,6 +48,7 @@ const productsRoutes = require("./routes/productsRoutes");
 
 //Aquí llamo a la ruta de las api de movies
 const apiUserRouter = require("./routes/api/usersApiRoute");
+const apiProductsRouter = require("./routes/api/productsApiRoute");
 
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
@@ -55,6 +56,7 @@ app.use("/products", productsRoutes);
 
 //Aquí creo la colección de mis recursos (APIs)
 app.use("/api/users", apiUserRouter);
+app.use("/api/products", apiProductsRouter);
 
 //Al final levantamos el servidor
 app.listen(port, () => {
