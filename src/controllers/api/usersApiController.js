@@ -13,6 +13,7 @@ const userApiController = {
         userInfo.id = user.id_users;
         userInfo.name = user.full_name;
         userInfo.email = user.email;
+        userInfo.detail = `http://localhost:3000/api/users/${user.id_users}`;
         return userInfo;
       });
 
@@ -40,7 +41,12 @@ const userApiController = {
         userInfo.id = userInDb.id_users;
         userInfo.name = userInDb.full_name;
         userInfo.email = userInDb.email;
-        userInfo.avatar = userInDb.avatar;
+
+        if (userInDb.avatar.includes("http")) {
+          userInfo.avatar = userInDb.avatar;
+        } else {
+          userInfo.avatar = `http://localhost:3000/images/avatars/${userInDb.avatar}`;
+        }
 
         response = {
           meta: {
