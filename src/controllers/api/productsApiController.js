@@ -17,13 +17,25 @@ const productsApiController = {
         { association: "category" },
       ],
     }).then((albums) => {
+      let allAlbums = albums.map((album) => {
+        let albumInfo = {};
+        (albumInfo.id = album.id_albums),
+          (albumInfo.name = album.title),
+          (albumInfo.description = album.description),
+          (albumInfo.artist = album.artist.name),
+          (albumInfo.category = album.category.name);
+        albumInfo.detail = `http://localhost:3000/api/products/${album.id_albums}`;
+        albumInfo.songs = album.songs;
+        return albumInfo;
+      });
+
       let response = {
         meta: {
           status: 200,
           count: albums.length,
           url: "api/users",
         },
-        data: albums,
+        data: allAlbums,
       };
 
       res.json(response);
@@ -40,13 +52,34 @@ const productsApiController = {
         { association: "category" },
       ],
     }).then((album) => {
-      let response = {
-        meta: {
-          status: 200,
-          url: "api/users",
-        },
-        data: album,
-      };
+      let response;
+
+      if (album !== null) {
+        let albumInfo = {};
+        albumInfo.id = album.id_albums;
+        albumInfo.name = album.title;
+        albumInfo.description = album.description;
+        albumInfo.artist = album.artist.name;
+        albumInfo.category = album.category.name;
+        albumInfo.image = `http://localhost:3000/images/covers/${album.image}`;
+        albumInfo.songs = album.songs;
+
+        response = {
+          meta: {
+            status: 200,
+            url: "api/users",
+          },
+          data: albumInfo,
+        };
+      } else {
+        response = {
+          meta: {
+            status: 204,
+            url: "api/products/:id",
+          },
+          data: "No hay albumbs con ese id",
+        };
+      }
 
       res.json(response);
     });
