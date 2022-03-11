@@ -1,3 +1,17 @@
+# RETRO SPRINT 7
+
+Algo que se hizo bien en el sprint anterior fue volver a organizarme con mi compañero de equipo, incorporarlo y poder agilizar las tareas del sprint. Se tuvo la oportunidad de designar tareas, coordinarse y trabajar en equipo.
+
+Algo que se debería empezar mejorar la comunicación, la comunicación es fundamental para que la confianza y la resolución de problemas se den.
+
+Este sprint estuvo algo más relajado, no fue tan complejo llevar a cabo las tareas asignadas.
+
+Enlace Trello:
+https://trello.com/b/B79sPQg0/sprints-grupo-exito
+
+Enlace a Github:
+https://github.com/Oleandra/grupo_4_exitosos
+
 # RETRO SPRINT 6
 
 Algo que se hizo bien en el sprint anterior fue darle prioridad a los pasos mas complejos del sprint y sacarlos adelante, al hacer esto hubo tiempo suficiente para resolver los procesos mas sencillos y al mismo tiempo tratar de optimizar la aplicación.
