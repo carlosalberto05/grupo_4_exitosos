@@ -15,6 +15,7 @@ const productsApiController = {
         { association: "artist" },
         { association: "songs" },
         { association: "category" },
+        { association: "genre" },
       ],
     }).then((albums) => {
       let allAlbums = albums.map((album) => {
@@ -23,8 +24,10 @@ const productsApiController = {
           (albumInfo.name = album.title),
           (albumInfo.description = album.description),
           (albumInfo.artist = album.artist.name),
+          (albumInfo.image = `http://localhost:3001/images/covers/${album.image}`);
+        (albumInfo.genre = album.genre.name),
           (albumInfo.category = album.category.name);
-        albumInfo.detail = `http://localhost:3000/api/products/${album.id_albums}`;
+        albumInfo.detail = `http://localhost:3001/api/products/${album.id_albums}`;
         albumInfo.songs = album.songs;
         return albumInfo;
       });
@@ -33,7 +36,7 @@ const productsApiController = {
         meta: {
           status: 200,
           count: albums.length,
-          url: "api/users",
+          url: "api/products",
         },
         data: allAlbums,
       };
@@ -50,6 +53,7 @@ const productsApiController = {
         { association: "artist" },
         { association: "songs" },
         { association: "category" },
+        { association: "genre" },
       ],
     }).then((album) => {
       let response;
@@ -60,14 +64,15 @@ const productsApiController = {
         albumInfo.name = album.title;
         albumInfo.description = album.description;
         albumInfo.artist = album.artist.name;
+        albumInfo.genre = album.genre.name;
         albumInfo.category = album.category.name;
-        albumInfo.image = `http://localhost:3000/images/covers/${album.image}`;
+        albumInfo.image = `http://localhost:3001/images/covers/${album.image}`;
         albumInfo.songs = album.songs;
 
         response = {
           meta: {
             status: 200,
-            url: "api/users",
+            url: "api/products",
           },
           data: albumInfo,
         };

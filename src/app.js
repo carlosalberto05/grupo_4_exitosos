@@ -5,7 +5,7 @@ const cookies = require("cookie-parser");
 const logger = require("morgan");
 const path = require("path");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -49,6 +49,7 @@ const productsRoutes = require("./routes/productsRoutes");
 //Aquí llamo a la ruta de las api de movies
 const apiUserRouter = require("./routes/api/usersApiRoute");
 const apiProductsRouter = require("./routes/api/productsApiRoute");
+const apiGenresRoter = require("./routes/api/genresApiRoute");
 
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
@@ -57,8 +58,9 @@ app.use("/products", productsRoutes);
 //Aquí creo la colección de mis recursos (APIs)
 app.use("/api/users", apiUserRouter);
 app.use("/api/products", apiProductsRouter);
+app.use("/api/genres", apiGenresRoter);
 
 //Al final levantamos el servidor
 app.listen(port, () => {
-  console.log("Servidor corriendo en el puerto 3000");
+  console.log("Servidor corriendo en el puerto 3001");
 });

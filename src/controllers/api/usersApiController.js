@@ -13,7 +13,7 @@ const userApiController = {
         userInfo.id = user.id_users;
         userInfo.name = user.full_name;
         userInfo.email = user.email;
-        userInfo.detail = `http://localhost:3000/api/users/${user.id_users}`;
+        userInfo.detail = `http://localhost:3001/api/users/${user.id_users}`;
         return userInfo;
       });
 
@@ -45,7 +45,7 @@ const userApiController = {
         if (userInDb.avatar.includes("http")) {
           userInfo.avatar = userInDb.avatar;
         } else {
-          userInfo.avatar = `http://localhost:3000/images/avatars/${userInDb.avatar}`;
+          userInfo.avatar = `http://localhost:3001/images/avatars/${userInDb.avatar}`;
         }
 
         response = {
