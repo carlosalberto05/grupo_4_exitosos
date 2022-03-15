@@ -1,12 +1,6 @@
-const paht = require("path");
 const db = require("../../database/models");
 
 const Album = db.Album;
-const User = db.Album;
-const Artist = db.Artist;
-const Song = db.Song;
-const Category = db.Category;
-const Genre = db.Genre;
 
 const productsApiController = {
   colection: (req, res) => {
@@ -32,13 +26,28 @@ const productsApiController = {
         return albumInfo;
       });
 
+      let countByCategory = {};
+      let totalTopProducts = albums.filter(
+        (album) => album.category.name === "top"
+      );
+      countByCategory.total_top = totalTopProducts.length;
+      let totalPopularProducts = albums.filter(
+        (album) => album.category.name === "popular"
+      );
+      countByCategory.total_popular = totalPopularProducts.length;
+      let totalMoreSaleProducts = albums.filter(
+        (album) => album.category.name === "moreSale"
+      );
+      countByCategory.total_moreSale = totalMoreSaleProducts.length;
+
       let response = {
         meta: {
           status: 200,
           count: albums.length,
+          countByCategory: countByCategory,
           url: "api/products",
         },
-        data: allAlbums,
+        products: allAlbums,
       };
 
       res.json(response);
