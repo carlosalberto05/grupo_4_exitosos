@@ -25,22 +25,17 @@
 
   <body>
     <%- include('../partials/navbar')%>
-    <main>
+    <main style="margin-bottom: 5%">
       <!-- Se actualizó -->
       <div class="header-carrito">
         <h2>Tu carrito</h2>
       </div>
       <div class="productoX">
         <a href="/products/detail">
-          <img
-            class="img-car"
-            src="/images/crystalcastles.jpg"
-            alt="(III)-Crystal Castles"
-          />
+          <img class="img-car" src="/images/covers/<%= album.image %>" />
         </a>
         <div class="info-album">
-          <p>(III)</p>
-          <p class="artist">Crystal Castles</p>
+          <p class="artist"><%= album.artist.name %></p>
         </div>
         <div class="cantidad">
           <i class="fas fa-minus-circle"></i>
@@ -48,35 +43,14 @@
           <i class="fas fa-plus"></i>
         </div>
         <div>
-          <p class="precio-album">$550 mxn</p>
+          <p class="precio-album">$<%= album.price %> MXN</p>
         </div>
         <p class="borrar"><a href="#">Eliminar</a></p>
       </div>
-      <div class="productoX">
-        <a href="/products/detail">
-          <img
-            class="img-car"
-            src="/images/crystalcastles.jpg"
-            alt="(III)-Crystal Castles"
-          />
-        </a>
-        <div class="info-album">
-          <p>(III)</p>
-          <p class="artist">Crystal Castles</p>
-        </div>
-        <div class="cantidad">
-          <i class="fas fa-minus-circle"></i>
-          <p>1</p>
-          <i class="fas fa-plus"></i>
-        </div>
-        <div>
-          <p class="precio-album">$550 mxn</p>
-        </div>
-        <p class="borrar"><a href="#">Eliminar</a></p>
-      </div>
+
       <div class="subtotal">
         <h5>Subtotal</h5>
-        <p id="x-pagar">$1100 mxn</p>
+        <p id="x-pagar">$<%= album.price %> MXN</p>
       </div>
       <div class="btn-form">
         <button class="form-btn" type="button">
