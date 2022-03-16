@@ -27,11 +27,6 @@
           <div class="main-image">
             <img src="/images/covers/<%= album.image %>" />
           </div>
-
-          <!-- <div class="small-images">
-            <img class="pic" src="/images/covers/<%= album.image %>" />
-            <img class="pic" src="/images/covers/<%= album.image %> " />
-          </div> -->
         </section>
 
         <section class="product-column product-info">
@@ -42,7 +37,9 @@
 
             <div class="product-price">
               <div class="add-btn">
-                <button type="button">Comprame</button>
+                <button type="button">
+                  <a href="/products/cart/<%= album.id_albums %>">Comprame </a>
+                </button>
 
                 <% if (locals.isLogged) { %>
                 <button class="form-btn edit">
