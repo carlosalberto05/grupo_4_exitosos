@@ -77,6 +77,11 @@ const productsController = {
     });
   },
 
+  //Carro de compras vacío
+  emptycart: (req, res) => {
+    res.render("products/productCartEmpty");
+  },
+
   //Carro de compras
   cart: (req, res) => {
     let { id } = req.params;

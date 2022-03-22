@@ -25,42 +25,20 @@
 
   <body>
     <%- include('../partials/navbar')%>
-    <section class="container-car" style="margin-bottom: 5%">
+    <main style="margin-bottom: 5%">
       <!-- Se actualizó -->
-      <div class="header-carrito">
-        <h2>Tu carrito</h2>
-      </div>
-      <div class="productoX">
-        <a href="/products/detail">
-          <img class="img-car" src="/images/covers/<%= album.image %>" />
-        </a>
-        <div class="info-album">
-          <p class="artist"><%= album.artist.name %></p>
+      <section class="container-car">
+        <div class="header-empty">
+          <h2>Tu carrito está vacío</h2>
         </div>
-        <div class="cantidad">
-          <i class="fas fa-minus-circle"></i>
-          <p>1</p>
-          <i class="fas fa-plus"></i>
+        <div class="empty">
+          <div>
+            <p>¿No sabes qué comprar?</p>
+            <p>Revisa las colecciones de álbumes</p>
+          </div>
         </div>
-        <div>
-          <p class="precio-album">$<%= album.price %> MXN</p>
-        </div>
-        <p class="borrar"><a href="#">Eliminar</a></p>
-      </div>
-
-      <div class="subtotal">
-        <h5>Subtotal</h5>
-        <p id="x-pagar">$<%= album.price %> MXN</p>
-      </div>
-      <div class="btn-form">
-        <button class="form-btn" type="button">
-          <a href="/">Seguir comprando</a>
-        </button>
-        <button class="form-btn-finalizar" type="submit">
-          Finalizar pedido
-        </button>
-      </div>
-    </section>
+      </section>
+    </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
   </body>

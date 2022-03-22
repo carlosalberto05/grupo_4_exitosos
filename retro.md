@@ -1,3 +1,13 @@
+#RETRO SPRINT 8
+
+Este sprint fue algo retador, de nueva cuenta me quedé trabajando solo en el proyecto pero pude organizarme para sacar adelante el sprint y cumplir con los objetivos encomendados, ahora solo falta detallar y mejorar lo que se pueda de la aplicación. Algo que hice bien y que no había mencionado en los anteriores sprints es priorizar las tareas mas complejas para tener tiempo extra de resolver las tareas mas sencillas.
+
+Algo que puedo mejorar es documentar lo que estoy haciendo o lo que codifique para que no se me olvide en un futuro por que implementé tal logica.
+
+Creo que también necesito repasar conceptos de css y html ya que encontré dificultades para resolver conflictos en esas áreas ya que al parecer disfruto mas implementando lógica.
+
+Este proyecto fue muy enriquecedor para mi y espero que me pueda servir de evidencia en mi portafolio para futuros empleos.
+
 # RETRO SPRINT 7
 
 Algo que se hizo bien en el sprint anterior fue volver a organizarme con mi compañero de equipo, incorporarlo y poder agilizar las tareas del sprint. Se tuvo la oportunidad de designar tareas, coordinarse y trabajar en equipo.

@@ -11,8 +11,8 @@ body {
 /* header, menu y barra de navegacion .................. */
 
 .main_header {
-  width: 100vw;
-  height: 12vh;
+  width: 100%;
+  padding: 0.5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -297,7 +297,7 @@ body {
     display: none;
   }
   .header_logo {
-    width: 60%;
+    width: 70%;
     display: flex;
   }
   .logo {
@@ -305,6 +305,7 @@ body {
     display: flex;
     justify-content: center;
   }
+
   .search_movil {
     display: none;
   }
@@ -323,6 +324,10 @@ body {
     border-right: none;
   }
 
+  .search_input_movil.show {
+    display: none;
+  }
+
   .search-form_button {
     position: relative;
     right: 6%;
@@ -339,38 +344,41 @@ body {
   }
 
   .header_icons {
-    width: 40%;
+    width: 30%;
+    justify-content: flex-start;
   }
   .user-icon {
     display: none;
   }
   .butt-regis_login {
-    width: 80%;
-    display: block;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
   .user-profile {
-    width: 40%;
+    width: 100%;
     text-decoration: none;
     color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
+  a.user-profile {
+    font-size: 80%;
+  }
+
   .btn_registro {
-    background-color: #dfece8;
-    opacity: 0.5;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    /* opacity: 0.5; */
     border: none;
-    border-radius: 3%;
     transition: all 0.5s;
     padding: 2%;
-    width: 45%;
+    width: 100%;
   }
-  .btn_registro a {
-    text-decoration: none;
-    color: black;
-  }
+
   .btn_registro:hover {
     cursor: pointer;
     opacity: 1;
@@ -442,5 +450,9 @@ body {
 
   .logo_img2.show {
     display: none;
+  }
+
+  a.user-profile {
+    font-size: 100%;
   }
 }

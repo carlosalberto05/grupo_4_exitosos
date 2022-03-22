@@ -24,40 +24,43 @@
 
     <!-- Container -->
     <div class="profile-container">
-      <h2>Hola <%= user.full_name %></h2>
-      <img class="avatar" src="/images/avatars/<%= user.avatar %> " />
-      <div class="alert alert-success"><%= user.email %></div>
-    </div>
-    <div class="container">
-      <div class="row-profile">
-        <div class="col-md-3">
-          <div class="form-btn-profile">
-            <a href="/users/profile/editName/<%= user.id_users %>"
-              >Editar nombre</a
-            >
-          </div>
-          <div class="form-btn-profile">
-            <a href="/users/profile/editEmail/<%= user.id_users %>"
-              >Editar email</a
-            >
-          </div>
-          <div class="form-btn-profile">
-            <a href="/users/profile/editPassword/<%= user.id_users %>"
-              >Editar password</a
-            >
-          </div>
-          <div class="form-btn-profile">
-            <a href="/users/profile/editAvatar/<%= user.id_users %>"
-              >Editar imagen de perfil</a
-            >
-          </div>
+      <div>
+        <h2>Hola <%= user.full_name %></h2>
+        <img class="avatar" src="/images/avatars/<%= user.avatar %> " />
+        <div class="alert alert-success"><%= user.email %></div>
+      </div>
+      <div class="container">
+        <div class="row-profile">
+          <div class="col-md-3">
+            <div class="form-btn-profile">
+              <a href="/users/profile/editName/<%= user.id_users %>"
+                >Editar nombre</a
+              >
+            </div>
+            <div class="form-btn-profile">
+              <a href="/users/profile/editEmail/<%= user.id_users %>"
+                >Editar email</a
+              >
+            </div>
+            <div class="form-btn-profile">
+              <a href="/users/profile/editPassword/<%= user.id_users %>"
+                >Editar password</a
+              >
+            </div>
+            <div class="form-btn-profile">
+              <a href="/users/profile/editAvatar/<%= user.id_users %>"
+                >Editar imagen de perfil</a
+              >
+            </div>
 
-          <div class="form-btn-profile">
-            <a id="logout" href="/users/logout">Cerrar Sesión</a>
+            <div class="form-btn-profile">
+              <a id="logout" href="/users/logout">Cerrar Sesión</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- //Container -->
 
     <%- include('../partials/footer')%>

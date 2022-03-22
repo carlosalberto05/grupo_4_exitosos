@@ -61,11 +61,10 @@
             src="/images/avatars/<%= locals.userLogged.avatar %>"
             alt=""
           />
-          <span>Hola <%= locals.userLogged.full_name.slice(0,7) %></span>
+          <span><%= locals.userLogged.full_name.slice(0,5) %></span>
         </a>
-        <button class="btn_registro">
-          <a class="" href="/users/logout">Cerrar Sesión</a>
-        </button>
+
+        <a class="user-profile" href="/users/logout">Cerrar Sesión</a>
       </div>
 
       <a href="/products/cart" class="car-icon">
@@ -78,16 +77,12 @@
         <i class="fas fa-user"></i>
       </a>
       <div class="butt-regis_login">
-        <button class="btn_registro">
-          <a href="/users/register">Registro</a>
-        </button>
-        <button class="btn_registro">
-          <a href="/users/login">Login</a>
-        </button>
+        <a class="btn_registro" href="/users/register">Registro</a>
+        <a class="btn_registro" href="/users/login">Login</a>
       </div>
-      <a href="/products/cart" class="car-icon">
+      <!-- <a href="/products/cart" class="car-icon">
         <i class="fas fa-shopping-cart"></i>
-      </a>
+      </a> -->
       <% } %>
     </div>
   </div>
