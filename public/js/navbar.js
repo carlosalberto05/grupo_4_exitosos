@@ -9,7 +9,6 @@ addEventListener("DOMContentLoaded", () => {
 
   iconSearch.addEventListener("click", () => {
     logo1.classList.add("remove");
-
     search_input_movil.classList.toggle("show");
     iconSearch.classList.toggle("remove");
     logo2.classList.toggle("show");
