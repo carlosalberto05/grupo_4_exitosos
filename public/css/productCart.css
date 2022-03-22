@@ -1,224 +1,235 @@
 * {
-    margin: ​0​px​;
-    padding: ​0​px​;
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: #464646;
+}
+
+.container-car {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.header-carrito {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.header-empty {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.productoX {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #3c119e;
+  padding-bottom: 3vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empty {
+  width: 100%;
+}
+
+.productoX a {
+  width: 20%;
+}
+
+.empty {
+  padding-bottom: 14%;
+}
+
+.empty h3,
+p {
+  text-align: center;
+}
+
+.img-car {
+  width: 100%;
+}
+
+.info-album {
+  margin-left: 2vw;
+  width: 20%;
+  text-align: left;
+  font-size: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: 700;
+}
+.artist {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cantidad {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  align-items: baseline;
+}
+
+.cantidad p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.fa-minus-circle,
+.fa-plus {
+  color: #f06355;
+  align-items: baseline;
+  margin: 15px;
+}
+
+.precio-album {
+  font-weight: 700;
+  font-size: 1rem;
+  align-items: baseline;
+}
+
+.borrar {
+  width: 100%;
+  text-decoration: underline;
+  align-items: center;
+}
+
+.borrar a {
+  color: black;
+}
+
+.subtotal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.subtotal h5 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+#x-pagar {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.form-btn {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-btn-finalizar {
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #88db9a;
+  border: 1px solid #dfece8;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Media query */
+@media (min-width: 768px) {
+  .precio-album {
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-items: baseline;
   }
 
-  body {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10vh;
-  }
-
-  main{
-      margin-left: 5vw;
-      margin-top: 4rem;
-      margin-right: 5vw;
-      margin-bottom: 4rem;
-    }
-  .header-carrito{
-      font-size: 1.5rem;
-      margin-bottom: 50px;
-  }
-
-  .productoX{
-      display:flex;
-      flex-wrap: wrap;
-      margin-bottom: 50px;
-      border-bottom: 1px solid #3C119E;
-      padding-bottom: 3vh;
-      justify-content: space-between;
-      align-items: center;
-  }
-
-  
-  
-  .productoX a {
-    width: 20%;
-  }
-
-  .img-car{
-      width: 100%;
-  }
-
-  .info-album{
-    margin-left: 2vw;
-    width: 20%;
-    text-align: left;
-    font-size: 16px;
-    justify-content: center;
-    align-items: flex-end;
+  #x-pagar {
+    font-size: 1.5rem;
     font-weight: 700;
   }
-  .artist{
-      font-weight: 500;
-      font-style: italic;
+
+  .cantidad p {
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 
-  .cantidad{
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 1rem;
-      align-items: baseline;
+  .fa-minus-circle,
+  .fa-plus {
+    color: #f06355;
+    align-items: baseline;
+    margin: 25px;
   }
 
-  .cantidad p{
-      font-size: 1.1rem;
-      font-weight: 600;
+  .productoX div.info-album {
+    font-size: 24px;
+  }
+  .info-album {
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 50px;
   }
 
-  .fa-minus-circle, .fa-plus{
-      color: #F06355;
-      align-items: baseline;
-      margin: 15px;
+  .artist {
+    font-style: italic;
   }
 
-  .precio-album{
-      font-weight: 700;
-      font-size: 1rem;
-      align-items: baseline;
+  .borrar {
+    font-weight: 600;
   }
 
-  .borrar{
-      width: 100%;
-      text-decoration: underline;
-      align-items: center;
+  .borrar a:hover {
+    color: #f06355;
   }
 
-  .borrar a{
-      color: black;
+  .form-btn-finalizar:hover {
+    background-color: #88db53;
   }
 
-  .subtotal{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
+  .form-btn:hover {
+    background-color: lightgray;
+    color: black;
   }
 
-  .subtotal h5{
-      font-size: 1.5rem;
-      font-style: italic;
+  .form-btn a {
+    color: white;
+    text-decoration: none;
   }
 
-  #x-pagar{
-      font-size: 1.2rem;
-      font-weight: 800;
-  }
-  
-  .form-btn {
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #000;
-    border: 1px solid #000;
-    border-radius: 10px;
-    padding: 10px 25px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-btn a{
-      color: white;
-      text-decoration: none;
-  }
-
-  .form-btn-finalizar{
-    font-size: 12px;
-    color: #000;
-    text-transform: uppercase;
-    background-color: #88DB9A;
-    border: 1px solid #DFECE8;
-    border-radius: 10px;
-    padding: 10px 25px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
   .btn-form {
     display: flex;
-    flex-direction: column;
+    padding: 0px 20vw;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     justify-content: space-around;
   }
-
-  /* Media query */
-  @media(min-width: 768px){
-
-    .precio-album{
-        font-weight: 700;
-        font-size: 1.5rem;
-        align-items: baseline;
-    }
-
-    #x-pagar{
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    .cantidad p{
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
-  
-    .fa-minus-circle, .fa-plus{
-        color: #F06355;
-        align-items: baseline;
-        margin: 25px;
-    }
-
-
-    .productoX div.info-album{
-        font-size: 24px;
-    }
-      .info-album{
-          margin-left: 0;
-          font-weight: 600;
-          font-size: 50px;
-      }
-
-      .artist{
-          font-style: italic;
-      }
-      
-      .borrar{
-          font-weight: 600;
-      }
-
-      .borrar a:hover{
-          color: #F06355;
-      }
-
-      .form-btn-finalizar:hover{
-          background-color: #88DB53;
-
-      }
-
-      .form-btn:hover{
-          background-color: lightgray;
-          color: black;
-      }
-
-      .form-btn a{
-          color: white;
-          text-decoration: none;
-      }
-
-      .btn-form {
-        display: flex;
-        padding: 0px 20vw;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        justify-content: space-around;
-      }
-  }
-
-  
+}
