@@ -8,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
   console.log(sizeWindow);
 
   iconSearch.addEventListener("click", () => {
-    logo1.classList.add("remove");
+    logo1.classList.toggle("remove");
     search_input_movil.classList.toggle("show");
     iconSearch.classList.toggle("remove");
     logo2.classList.toggle("show");
