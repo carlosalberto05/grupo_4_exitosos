@@ -32,6 +32,8 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .form-btn-profile a {
@@ -61,6 +63,11 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+  }
+
+  .form-btn-profile {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .form-btn-profile:hover {

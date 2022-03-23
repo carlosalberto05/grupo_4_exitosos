@@ -100,6 +100,9 @@ body {
 
 .search-form_input {
   width: 100%;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 0.7%;
 }
 
 .search {
@@ -122,6 +125,7 @@ body {
 .avatar_icon {
   width: 30px;
   height: 30px;
+  margin-right: 6%;
   border-radius: 100%;
 }
 
@@ -365,7 +369,7 @@ body {
     text-decoration: none;
     color: #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
   }
   a.user-profile {
