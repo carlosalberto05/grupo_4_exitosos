@@ -82,7 +82,7 @@ const productsController = {
     res.render("products/productCartEmpty");
   },
 
-  //Carro de compras
+  // Carro de compras
   cart: (req, res) => {
     let { id } = req.params;
     Album.findByPk(id, {

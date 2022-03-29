@@ -139,6 +139,14 @@ body {
   color: #fff;
 }
 
+.number-car {
+  position: relative;
+  color: rgb(212, 127, 14);
+  font-size: 50%;
+  right: 32%;
+  bottom: 6px;
+}
+
 /* tamaño de iconos */
 
 .user-icon,
