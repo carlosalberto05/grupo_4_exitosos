@@ -276,6 +276,13 @@ body {
   color: #3c119e;
 }
 
+.no-result {
+  width: 100%;
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 20%;
+}
+
 .popular {
   background-color: #dfece8;
 }
@@ -447,6 +454,10 @@ body {
 
   .logo_img.remove {
     display: block;
+  }
+
+  .no-result {
+    margin-bottom: 10%;
   }
 }
 
