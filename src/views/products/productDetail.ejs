@@ -25,20 +25,24 @@
       <div class="row footer-row">
         <section class="product-column product-pics">
           <div class="main-image">
-            <img src="/images/covers/<%= album.image %>" />
+            <img id="imgBuy" src="/images/covers/<%= album.image %>" />
           </div>
         </section>
 
         <section class="product-column product-info">
           <article>
             <div class="product-details">
-              <h4><%= album.title %> - <%= album.artist.name %></h4>
+              <h4 id="titleBuy">
+                <%= album.title %> - <%= album.artist.name %>
+              </h4>
             </div>
 
             <div class="product-price">
               <div class="add-btn">
-                <button type="button">
-                  <a href="/products/cart/<%= album.id_albums %>">Comprame </a>
+                <button id="buyBotton" type="button">
+                  <a id="buyId" href="/products/cart/<%= album.id_albums %>"
+                    >Comprame
+                  </a>
                 </button>
 
                 <% if (locals.isLogged) { %>
@@ -54,7 +58,9 @@
                 <% } %>
               </div>
               <div class="price">
-                <h3>$<%=album.price %> <span class="moneda">MXN</span></h3>
+                <h3 id="priceBuy">
+                  $<%=album.price %> <span class="moneda">MXN</span>
+                </h3>
               </div>
             </div>
 
@@ -76,5 +82,6 @@
     </main>
     <%- include('../partials/footer')%>
     <script src="/js/index.js"></script>
+    <script src="/js/productDetail.js"></script>
   </body>
 </html>

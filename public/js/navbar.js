@@ -5,7 +5,6 @@ addEventListener("DOMContentLoaded", () => {
   const logo2 = document.querySelector(".logo_img2");
   const search_input_movil = document.querySelector(".search_input_movil");
   const sizeWindow = screen.width;
-  console.log(sizeWindow);
 
   iconSearch.addEventListener("click", () => {
     logo1.classList.toggle("remove");
@@ -13,4 +12,12 @@ addEventListener("DOMContentLoaded", () => {
     iconSearch.classList.toggle("remove");
     logo2.classList.toggle("show");
   });
+
+  const iconCar = document.querySelector("#car");
+
+  if (localStorage.getItem("carrito")) {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+
+    iconCar.nextElementSibling.innerText = `${carrito.length}`;
+  }
 });
