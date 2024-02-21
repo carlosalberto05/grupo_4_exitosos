@@ -11,8 +11,4 @@ module.exports = {
     use_env_variable: "DATABASE_URL_PROD",
     dialect: "mysql",
   },
-  production: {
-    use_env_variable: "DATABASE_URL_PROD",
-    dialect: "mysql",
-  },
 };
