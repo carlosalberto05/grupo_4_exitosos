@@ -7,16 +7,16 @@ module.exports = {
     use_env_variable: "DATABASE_URL_TEST",
     dialect: "mysql",
   },
-  // production: {
-  //   use_env_variable: "DATABASE_URL_PROD",
-  //   dialect: "mysql",
-  // },
   production: {
+    use_env_variable: "DATABASE_URL_PROD",
     dialect: "mysql",
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT,
-    host: process.env.DB_HOST,
   },
+  // production: {
+  //   dialect: "mysql",
+  //   username: process.env.DB_USERNAME,
+  //   password: process.env.DB_PASSWORD,
+  //   database: process.env.DATABASE,
+  //   port: process.env.DB_PORT,
+  //   host: process.env.DB_HOST,
+  // },
 };
