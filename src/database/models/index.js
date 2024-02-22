@@ -12,8 +12,13 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize(process.env.DATABASE_URL_PROD, {
+  sequelize = new Sequelize({
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DATABASE,
     dialect: "mysql",
+    port: process.env.DB_PORT,
+    host: process.env.DB_HOST,
   });
 }
 
