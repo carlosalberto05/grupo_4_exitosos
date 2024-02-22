@@ -13,10 +13,10 @@ module.exports = {
   // },
   production: {
     dialect: "mysql",
-    username: "DB_USERNAME",
-    password: "DB_PASSWORD",
-    database: "DATABASE",
-    port: "DB_PORT",
-    host: "DB_HOST",
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DATABASE,
+    port: process.env.DB_PORT,
+    host: process.env.DB_HOST,
   },
 };
