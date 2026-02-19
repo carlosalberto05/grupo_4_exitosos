@@ -9,17 +9,17 @@ const config = require(__dirname + "/../config/config.js")[env];
 const db = {};
 
 let sequelize;
-if (config.use_env_variable) {
+if (config.use_env_variable && process.env[config.use_env_variable]) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else if (config.url) {
+  sequelize = new Sequelize(config.url, config);
 } else {
-  sequelize = new Sequelize({
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE,
-    dialect: "mysql",
-    port: process.env.DB_PORT,
-    host: process.env.DB_HOST,
-  });
+  sequelize = new Sequelize(
+    config.database || process.env.DATABASE,
+    config.username || process.env.DB_USERNAME,
+    config.password || process.env.DB_PASSWORD,
+    config
+  );
 }
 
 fs.readdirSync(__dirname)
