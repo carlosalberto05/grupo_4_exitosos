@@ -65,5 +65,5 @@ app.use("/api/genres", apiGenresRoter);
 
 //Al final levantamos el servidor
 app.listen(port, () => {
-  console.log("Servidor corriendo en el puerto 3001");
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
